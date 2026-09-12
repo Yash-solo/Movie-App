@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className='w-full p-3 flex items-center justify-around'>
       <div className='h-full flex items-center justify-around w-full border border-[rgba(255,255,255,0.3)] rounded-2xl p-2'>
         <div className='logo flex z-30 items-center justify-around gap-2'>
-            <img className="h-7" src="src/photos/video-camera (1).png" alt="" />
+            <img className="h-7" src="./src/photos/video.png" alt="" />
             <h1 className='font-bold text-xl text-white'>Daily.Movies</h1>
         </div>
         <div className='md:flex text-gray-50 font-bold hidden flex-row items-center justify-around gap-7'>
