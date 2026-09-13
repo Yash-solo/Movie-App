@@ -1,6 +1,6 @@
 import "./style.css";
 import React from 'react'
-import filmImage from "/photos/hanuman ansh.jpg";
+import filmImage from "/hanuman ansh.jpg";
 const Latest = () => {
   return (
     <>
