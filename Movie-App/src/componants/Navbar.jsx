@@ -3,8 +3,8 @@ import { useState } from 'react';
 const Navbar = () => {
     const [isOpen,setOpen] = useState(false)
   return (
-    <div className='w-full p-3 flex items-center justify-around'>
-      <div className='h-full flex items-center justify-around w-full border border-[rgba(255,255,255,0.3)] rounded-2xl p-2'>
+    <div className='w-full  p-3 md:px-25  flex items-center justify-around'>
+      <div className='h-full  flex items-center justify-around w-full border border-[rgba(255,255,255,0.3)] rounded-2xl p-2'>
         <div className='logo flex z-30 items-center justify-around gap-2'>
             <h1 className='font-bold text-xl text-white'>Daily.Movies</h1>
         </div>
