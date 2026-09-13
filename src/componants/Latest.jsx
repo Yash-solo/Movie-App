@@ -1,6 +1,6 @@
 import "./style.css";
 import React from 'react'
-
+import filmImage from "/photos/hanuman ansh.jpg";
 const Latest = () => {
   return (
     <>
@@ -10,7 +10,7 @@ const Latest = () => {
             </ul>
 
             <div className="w-full [&::-webkit-scrollbar]:hidden overflow-x-auto  p-2 flex items-center justify-around gap-3">
-                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
+                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src={filmImage} alt="" /></div>
                 <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
                 <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
                 <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
