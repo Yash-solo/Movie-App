@@ -1,5 +1,5 @@
 @import "tailwindcss";
 body{
-  background-image: url("src/photos/darkTheme.avif");
+  background-image: url("photos/dark.jpg");
   background-size: cover;
 }
