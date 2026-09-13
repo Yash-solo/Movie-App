@@ -1,11 +1,7 @@
+import "./style.css";
 import { useState } from 'react';
-
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  // Helper function to close menu when a link is clicked
-  const handleLinkClick = () => setIsOpen(false);
-
+const Navbar = () => {
+    const [isOpen,setOpen] = useState(false)
   return (
     <div className='w-full p-3 flex items-center justify-around'>
       <div className='h-full flex items-center justify-around w-full border border-[rgba(255,255,255,0.3)] rounded-2xl p-2'>
@@ -37,5 +33,7 @@ export default function Navbar() {
         </div>
       </div>
     </div>
-  );
+  )
 }
+
+export default Navbar
