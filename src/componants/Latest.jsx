@@ -11,15 +11,15 @@ const Latest = () => {
 
             <div className="w-full [&::-webkit-scrollbar]:hidden overflow-x-auto  p-2 flex items-center justify-around gap-3">
                 <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src={filmImage} alt="" /></div>
-                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
-                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
-                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
-                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
-                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
-                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
-                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
-                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
-                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src="photos/hanuman ansh.jpg" alt="" /></div>
+                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src={filmImage} alt="" /></div>
+                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src={filmImage} alt="" /></div>
+                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src={filmImage} alt="" /></div>
+                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src={filmImage} alt="" /></div>
+                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src={filmImage} alt="" /></div>
+                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src={filmImage} alt="" /></div>
+                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src={filmImage} alt="" /></div>
+                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src={filmImage} alt="" /></div>
+                <div className="h-45 shrink-0 w-30"><img className="w-30 h-45 rounded-2xl object-cover" src={filmImgae} alt="" /></div>
             </div>
             {/* Right button */}
             <button className="bg-white rounded-2xl absolute top-[50%] hidden md:flex right-25 p-1">
