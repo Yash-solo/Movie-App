@@ -1,5 +1,4 @@
 @import "tailwindcss";
 body{
-  background-image: url("./photos/dark.jpg");
-  background-size: cover;
+  background-color: rgb(17, 17, 17);
 }
