@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import hanumanAnsh from './photos/hanuman ansh.jpg'
@@ -10,7 +9,7 @@ function App() {
 
   return (
     <>
-      <img src={hanumanAnsh} alt="" />
+      <img className="h-30 rounded-2xl" src={hanumanAnsh} alt="" />
       <section id="center">
         <div className="hero">
           <img src={hanumanAnsh} className="base" width="170" height="179" alt="" />
