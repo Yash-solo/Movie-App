@@ -6,7 +6,7 @@ const Navbar = () => {
     const [isOpen ,setOpen] = useState(false);
   return (
     <>
-        <div className="bg-black w-full p-3 md:px-25 flex items-center justify-center">
+        <div className=" w-full p-3 md:px-25 flex items-center justify-center">
             <div className="text-white flex items-center justify-around rounded-2xl w-full p-2 border border-[#ddd]">
                 <div className="flex items-center justify-around gap-1 ">
                     <img className="h-5 md:h-7"src={videoCam} alt="" />
@@ -29,7 +29,7 @@ const Navbar = () => {
                         <li>Service</li>
                     </ul>
                 </div>
-                <div className={`sidebar  md:hidden w-full p-5 h-1/2 backdrop-blur-2xl absolute bg-[rgba(255,255,255,0.4)] ${isOpen?"flex items-end justify-end flex-col":"hidden"} -z-30 top-10 `}>
+                <div className={`sidebar  md:hidden w-full p-5 h-1/2 backdrop-blur-2xl absolute bg-[rgba(255,255,255,0.4)] ${isOpen?"flex items-end justify-end flex-col":"hidden"} -z-30 top-15 `}>
                     <ul className="w-full flex flex-col items-center justify-around gap-5">
                         
                         <li className="w-full rounded-2xl hover:bg-gray-800 text-center p-2">Faviorate</li>
