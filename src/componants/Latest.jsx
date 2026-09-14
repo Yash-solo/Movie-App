@@ -1,15 +1,15 @@
 import "./style.css"
 import React, { useState } from 'react'
-import HanumanAnsh from "/src/photos/hanuman ansh.jpg"
-import SpiderManMovie from "/src/photos/spiderman brand.jpg"
-import df from "/src/photos/df.jpg"
-import matrabhumiMovie from "/src/photos/matrabhumi.jpg"
-import alpha from "/src/photos/alpha.jpg"
-import vvaan from "/src/photos/vvan.jpg"
-import rrr from "/src/photos/rrr.jpg"
-import Kalki from "/src/photos/kalki.jpg"
-import game from "/src/photos/Kalki_film_poster.jpg"
-import std from "/src/photos/sdf.jpg"
+import HanumanAnsh from "/photos/hanuman ansh.jpg"
+import SpiderManMovie from "/photos/spiderman brand.jpg"
+import df from "/photos/df.jpg"
+import matrabhumiMovie from "/photos/matrabhumi.jpg"
+import alpha from "/photos/alpha.jpg"
+import vvaan from "/photos/vvan.jpg"
+import rrr from "/photos/rrr.jpg"
+import Kalki from "/photos/kalki.jpg"
+import game from "/photos/Kalki_film_poster.jpg"
+import std from "/photos/sdf.jpg"
 import {useRef} from 'react'
 
 const Latest = () => {
@@ -22,7 +22,7 @@ const Latest = () => {
             });
         }   
     };
-    const MovieList = [HanumanAnsh,SpiderManMovie,matrabhumiMovie,alpha,vvaan,std,rrr,Kalki,game,]
+    const MovieList = [HanumanAnsh,df,SpiderManMovie,matrabhumiMovie,alpha,vvaan,std,rrr,Kalki,game,]
     const Latest_movies = MovieList.map((movie)=>{
         return <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={movie} alt="MoviePic" />
     })
