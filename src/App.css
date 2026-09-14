@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
 body{
-  background-color: black;
+  background-image: url("src/photos/darkThem.png");
+  background-size: cover;
+  object-fit: cover;
 }
