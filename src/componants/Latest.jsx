@@ -22,7 +22,7 @@ const Latest = () => {
             });
         }   
     };
-    const MovieList = [HanumanAnsh,df,SpiderManMovie,matrabhumiMovie,alpha,vvaan,std,rrr,Kalki,game,]
+    const MovieList = [HanumanAnsh,df,SpiderManMovie,"/photos/matrabhumi.jpg",alpha,vvaan,std,rrr,Kalki,game,]
     const Latest_movies = MovieList.map((movie)=>{
         return <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={movie} alt="MoviePic" />
     })
