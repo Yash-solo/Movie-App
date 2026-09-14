@@ -1,11 +1,14 @@
 import './App.css'
-import Navbar from './componants/Navbar'
+import Navbar from './componants/Navbar.jsx'
+import SearchBar from './componants/Search.jsx'
+import Latest from './componants/Latest.jsx'
 function App() {
 
   return (
     <>
       <Navbar/>
-      <searchBar/>
+      <SearchBar/>
+      <Latest/>
     </>
   )
 }
