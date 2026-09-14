@@ -1,5 +1,5 @@
 import "./style.css"
-import React, { useState } from 'react'
+import React, { useEffect , useState } from 'react'
 import HanumanAnsh from "/photos/hanuman ansh.jpg"
 import SpiderManMovie from "/photos/spiderman brand.jpg"
 import df from "/photos/df.jpg"
@@ -11,6 +11,7 @@ import Kalki from "/photos/kalki.jpg"
 import game from "/photos/Kalki_film_poster.jpg"
 import std from "/photos/sdf.jpg"
 import {useRef} from 'react'
+import { nanoid } from 'nanoid'
 
 const Latest = () => {
     let ref = useRef(null);
@@ -22,9 +23,18 @@ const Latest = () => {
             });
         }   
     };
-    const MovieList = [HanumanAnsh,df,SpiderManMovie,"./photos/matrabhumi.jpg",alpha,vvaan,std,rrr,Kalki,game,]
-    const Latest_movies = MovieList.map((movie)=>{
-        return <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={movie} alt="MoviePic" />
+    const [Movie,setMovie] = useState([]);
+    useEffect(()=>{
+        async function getMovie(){
+            const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
+            const data = await response.json();
+            setMovie(data);
+        }
+        getMovie();
+    },[])
+
+    const Latest_movies = Movie.map((movie)=>{
+        return <img key = {nanoid()} className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={movie.picture} alt="MoviePic" />
     })
     console.log(Latest_movies)
 
