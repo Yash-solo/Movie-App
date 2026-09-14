@@ -11,7 +11,7 @@ function App() {
     <>
       <img className="h-30 rounded-2xl" src={hanumanAnsh} alt="" />
       <section id="center">
-        <div className="hero">
+        <div className=" bg-black">
           <img src={hanumanAnsh} className="base" width="170" height="179" alt="" />
           <img src={reactLogo} className="framework" alt="React logo" />
           <img src={viteLogo} className="vite" alt="Vite logo" />
@@ -24,7 +24,7 @@ function App() {
         </div>
         <button
           type="button"
-          className="counter"
+          className="counter bg-amber-500"
           onClick={() => setCount((count) => count + 1)}
         >
           Count is {count}
