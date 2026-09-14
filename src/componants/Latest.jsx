@@ -11,6 +11,7 @@ import Kalki from "/src/photos/kalki.jpg"
 import game from "/src/photos/Kalki_film_poster.jpg"
 import std from "/src/photos/sdf.jpg"
 import {useRef} from 'react'
+
 const Latest = () => {
     let ref = useRef(null);
     const scroll = (scrollOffset) => {
@@ -21,31 +22,18 @@ const Latest = () => {
             });
         }   
     };
+    const MovieList = [HanumanAnsh,SpiderManMovie,"./src/photos/matrabhumi.jpg",alpha,vvaan,std,rrr,Kalki,game,]
+    const Latest_movies = MovieList.map((movie)=>{
+        return <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={movie} alt="MoviePic" />
+    })
+    console.log(Latest_movies)
+
   return (
     <div className="w-full p-3 flex items-center justify-around">
       <div className="relative flex flex-col w-full md:px-26 px-3  gap-1 ">
         <ul className="text-white list-disc text-[15px] font-bold md:text-xl"><li>Latest Movies:- </li></ul>
         <div ref = {ref} className="mask-[linear-gradient(to_right,transparent_0%,white_3%_97%,transparent_100%)] w-full  [&::-webkit-scrollbar]:hidden overflow-x-auto flex flex-row gap-2 items-center justify-around p-1">
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={HanumanAnsh} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={SpiderManMovie} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={df} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={matrabhumiMovie} alt="" />
-            <img className={`rounded-2xl w-30 h-50 object-cover shrink-0 `} src={alpha} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={vvaan} alt="" />
-            <img className={`rounded-2xl w-30 h-50 object-cover shrink-0 `} src={rrr} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={Kalki} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={game} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={std} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={HanumanAnsh} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={SpiderManMovie} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={df} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={matrabhumiMovie} alt="" />
-            <img className={`rounded-2xl w-30 h-50 object-cover shrink-0 `} src={alpha} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={vvaan} alt="" />
-            <img className={`rounded-2xl w-30 h-50 object-cover shrink-0 `} src={rrr} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={Kalki} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={game} alt="" />
-            <img className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={std} alt="" />
+            {Latest_movies}
         </div>
         <div onClick={()=>{
             scroll(-100)
