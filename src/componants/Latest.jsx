@@ -26,10 +26,9 @@ const Latest = () => {
             //contains latest movies
             let lMovieList = [];
              
-            const movieAdded = 12;
+            const movieAdded = 13;
             //show only last 10 movies
             for(let i= data.length-1  ;i > data.length-movieAdded+1;i--){
-                console.log(i);
                 lMovieList.push(data[i]);
             };
             //set movies for randering
@@ -42,7 +41,15 @@ const Latest = () => {
 
     //create image element for every movie for render on the screen
     const Latest_movies = Movie.map((movie)=>{
-        return <img key = {nanoid()} className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={movie.picture} alt="MoviePic" />
+        return <img onClick = {()=>{
+            localStorage.setItem("categories",JSON.stringify(movie.category));
+            //open link where you can see your movie in 0 payment
+            if(movie.path!=="xyz"){
+                window.open(movie.path,"_blank")
+            }else{
+                alert("Movie not found");
+            }
+        }} key = {nanoid()} className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={movie.picture} alt="MoviePic" />
     })
 
     //main page
