@@ -18,7 +18,16 @@ const Latest = () => {
         async function getMovie(){
             const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
             const data = await response.json();
-            setMovie(data);
+            let lMovieList = [];
+            const movieAdded = 12;
+            //show only last 10 movies
+            for(let i= data.length-1  ;i > data.length-movieAdded+1;i--){
+                console.log(i);
+                lMovieList.push(data[i]);
+            };
+            console.log(lMovieList);
+            setMovie(lMovieList);
+
         }
         getMovie();
     },[])

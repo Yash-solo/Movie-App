@@ -1,63 +1,69 @@
 [
     {
         "id":0,
-        "MovieName":"Hanuman ansh",
-        "picture":"./photos/hanuman ansh.jpg",
-        "path":"xyz"
-    },
-    {
-        "id":1,
         "MovieName":"Spider Man Brand",
         "picture":"./photos/spiderman brand.jpg",
         "path":"xyz"
     },
     {
-        "id":2,
+        "id":1,
         "MovieName":"Matrabhumi",
         "picture":"./photos/matrabhumi.jpg",
         "path":"xyz"
     },
     {
-        "id":3,
+        "id":2,
         "MovieName":"Kalki 2898 AD",
         "picture":"./photos/kalki.jpg",
         "path":"xyz"
     },
     {
-        "id":4,
+        "id":3,
         "MovieName":"Kalki poster",
         "picture":"./photos/Kalki_film_poster.jpg",
         "path":"xyz"
     },
     {
-        "id":5,
+        "id":4,
         "MovieName":"RRR",
         "picture":"./photos/rrr.jpg",
         "path":"xyz"
     },
     {
-        "id":6,
+        "id":5,
         "MovieName":"SDF",
         "picture":"./photos/sdf.jpg",
         "path":"xyz"
     },
     {
-        "id":7,
+        "id":6,
         "MovieName":"VVAAN",
         "picture":"./photos/vvan.jpg",
         "path":"xyz"
     },
     {
-        "id":8,
+        "id":7,
         "MovieName":"DF",
         "picture":"./photos/df.jpg",
         "path":"xyz"
     },
     {
-        "id":9,
+        "id":8,
         "MovieName":"ALPHA",
         "picture":"./photos/alpha.jpg",
         "path":"xyz"
-    }
+    },
+    {
+        "id":9,
+        "MovieName":"Cog",
+        "picture":"./photos/coy.jpg",
+        "path":"xyz"
+    },
 
+    {
+        "id":10,
+        "MovieName":"Hanuman ansh",
+        "picture":"./photos/hanuman ansh.jpg",
+        "path":"xyz"
+    }
 ]
