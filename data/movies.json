@@ -9,7 +9,7 @@
     {
         "id":1,
         "MovieName":"Matrabhumi",
-        "category":["Patriotic War Drama","Action"],
+        "category":["Patriotic War Drama","action"],
         "picture":"./photos/matrabhumi.jpg",
         "path":"xyz"
     },
@@ -17,26 +17,26 @@
         "id":2,
         "MovieName":"Kalki 2898 AD",
         "picture":"./photos/kalki.jpg",
-        "category":["Sci-fi","Dystopian","epic","science","fiction","action","adventure"],
+        "category":["sci-fi","dystopian","epic","science","fiction","action","adventure"],
         "path":"https://www.youtube.com/watch?v=ed7DxXQgTKk&t=10216s"
     },
     {
         "id":3,
         "MovieName":"Kalki (2019)",
         "picture":"./photos/Kalki_film_poster.jpg",
-        "category":["action","Mystery","Investigative","Thriller"],
+        "category":["action","Mystery","Investigative","thriller"],
         "path":"https://net77.cc/home"
     },
     {
         "id":4,
         "MovieName":"RRR",
         "picture":"./photos/rrr.jpg",
-        "category":["action","adventure","drama","historical fiction"],
+        "category":["action","adventure","sci-fi","drama","historical fiction"],
         "path":"https://net77.cc/home"
     },
     {
         "id":5,
-        "MovieName":"",
+        "MovieName":"policeman",
         "picture":"./photos/sdf.jpg",
         "category":["action","crime","drama"],
         "path":"https://net77.cc/home"
@@ -74,7 +74,7 @@
         "id":10,
         "MovieName":"Hanuman ansh",
         "picture":"./photos/hanuman ansh.jpg",
-        "category":["devotional drama","biography","devotional","drama","spiritual biopic","biographical film"],
+        "category":["devotional drama","history","biography","devotional","drama","spiritual biopic","biographical film"],
         "path":"https://www.facebook.com/sanjeev.kumar.81089/videos/hanuman-ansh-full-movi/2013226039341542/"
     }
 ]
