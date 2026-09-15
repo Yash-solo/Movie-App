@@ -3,11 +3,13 @@
         "id":0,
         "MovieName":"Spider Man Brand",
         "picture":"./photos/spiderman brand.jpg",
-        "path":"xyz"
+        "category":["action","adventure","sci-fi"],
+        "path":"https://net77.cc/home"
     },
     {
         "id":1,
         "MovieName":"Matrabhumi",
+        "category":["Patriotic War Drama","Action"],
         "picture":"./photos/matrabhumi.jpg",
         "path":"xyz"
     },
@@ -15,55 +17,64 @@
         "id":2,
         "MovieName":"Kalki 2898 AD",
         "picture":"./photos/kalki.jpg",
-        "path":"xyz"
+        "category":["Sci-fi","Dystopian","epic","science","fiction","action","adventure"],
+        "path":"https://www.youtube.com/watch?v=ed7DxXQgTKk&t=10216s"
     },
     {
         "id":3,
-        "MovieName":"Kalki poster",
+        "MovieName":"Kalki (2019)",
         "picture":"./photos/Kalki_film_poster.jpg",
-        "path":"xyz"
+        "category":["action","Mystery","Investigative","Thriller"],
+        "path":"https://net77.cc/home"
     },
     {
         "id":4,
         "MovieName":"RRR",
         "picture":"./photos/rrr.jpg",
-        "path":"xyz"
+        "category":["action","adventure","drama","historical fiction"],
+        "path":"https://net77.cc/home"
     },
     {
         "id":5,
-        "MovieName":"SDF",
+        "MovieName":"",
         "picture":"./photos/sdf.jpg",
-        "path":"xyz"
+        "category":["action","crime","drama"],
+        "path":"https://net77.cc/home"
     },
     {
         "id":6,
         "MovieName":"VVAAN",
         "picture":"./photos/vvan.jpg",
-        "path":"xyz"
+        "category":["action","mystery","thriller"],
+        "path":"https://net77.cc/home"
     },
     {
         "id":7,
         "MovieName":"DF",
         "picture":"./photos/df.jpg",
-        "path":"xyz"
+        "category":["action","crime","drama"],
+        "path":"https://net77.cc/home"
     },
     {
         "id":8,
         "MovieName":"ALPHA",
         "picture":"./photos/alpha.jpg",
-        "path":"xyz"
+        "category":["action","thriller"],
+        "path":"https://net77.cc/home"
     },
     {
         "id":9,
         "MovieName":"Cog",
         "picture":"./photos/coy.jpg",
-        "path":"xyz"
+        "category":["action","thriller"],
+        "path":"https://net77.cc/home"
     },
 
     {
         "id":10,
         "MovieName":"Hanuman ansh",
         "picture":"./photos/hanuman ansh.jpg",
-        "path":"xyz"
+        "category":["devotional drama","biography","devotional","drama","spiritual biopic","biographical film"],
+        "path":"https://www.facebook.com/sanjeev.kumar.81089/videos/hanuman-ansh-full-movi/2013226039341542/"
     }
 ]
