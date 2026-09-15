@@ -20,10 +20,17 @@ const Recommanded = () => {
             const data = await response.json();
 
             const newList = data.filter((movie)=>{
+                let cateAgree = 0;
                 for(let cate of category){
-                    return movie.category.includes(cate);
+                    if(movie.category.includes(cate)){
+                        cateAgree+=1;
+                    }
+                    if(cateAgree===2){
+                        return true
+                    }
                 }
             })
+            console.log(newList)
             const RecMovieList = newList.map((movie)=>{
                 return <img onClick = {()=>{
                             //open link where you can see your movie in 0 payment
@@ -42,8 +49,8 @@ const Recommanded = () => {
   return (
     <>
     <div className="relative w-full p-3 md:px-25 flex justify-around items-center ">
-        <div className=" w-full p-2flex flex-col gap-2  ">
-            <ul className="text-white list-disc text-[15px] font-bold md:text-xl"><li>Recommanded for you:- </li></ul>
+        <div className=" w-full p-2 flex flex-col gap-2  ">
+            <ul className="text-white px-3 list-disc text-[15px] font-bold md:text-xl"><li>Recommanded for you:- </li></ul>
             <div ref = {ref} className="mask-[linear-gradient(to_right,transparent_0%,black_5%_95%,transparent_100%)] flex [&::-webkit-scrollbar]:hidden overflow-x-auto items-center justify-around gap-3">
                 {...movies}
             </div>
