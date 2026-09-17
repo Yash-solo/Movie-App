@@ -21,11 +21,12 @@ const ContinueWatch = () => {
             
             //reduce the usablitily
             const watchingId = [];
-            for(let id of getKey){
+            getKey.map((id)=>{
                 if(!watchingId.includes(id)){
                     watchingId.push(id);
                 }
-            }
+            })
+            
             //fetch data and filter items that contains that id
             async function getWatch(){
                 const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
