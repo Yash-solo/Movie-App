@@ -18,46 +18,51 @@ const ContinueWatch = () => {
         
         useEffect(()=>{
             const getKey = JSON.parse(localStorage.getItem("watching"));
-            
-            //reduce the usablitily
-            const watchingId = [];
-            getKey.map((id)=>{
-                if(!watchingId.includes(id)){
-                    watchingId.push(id);
-                }
-            })
-            
-            //fetch data and filter items that contains that id
-            async function getWatch(){
-                const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
-                const data = await response.json();
-    
-                const filtered_list = data.filter((movie)=>{
-                    return watchingId.includes(movie.id);
-                })
-                //make movies pictures
-                const watchingList = filtered_list.map((movie)=>{
-                    return <img onClick={()=>{
-                        const getKey = JSON.parse(localStorage.getItem("watching"));
-                        localStorage.setItem("categories",JSON.stringify(movie.category));
-                        //open link where you can see your movie in 0 payment
-                        if(movie.path!=="xyz"){
-                            if(getKey!==null){
-                                localStorage.setItem("watching",JSON.stringify([...getKey,movie.id]));
-                            }else{
-                                localStorage.setItem("watching",JSON.stringify([movie.id]));
-                            }
-                            window.open(movie.path,"_blank")
-                            
-                        }else{
-                            alert("Movie not found");
-                        }
+            if(getKey===null){
+                console.log("get key is null");
+            }else{
+
+                //reduce the usablitily
+                const watchingId = [];
+                getKey.map((id)=>{
+                    if(!watchingId.includes(id)){
+                        watchingId.push(id);
                     }
-                    } key = {nanoid()} className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={movie.picture} alt="MoviePic" />
                 })
-                setWathingList(watchingList)
+                
+                //fetch data and filter items that contains that id
+                async function getWatch(){
+                    const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
+                    const data = await response.json();
+        
+                    const filtered_list = data.filter((movie)=>{
+                        return watchingId.includes(movie.id);
+                    })
+                    //make movies pictures
+                    const watchingList = filtered_list.map((movie)=>{
+                        return <img onClick={()=>{
+                            const getKey = JSON.parse(localStorage.getItem("watching"));
+                            localStorage.setItem("categories",JSON.stringify(movie.category));
+                            //open link where you can see your movie in 0 payment
+                            if(movie.path!=="xyz"){
+                                if(getKey!==null){
+                                    localStorage.setItem("watching",JSON.stringify([...getKey,movie.id]));
+                                }else{
+                                    localStorage.setItem("watching",JSON.stringify([movie.id]));
+                                }
+                                window.open(movie.path,"_blank")
+                                
+                            }else{
+                                alert("Movie not found");
+                            }
+                        }
+                        } key = {nanoid()} className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={movie.picture} alt="MoviePic" />
+                    })
+                    setWathingList(watchingList)
+                }
+                getWatch();
             }
-            getWatch();
+                
         },[])
     } catch (error) {
         console.log("error is commig ",error.messege);
