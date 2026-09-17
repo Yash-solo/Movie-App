@@ -19,7 +19,6 @@ const ContinueWatch = () => {
         useEffect(()=>{
             const getKey = JSON.parse(localStorage.getItem("watching"));
             
-            console.log(getKey);
             //reduce the usablitily
             const watchingId = [];
             for(let id of getKey){

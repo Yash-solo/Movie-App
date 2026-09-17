@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div>
                     <div onClick={()=>{
                         setOpen(!isOpen);
-                        console.log(isOpen);
+                        
                     }
                     } className="flex md:hidden flex-col p-2 rounded-[5px] bg-[rgba(255,255,255,0.2)] items-center justify-around gap-1">
                         <span className={`h-0.5 transform tranistion-all duration-150 ease-in-out w-5 border ${isOpen?"rotate-45 translate-y-1 ":""} border-white`}></span>

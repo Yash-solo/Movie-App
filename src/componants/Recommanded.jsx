@@ -30,7 +30,6 @@ const Recommanded = () => {
                     }
                 }
             })
-            console.log(newList)
             const RecMovieList = newList.map((movie)=>{
                 return <img onClick = {()=>{
                             //open link where you can see your movie in 0 payment
