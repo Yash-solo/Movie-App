@@ -4,7 +4,13 @@ import { nanoid } from "nanoid";
 const Recommanded = () => {
     const category= JSON.parse(localStorage.getItem("categories"));
     let ref = useRef(null);
+    const [isrecmnd,setRecomend] = useState(false);
 
+    if(category===null){
+        console.log("Category not find");
+    }else{
+        setRecomend(true);
+    }
     const scroll = (scrollByNum) =>{
         if(ref.current){
             ref.current.scrollBy({
@@ -52,9 +58,9 @@ const Recommanded = () => {
         getRecommand();
     },[])
     
-  return (
-    <>
-    <div className="relative w-full p-3 md:px-25 flex justify-around items-center ">
+    const fakeTemplate = ("");
+    const realTemplate = (
+        <div className="relative w-full p-3 md:px-25 flex justify-around items-center ">
         <div className=" w-full p-2 flex flex-col gap-2  ">
             <ul className="text-white px-3 list-disc text-[15px] font-bold md:text-xl"><li>Recommanded for you:- </li></ul>
             <div ref = {ref} className="mask-[linear-gradient(to_right,transparent_0%,black_5%_95%,transparent_100%)] flex [&::-webkit-scrollbar]:hidden overflow-x-auto items-center justify-around gap-3">
@@ -81,6 +87,10 @@ const Recommanded = () => {
         </div>
 
     </div>
+    )
+  return (
+    <>
+        {isrecmnd?realTemplate:fakeTemplate}
     </>
   )
 }

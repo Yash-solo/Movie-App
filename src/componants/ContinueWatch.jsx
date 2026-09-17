@@ -3,6 +3,7 @@ import { useEffect , useReducer, useRef, useState } from "react"
 import { nanoid } from "nanoid";
 const ContinueWatch = () => {
     const [watchingLIST,setWathingList] = useState([]);
+    const [iswatched,setWathed] = useState(false);
     const ref = useRef(null);
 
     const scroll = (scrollByNum)=>{
@@ -19,9 +20,9 @@ const ContinueWatch = () => {
         useEffect(()=>{
             const getKey = JSON.parse(localStorage.getItem("watching"));
             if(getKey===null){
-                console.log("get key is null");
+                console.log("getKey is null");
             }else{
-
+                setWathed(true);
                 //reduce the usablitily
                 const watchingId = [];
                 getKey.map((id)=>{
@@ -67,10 +68,10 @@ const ContinueWatch = () => {
     } catch (error) {
         console.log("error is commig ",error.messege);
     }
+    const fakeTemplate = ("")
 
-
-  return (
-    <div className="relative w-full p-3 md:px-25 flex items-center justify-around">
+    const realTemplate = (
+        <div className="relative w-full p-3 md:px-25 flex items-center justify-around">
         <div className=" p-2 w-full flex items-center justify-around flex-col gap-2">
             <ul className="px-3 md:text-2xl w-full text-start text-white font-bold list-disc"><li>Continue watching</li></ul>
             <div ref={ref} className="mask-[linear-gradient(to_right,transparent_0%,black_5%_95%,transparent_100%)] [&::-webkit-scrollbar]:hidden w-full flex items-center justify-around flex-row gap-2 p-2 overflow-x-auto ">
@@ -95,6 +96,12 @@ const ContinueWatch = () => {
             </button>
         </div>
     </div>
+    )
+
+  return (
+   <>
+    {iswatched?realTemplate:fakeTemplate}
+   </>
   )
 }
 
