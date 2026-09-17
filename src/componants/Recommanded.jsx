@@ -35,6 +35,13 @@ const Recommanded = () => {
                 return <img onClick = {()=>{
                             //open link where you can see your movie in 0 payment
                             if(movie.path!=="xyz"){
+
+                                const getKey = JSON.parse(localStorage.getItem("watching"))
+                                if(getKey!==null){
+                                    localStorage.setItem("watching",JSON.stringify([...getKey,movie.id]));
+                                }else{
+                                    localStorage.setItem("watching",JSON.stringify([movie.id]));
+                                }
                                 window.open(movie.path,"_blank")
                             }else{
                                 alert("Movie not found");

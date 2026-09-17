@@ -42,10 +42,17 @@ const Latest = () => {
     //create image element for every movie for render on the screen
     const Latest_movies = Movie.map((movie)=>{
         return <img onClick = {()=>{
+            const getKey = JSON.parse(localStorage.getItem("watching"));
             localStorage.setItem("categories",JSON.stringify(movie.category));
             //open link where you can see your movie in 0 payment
             if(movie.path!=="xyz"){
+                if(getKey!==null){
+                    localStorage.setItem("watching",JSON.stringify([...getKey,movie.id]));
+                }else{
+                    localStorage.setItem("watching",JSON.stringify([movie.id]));
+                }
                 window.open(movie.path,"_blank")
+                
             }else{
                 alert("Movie not found");
             }
