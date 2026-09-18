@@ -5,6 +5,14 @@ const ContinueWatch = () => {
     const [watchingLIST,setWathingList] = useState([]);
     const [iswatched,setWathed] = useState(false);
     const ref = useRef(null);
+    let leftBtn = useRef(null);
+    let rightBtn = useRef(null);
+
+    if(watchingLIST.length<8&&watchingLIST.length!==0){
+        leftBtn.current.style.display = "none";
+        rightBtn.current.style.display = "none";
+    }
+
 
     const scroll = (scrollByNum)=>{
         if(ref.current){
@@ -74,11 +82,11 @@ const ContinueWatch = () => {
         <div className="relative w-full p-3 md:px-25 flex items-center justify-around">
         <div className=" p-2 w-full flex items-center justify-around flex-col gap-2">
             <ul className="px-3 md:text-2xl w-full text-start text-white font-bold list-disc"><li>Continue watching</li></ul>
-            <div ref={ref} className="mask-[linear-gradient(to_right,transparent_0%,black_5%_95%,transparent_100%)] [&::-webkit-scrollbar]:hidden w-full flex items-center justify-around flex-row gap-2 p-2 overflow-x-auto ">
+            <div ref={ref} className="mask-[linear-gradient(to_right,transparent_0%,black_5%_95%,transparent_100%)] [&::-webkit-scrollbar]:hidden w-full flex items-center  flex-row gap-2 p-2 overflow-x-auto ">
                 {...watchingLIST}
             </div>
             {/* Left button which will scroll left after clicking */}
-            <div onClick={()=>{
+            <div ref={leftBtn} onClick={()=>{
                 scroll(-150)
             }} className="p-1 absolute top-[50%] md:flex hidden left-25  w-min rounded-2xl bg-white">
                 <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -86,11 +94,11 @@ const ContinueWatch = () => {
                 </svg>
             </div>
             {/* Right button to scroll right */}
-            <button onClick={()=>{
+            <button ref={rightBtn}  onClick={()=>{
                 scroll(150);
 
-            }} className="z-30 p-1 absolute top-[50%] md:flex hidden right-25 w-min rounded-2xl bg-white">
-                <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            }}  className="z-30 p-1 absolute top-[50%] md:flex hidden right-25 w-min rounded-2xl bg-white">
+                <svg  xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
             </button>

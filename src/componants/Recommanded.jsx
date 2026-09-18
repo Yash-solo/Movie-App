@@ -16,7 +16,7 @@ const Recommanded = () => {
     }
     
     useEffect(()=>{
-        if(movies.length<7){
+        if(movies.length<8){
             showBtnLeft.current.style.display = "none"
             showBtnRight.current.style.display = "none";
         }
@@ -75,7 +75,7 @@ const Recommanded = () => {
      <div className="relative w-full p-3 md:px-25 flex justify-around items-center ">
         <div className=" w-full p-2 flex flex-col gap-2  ">
             <ul className="text-white px-3 list-disc text-[15px] font-bold md:text-xl"><li>Recommanded for you:- </li></ul>
-            <div ref = {ref} className="mask-[linear-gradient(to_right,transparent_0%,black_5%_95%,transparent_100%)] flex [&::-webkit-scrollbar]:hidden overflow-x-auto items-center justify-around gap-3">
+            <div ref = {ref} className="mask-[linear-gradient(to_right,transparent_0%,black_5%_95%,transparent_100%)] flex [&::-webkit-scrollbar]:hidden overflow-x-auto items-center gap-3">
                 {...movies}
             </div>
             {/* Left button which will scroll left after clicking */}
