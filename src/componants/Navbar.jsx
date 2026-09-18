@@ -2,6 +2,7 @@ import "./style.css"
 import React from 'react'
 import { useState } from "react"
 import videoCam from "/photos/video-camera (1).png"
+import { Link } from "react-router-dom"
 const Navbar = () => {
     const [isOpen ,setOpen] = useState(false);
   return (
@@ -23,19 +24,19 @@ const Navbar = () => {
                         <span className={`h-0.5 w-5 transform tranistion-all duration-150 ease-in-out border ${isOpen?"-rotate-45 -translate-y-0.5":""} border-white`}></span>
                     </div>
                     <ul className="hidden md:flex items-center justify-around gap-5">
-                        <li>Faviorate</li>
-                        <li>Saved</li>
-                        <li>History</li>
-                        <li>Service</li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/Fav">Faviorate</Link></li>
+                        <li><Link to="/Saved">Saved</Link></li>
+                        <li><Link to="/History">History</Link></li>
                     </ul>
                 </div>
                 <div className={`sidebar  md:hidden w-full p-5 h-1/2 backdrop-blur-[5px] absolute bg-[rgba(0,0,0,0.4)] ${isOpen?"flex items-end justify-end flex-col":"hidden"} z-30 top-15 `}>
                     <ul className="w-full flex flex-col items-center justify-around gap-5">
                         
-                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2">Faviorate</li>
-                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2">Saved</li>
-                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2">History</li>
-                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2">Service</li>
+                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/">Home</Link></li>
+                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/Fav">Faviorate</Link></li>
+                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/Saved">Saved</Link></li>
+                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/History">History</Link></li>
                     </ul>
                 </div>
             </div>
