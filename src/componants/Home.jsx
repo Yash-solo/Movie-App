@@ -3,6 +3,7 @@ import SearchBar from "./Search.jsx"
 import Latest from './Latest.jsx'
 import Recommanded from './Recommanded.jsx'
 import ContinueWatch from './ContinueWatch.jsx'
+import About from './About.jsx'
 const Home = () => {
   return (
     <>
@@ -11,6 +12,7 @@ const Home = () => {
       <Latest/>
       <Recommanded/>
       <ContinueWatch/>
+      <About/>
     </>
   )
 }
