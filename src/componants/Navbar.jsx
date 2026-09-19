@@ -25,8 +25,8 @@ const Navbar = () => {
                     </div>
                     <ul className="hidden md:flex items-center justify-around gap-5">
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/Fav">Faviorate</Link></li>
-                        <li><Link to="/Saved">Saved</Link></li>
+                        <li><Link to="/Fav">TV Series</Link></li>
+                        <li><Link to="/Saved">Movies</Link></li>
                         <li><Link to="/History">History</Link></li>
                     </ul>
                 </div>
@@ -34,8 +34,8 @@ const Navbar = () => {
                     <ul className="w-full flex flex-col items-center justify-around gap-5">
 
                         <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/">Home</Link></li>
-                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/Fav">Faviorate</Link></li>
-                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/Saved">Saved</Link></li>
+                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/Fav">TV Series</Link></li>
+                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/Saved">Movies</Link></li>
                         <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/History">History</Link></li>
                     </ul>
                 </div>
