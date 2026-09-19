@@ -1,1 +1,15 @@
 @import "tailwindcss";
+.fadeInClass{
+    animation:FadeIn both;
+    animation-timeline: view(50% 10%);
+}
+@keyframes FadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

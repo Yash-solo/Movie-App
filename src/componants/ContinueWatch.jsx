@@ -79,7 +79,7 @@ const ContinueWatch = () => {
     const fakeTemplate = ("")
 
     const realTemplate = (
-        <div className="relative w-full p-3 md:px-25 flex items-center justify-around">
+        <div className="fadeInClass relative w-full p-3 md:px-25 flex items-center justify-around">
         <div className=" p-2 w-full flex items-center justify-around flex-col gap-2">
             <ul className="px-3 md:text-2xl w-full text-start text-white font-bold list-disc"><li>Continue watching</li></ul>
             <div ref={ref} className="mask-[linear-gradient(to_right,transparent_0%,black_5%_95%,transparent_100%)] [&::-webkit-scrollbar]:hidden w-full flex items-center  flex-row gap-2 p-2 overflow-x-auto ">

@@ -61,7 +61,7 @@ const Latest = () => {
 
     //main page
   return (
-    <div className="w-full p-3 flex items-center justify-around">
+    <div className="fadeInClass w-full p-3 flex items-center justify-around">
       <div className="relative flex flex-col w-full md:px-26 px-3  gap-1 ">
         <ul className="text-white list-disc text-[15px] font-bold md:text-xl"><li>Latest Movies:- </li></ul>
         <div ref = {ref} className="mask-[linear-gradient(to_right,transparent_0%,white_3%_97%,transparent_100%)] w-full  [&::-webkit-scrollbar]:hidden overflow-x-auto flex flex-row gap-2 items-center justify-around p-1">
