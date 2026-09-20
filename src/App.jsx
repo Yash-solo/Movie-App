@@ -3,8 +3,8 @@ import './App.css'
 
 
 import Navbar from './componants/Navbar.jsx'
-import Faviorate from './componants/Faviorate.jsx'
-import Saved from './componants/Saved.jsx'
+import TV from './componants/TV.jsx'
+import Movies from './componants/Movies.jsx'
 import History from './componants/History.jsx'
 import { BrowserRouter, Routes , Route } from 'react-router-dom'
 import Home from './componants/Home.jsx'
@@ -17,8 +17,8 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path='/'element ={<Home/>}/>
-          <Route path='/Fav' element={<Faviorate/>}/>
-          <Route path='/Saved' element={<Saved/>}/>
+          <Route path='/Fav' element={<TV/>}/>
+          <Route path='/Saved' element={<Movies/>}/>
           <Route path='/History' element={<History/>}/>
         </Routes>
       </BrowserRouter>
