@@ -1,8 +1,7 @@
 import './App.css'
 
 
-
-import Navbar from './componants/Navbar.jsx'
+import HeroSection from './componants/HeroSection.jsx'
 import TV from './componants/TV.jsx'
 import Movies from './componants/Movies.jsx'
 import History from './componants/History.jsx'
@@ -14,7 +13,7 @@ function App() {
     <>
 
       <BrowserRouter basename='/Movie-App/'>
-        <Navbar/>
+        <HeroSection/>
         <Routes>
           <Route path='/'element ={<Home/>}/>
           <Route path='/Fav' element={<TV/>}/>

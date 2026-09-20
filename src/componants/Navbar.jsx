@@ -7,8 +7,8 @@ const Navbar = () => {
     const [isOpen ,setOpen] = useState(false);
   return (
     <>
-        <div className=" w-ful p-3 sticky top-2 z-1000 md:px-25 flex items-center justify-center">
-            <div className="text-white bg-[rgb(17,17,17)] flex items-center justify-around rounded-2xl  w-full p-2 border border-[#ddd]">
+        <div className=" w-ful p-3 md:static sticky top-2 z-1000 md:px-25 flex items-center justify-center">
+            <div className="text-white z-50 md:bg-[rgba(0,0,0,0)] bg-[rgba(0,0,0,0.3)] md:border-none border border-[#ddd] flex items-center justify-between rounded-2xl  w-full p-2 ">
                 <div className="flex items-center justify-around gap-1 ">
                     <img className="h-5 md:h-7"src={videoCam} alt="" />
                     <h1 className="md:text-2xl text-[20px] font-bold">Daily.Movies</h1>
