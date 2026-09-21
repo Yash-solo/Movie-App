@@ -1,29 +1,34 @@
 import "./style.css"
-import Navbar from "./Navbar"
-import React from 'react'
-
+import Navbar from "./Navbar.jsx"
 const HeroSection = () => {
   return (
-    <div className="relative w-full bg-[url('./photos/herosection.png')] bg-repeat-round md:bg-no-repeat bg-cover md:bg-contain h-80 md:h-[42vh] lg:bg-cover lg:h-screen">
-      <div className="h-full absolute w-full bg-[rgba(0,0,0,0.3)]"></div>
+    <>
       <Navbar/>
-      <div className="md:h-100 h-50 flex flex-col gap-1 md:gap-2 items-start justify-end py-10 md:px-0 px-5 w-100 md:w-120 absolute bottom-0 md:left-25">
-        <h1 className="font-semibold  text-lg md:text-5xl text-gray-100 font-serif tracking-[25px] md:tracking-[55px]">KALKI</h1>
-        <p className="font-semibold text-[8px] md:text-lg text-gray-100 font-serif tracking-[10px]">== 2898 AD ==</p>
-        <ul className="flex text-white md:text-lg text-[8px] items-center justify-start gap-10">
-            <li>⭐8.1/10   |</li>
-            <li>2024   |</li>
-            <li> Sci-Fi </li>
-            <li className="list-disc">Action </li>
-            <li className="list-disc"> Adventure</li>
-        </ul>
-        <p className="md:w-full text-[10px] w-1/2 text-gray-200">atque qui quas maxime, expedita dolorum quisquam, voluptate sapiente velit dolor tempora consectetur nihil ipsum.</p>
-        <div className="flex item-center justify-start gap-3 ">
-            <button className="p-2 md:px-15 rounded-[10px] bg-yellow-200 ">Watch Now</button>
-            <button className="p-2 text-white bg-[rgba(0,0,0,0.2)] md:px-15 rounded-[10px] border border-[#ddd]">Add Watch Later</button>
+      <div className="w-full p-3 md:p-10 md:px-25 py-5 flex items-center justify-around">
+        <div className="bg-[rgba(255,255,255,0.1)] shadow-[0px_5px_10px_rgba(255,255,255,0.1)] border border-[#727171] rounded-3xl overflow-hidden flex itmes-center gap-1 justify-around flex-col">
+          <img className="object-cover" src="./photos/herosection.png" alt="" />
+          <div className="px-7 p-2 ">
+            <h1 className="text-3xl w-full text-center md:text-5xl text-white  tracking-[10px] font-serif">Kalki</h1>
+            <p className=" text-[#ddd] text-[12px] text-center">== 2898 AD ==</p>
+            
+            <ul className="flex text-white md:text-lg text-[8px] items-center justify-start gap-10">
+              <li>⭐8.1/10   |</li>
+              <li>2024   |</li>
+              <li> Sci-Fi </li>
+              <li className="list-disc">Action </li>
+              <li className="list-disc"> Adventure</li>
+            </ul>
+
+            <div className="flex p-2 gap-2 items-center justify-around">
+              <button className="font-bold text-[15px] md:px-7 cursor-pointer md:text-lg rounded-2xl px-4 p-2 text-gray-900 bg-amber-200 ">&#9655; Watch Now</button>
+              <button className="font-bold rounded-2xl md:px-7 cursor-pointer md:text-lg  border border-[#ddd] px-3 text-[15px] p-2 text-[#ddd] bg-none">+ Add to my List</button>
+
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
