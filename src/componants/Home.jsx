@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import SearchBar from "./Search.jsx"
 import Latest from './Latest.jsx'
 import Recommanded from './Recommanded.jsx'
 import ContinueWatch from './ContinueWatch.jsx'
 import About from './About.jsx'
 import HeroSection from './HeroSection.jsx'
-
+import { motion } from 'framer-motion'
 const Home = () => {
   const [isLoder,setLoder] = useState(true);
 
@@ -22,7 +22,7 @@ const Home = () => {
     </>
   )
   const RealTemplate = (
-    <>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}}exit={{opacity:0}}>
       <HeroSection MovieName="KALKI"aboutMovie="The story follows a modern avatar of Vishnu, inspired by Hindu mythology, who arrives on Earth to protect the world from evil forces"  ShortNote="== 2898AD ==" heroMovie="./photos/herosection.png"/>
       <h1 className='text-2xl text-white font-bold md:text-4xl font-mono w-full text-center'>Home</h1>
       <SearchBar/>
@@ -30,7 +30,7 @@ const Home = () => {
       <Recommanded/>
       <ContinueWatch/>
       <About/>
-    </>
+    </motion.div>
   )
   return (
     <>
