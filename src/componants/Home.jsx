@@ -24,7 +24,7 @@ const Home = () => {
   const RealTemplate = (
     <>
       <HeroSection/>
-      <h1 className='text-2xl text-white font-bold font-serif w-full text-center'>HomePage</h1>
+      <h1 className='text-2xl text-white font-bold md:text-4xl font-mono w-full text-center'>Home</h1>
       <SearchBar/>
       <Latest/>
       <Recommanded/>
