@@ -3,7 +3,7 @@ import Navbar from "./Navbar.jsx"
 const HeroSection = () => {
   return (
     <>
-      <div className="w-full md:mask-[linear-gradient(to_right,transparent_0%,black_5%_95%,transparent_100%)]  md:relative md:-top-25 md:p-0 md:py-0 p-3  py-5 flex items-center justify-around">
+      <div className="relative w-full md:mask-[linear-gradient(to_right,transparent_0%,black_5%_95%,transparent_100%)]  md:relative md:-top-25 md:p-0 md:py-0 p-3  py-5 flex items-center justify-around">
         <div className="h-full w-full bg-[rgba(0,0,0,0.2)] md:bg-[rgba(0,0,0,0.3)] absolute"></div>
         
         {/* For dekstop Devices */}
