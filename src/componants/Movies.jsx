@@ -1,10 +1,11 @@
 import React from 'react'
+import HeroSection from './HeroSection'
 
 const Movie = () => {
   return (
-    <div className=' flex flex-col items-center justify-around w-full bg-amber-400 p-2'>
-      <h1 className='text-2xl text-white font-bold font-serif w-full text-center'>Here is your  Movies</h1>
-    </div>
+    <>
+      <HeroSection heroMovie="./photos/heroOf Movie.png" MovieName = "KANTARA"/>
+    </>
   )
 }
 

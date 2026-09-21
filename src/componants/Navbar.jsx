@@ -1,8 +1,8 @@
 import "./style.css"
-import React from 'react'
 import { useState } from "react"
 import videoCam from "/photos/video-camera (1).png"
 import { Link } from "react-router-dom"
+
 const Navbar = () => {
     const [isOpen ,setOpen] = useState(false);
   return (

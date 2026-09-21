@@ -23,7 +23,7 @@ const Home = () => {
   )
   const RealTemplate = (
     <>
-      <HeroSection/>
+      <HeroSection MovieName="KALKI"  heroMovie="./photos/herosection.png"/>
       <h1 className='text-2xl text-white font-bold md:text-4xl font-mono w-full text-center'>Home</h1>
       <SearchBar/>
       <Latest/>
