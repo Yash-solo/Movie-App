@@ -3,7 +3,7 @@ import React from 'react'
 
 const SearchBar = () => {
   return (
-    <div className="fadeInClass w-full flex items-center justify-center p-3 ">
+    <div className=" w-full flex items-center justify-center p-3 ">
       <div className="flex flex-row rounded-2xl md:w-1/3 w-3/4 p-1 items-center justify-around gap-2 bg-white">
         <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="11" cy="11" r="8"></circle>

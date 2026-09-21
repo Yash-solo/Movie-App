@@ -7,13 +7,14 @@ import Movies from './componants/Movies.jsx'
 import History from './componants/History.jsx'
 import { BrowserRouter, Routes , Route } from 'react-router-dom'
 import Home from './componants/Home.jsx'
+import Navbar from './componants/Navbar.jsx'
 function App() {
 
   return (
     <>
 
       <BrowserRouter basename='/Movie-App/'>
-        <HeroSection/>
+        <Navbar/>
         <Routes>
           <Route path='/'element ={<Home/>}/>
           <Route path='/Fav' element={<TV/>}/>

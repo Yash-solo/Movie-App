@@ -4,6 +4,8 @@ import Latest from './Latest.jsx'
 import Recommanded from './Recommanded.jsx'
 import ContinueWatch from './ContinueWatch.jsx'
 import About from './About.jsx'
+import HeroSection from './HeroSection.jsx'
+
 const Home = () => {
   const [isLoder,setLoder] = useState(true);
 
@@ -21,7 +23,8 @@ const Home = () => {
   )
   const RealTemplate = (
     <>
-    <h1 className='text-2xl text-white font-bold font-serif w-full text-center'>HomePage</h1>
+      <HeroSection/>
+      <h1 className='text-2xl text-white font-bold font-serif w-full text-center'>HomePage</h1>
       <SearchBar/>
       <Latest/>
       <Recommanded/>
