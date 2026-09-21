@@ -8,7 +8,7 @@ const HeroSection = (props) => {
         {/* For dekstop Devices */}
         <div className="text-white hidden  absolute lg:gap-3 lg:bottom-20 bottom-5 gap-1 md:flex flex-col px-25">  
           <h1 className="text-5xl font-semibold lg:text-7xl lg:tracking-[40px] tracking-[30px]">{props.MovieName}</h1>
-          <p className="tracking-[10px]">== 2898 AD ==</p>
+          <p className="tracking-[10px]">{props.ShortNote}</p>
           <ul className="text-sm flex gap-5">
             <li>⭐8.1/10   |</li>
             <li>2024   |</li>
@@ -16,10 +16,10 @@ const HeroSection = (props) => {
             <li className="list-disc">Action </li>
             <li className="list-disc"> Adventure</li>
           </ul>
-          <p className="text-[#ddd] font-serif lg:w-1/2">The story follows a modern avatar of Vishnu, inspired by Hindu mythology, who arrives on Earth to protect the world from evil forces</p>
+          <p className="text-[#ddd] font-serif lg:w-1/2">{props.aboutMovie}</p>
           <div className="flex gap-7">
-            <button className="p-2 px-7 cursor-pointer bg-red-500">Watch Now</button>
-            <button className="p-2 px-7 border cursor-pointer border-[#ddd]">Add Watch Later</button>
+            <button className="p-2 px-7 cursor-pointer flex bg-red-500">&#9655; Watch Now</button>
+            <button className="p-2 px-7 border cursor-pointer border-[#ddd]">+ Add Watch Later</button>
           </div>
         </div>
 
@@ -28,7 +28,7 @@ const HeroSection = (props) => {
           <img className="object-cover " src={props.heroMovie} alt="" />
           <div className="px-7 p-2 md:hidden">
             <h1 className="text-3xl w-full z-30 text-center md:text-5xl text-white  tracking-[10px] font-serif">{props.MovieName}</h1>
-            <p className=" text-[#ddd] text-[12px] text-center">== 2898 AD ==</p>
+            <p className=" text-[#ddd] text-[12px] text-center">{props.ShortNote}</p>
             
             <ul className="flex text-white z-30 md:text-lg text-[8px] items-center justify-start gap-10">
               <li>⭐8.1/10   |</li>

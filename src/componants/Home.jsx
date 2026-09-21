@@ -23,7 +23,7 @@ const Home = () => {
   )
   const RealTemplate = (
     <>
-      <HeroSection MovieName="KALKI"  heroMovie="./photos/herosection.png"/>
+      <HeroSection MovieName="KALKI"aboutMovie="The story follows a modern avatar of Vishnu, inspired by Hindu mythology, who arrives on Earth to protect the world from evil forces"  ShortNote="== 2898AD ==" heroMovie="./photos/herosection.png"/>
       <h1 className='text-2xl text-white font-bold md:text-4xl font-mono w-full text-center'>Home</h1>
       <SearchBar/>
       <Latest/>
