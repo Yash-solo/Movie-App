@@ -19,7 +19,7 @@ const HeroSection = (props) => {
           </ul>
           <p className="text-[#ddd] font-serif lg:w-1/2">{props.aboutMovie}</p>
           <div className="flex gap-7">
-            <button className="p-2 px-7 cursor-pointer flex bg-red-500">&#9655; Watch Now</button>
+            <button onClick={()=>window.open(props.path,"_blank")} className="p-2 px-7 cursor-pointer flex bg-red-500">&#9655; Watch Now</button>
             <button className="p-2 px-7 border cursor-pointer border-[#ddd]">+ Add Watch Later</button>
           </div>
         </div>
@@ -40,7 +40,7 @@ const HeroSection = (props) => {
             </ul>
 
             <div className="flex p-2 gap-2 items-center justify-around">
-              <button className="font-bold z-30 text-[15px] md:px-7 cursor-pointer md:text-lg rounded-2xl px-4 p-2 text-gray-900 bg-amber-200 ">&#9655; Watch Now</button>
+              <button onClick={()=>window.open(props.path,"_blank")} className="font-bold z-30 text-[15px] md:px-7 cursor-pointer md:text-lg rounded-2xl px-4 p-2 text-gray-900 bg-amber-200 ">&#9655; Watch Now</button>
               <button className="font-bold z-30 rounded-2xl md:px-7 cursor-pointer md:text-lg  border border-[#ddd] px-3 text-[15px] p-2 text-[#ddd] bg-none">+ Add to my List</button>
 
             </div>

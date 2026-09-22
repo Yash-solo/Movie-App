@@ -65,7 +65,7 @@ const ContinueWatch = () => {
                                 alert("Movie not found");
                             }
                         }
-                        } key = {nanoid()} className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={movie.picture} alt="MoviePic" />
+                        } key = {nanoid()} className={`cursor-pointer rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={movie.picture} alt="MoviePic" />
                     })
                     setWathingList(watchingList)
                 }

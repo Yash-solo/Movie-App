@@ -47,7 +47,7 @@ const ActionxAdv = () => {
                     }else{
                         alert("Movie not found");
                     }
-                }} className="h-50 rounded-2xl shrink-0" src={movie.picture} alt="Movie" />
+                }} className="cursor-pointer h-50 rounded-2xl shrink-0" src={movie.picture} alt="Movie" />
         })
 
   return (
