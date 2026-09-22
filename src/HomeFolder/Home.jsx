@@ -6,6 +6,7 @@ import ContinueWatch from './ContinueWatch.jsx'
 import About from '../componants/About.jsx'
 import HeroSection from '../componants/HeroSection.jsx'
 import { motion } from 'framer-motion'
+import Top10 from '../MovieFolder/Top10.jsx'
 const Home = () => {
   const [isLoder,setLoder] = useState(true);
 
@@ -29,6 +30,7 @@ const Home = () => {
       <Latest/>
       <Recommanded/>
       <ContinueWatch/>
+      <Top10/>
       <About/>
     </motion.div>
   )
