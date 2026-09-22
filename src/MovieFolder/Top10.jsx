@@ -1,3 +1,4 @@
+import { img } from 'framer-motion/client';
 import React, { useEffect } from 'react'
 import { useRef } from 'react'
 const Top10 = () => {
@@ -13,9 +14,12 @@ const Top10 = () => {
 
     useEffect(()=>{
         async function getTopMovies(){
-            const response = await fetch(`src/MovieFolder/TopMovies.json`)
+            const response = await fetch(`${import.meta.env.BASE_URL}src/MovieFolder/TopMovies.json`)
             const data = await response.json();
-            console.log(data[0])
+            const TopMovies = data.map((movie)=>{
+                return <img src={movie.picture} alt="" />
+            })
+            console.log(TopMovies);
         }
         getTopMovies();
     },[])
