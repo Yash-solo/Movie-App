@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRef } from 'react'
 const Top10 = () => {
     const ref = useRef(null);
@@ -10,6 +10,17 @@ const Top10 = () => {
             })
         }
     }
+
+    useEffect(()=>{
+        async function getTopMovies(){
+            const response = await fetch(`src/MovieFolder/TopMovies.json`)
+            const data = await response.json();
+            console.log(data[0])
+        }
+        getTopMovies();
+    },[])
+
+
 
   return (
     <div className='relative w-full flex-col  md:px-25 p-3 flex  '>
