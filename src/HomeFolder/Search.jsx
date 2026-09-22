@@ -72,7 +72,7 @@ const SearchBar = () => {
   const realSearch=(
     <>
       <div className="w-full md:px-25 p-2 flex items-center justify-around">
-        <div className="h-full w-full rounded-3xl border px-10 border-[#9b9b9b] p-3 grid-cols-2 grid md:grid-cols-4 lg:grid-cols-7 gap-3 bg-[rgba(255,255,255,0.1)]">
+        <div className="h-full w-full rounded-3xl border px-10 border-[#9b9b9b] p-3 grid-cols-3 grid md:grid-cols-4 lg:grid-cols-7 gap-3 bg-[rgba(255,255,255,0.1)]">
             {newList}
         </div>
       </div>
@@ -95,7 +95,7 @@ const SearchBar = () => {
       </div>
 
       {/* Search Movies will render here */}
-      {newList.length!==0?realSearch:fakeSearch}
+      {searchMovie !== "" && newList.length!==0 ?realSearch:fakeSearch}
     </>
   )
 }
