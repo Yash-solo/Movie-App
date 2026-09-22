@@ -14,5 +14,70 @@
         "iswatching":false,
         "category":["Patriotic War Drama","action"],
         "path":"xyz"
+    },
+    {
+        "id":2,
+        "MovieName":"ALPHA",
+        "picture":"./photos/alpha.jpg",
+        "iswatching":false,
+        "category":["action","thriller"],
+        "path":"https://net77.cc/home"
+    },
+    {
+        "id":3,
+        "MovieName":"Spider Man Brand",
+        "picture":"./photos/spiderman brand.jpg",
+        "category":["action","adventure","sci-fi"],
+        "iswatching":false,
+        "path":"https://net77.cc/home"
+    },
+    {
+        "id":4,
+        "MovieName":"RRR",
+        "picture":"./photos/rrr.jpg",
+        "iswatching":false,
+        "category":["action","adventure","sci-fi","drama","historical fiction"],
+        "path":"https://net77.cc/home"
+    },
+    {
+        "id":5,
+        "MovieName":"Kalki 2898 AD",
+        "picture":"./photos/kalki.jpg",
+        "iswatching":false,
+        "category":["sci-fi","dystopian","epic","science","fiction","action","adventure"],
+        "path":"https://www.youtube.com/watch?v=ed7DxXQgTKk&t=10216s"
+    },
+    {
+        "id":6,
+        "MovieName":"VVAAN",
+        "picture":"./photos/vvan.jpg",
+        "iswatching":false,
+        "category":["action","mystery","thriller"],
+        "path":"https://net77.cc/home"
+    },
+    {
+        "id":7,
+        "MovieName":"Kalki (2019)",
+        "picture":"./photos/Kalki_film_poster.jpg",
+        "iswatching":false,
+        "category":["action","Mystery","Investigative","thriller"],
+        "path":"https://net77.cc/home"
+    },
+    {
+        "id":8,
+        "MovieName":"DF",
+        "picture":"./photos/df.jpg",
+        "iswatching":false,
+        "category":["action","crime","drama"],
+        "path":"https://net77.cc/home"
+    },
+    {
+        "id":9,
+        "MovieName":"Cog",
+        "picture":"./photos/coy.jpg",
+        "category":["action","thriller"],
+        "iswatching":false,
+        "path":"https://net77.cc/home"
     }
+
 ]
