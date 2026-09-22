@@ -1,10 +1,18 @@
 [
     {
-        "id":1,
+        "id":0,
         "MovieName":"Hanuman ansh",
         "picture":"./photos/hanuman ansh.jpg",
         "iswatching":false,
         "category":["devotional drama","history","biography","devotional","drama","spiritual biopic","biographical film"],
         "path":"https://www.facebook.com/sanjeev.kumar.81089/videos/hanuman-ansh-full-movi/2013226039341542/"
+    },
+    {
+        "id":1,
+        "MovieName":"Matrabhumi",
+        "picture":"./photos/matrabhumi.jpg",
+        "iswatching":false,
+        "category":["Patriotic War Drama","action"],
+        "path":"xyz"
     }
 ]

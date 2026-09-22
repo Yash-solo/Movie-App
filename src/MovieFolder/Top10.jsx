@@ -1,7 +1,8 @@
 import { img } from 'framer-motion/client';
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import { useRef } from 'react'
 const Top10 = () => {
+    const [topMovies,setTopMovies] = useState([]);
     const ref = useRef(null);
     const scroll = (scrollNum)=>{
         if(ref.current){
@@ -17,9 +18,31 @@ const Top10 = () => {
             const response = await fetch(`${import.meta.env.BASE_URL}/data/TopMovies.json`)
             const data = await response.json();
             const TopMovies = data.map((movie)=>{
-                return <img src={movie.picture} alt="Moviepic" />
+                return (
+                    <>
+                        <div className='relative shrink-0'>
+                            <h1 className='absolute bottom-0 -left-6 text-8xl text-[rgb(17,17,17)] font-bold [-webkit-text-stroke:1px_#ddd]'>{movie.id+1}</h1>
+                            <img onClick = {()=>{
+                                const getKey = JSON.parse(localStorage.getItem("watching"));
+                                localStorage.setItem("categories",JSON.stringify(movie.category));
+                                //open link where you can see your movie in 0 payment
+                                if(movie.path!=="xyz"){
+                                    if(getKey!==null){
+                                        localStorage.setItem("watching",JSON.stringify([...getKey,movie.MovieName]));
+                                    }else{
+                                        localStorage.setItem("watching",JSON.stringify([movie.MovieName]));
+                                    }
+                                    window.open(movie.path,"_blank")
+                                    
+                                }else{
+                                    alert("Movie not found");
+                                }
+                            }} className='h-50   rounded-2xl cursor-pointer' src={movie.picture} alt="MovieName" />
+                        </div>
+                    </>
+                )
             })
-            console.log(TopMovies);
+            setTopMovies(TopMovies);
         }
         getTopMovies();
     },[])
@@ -30,46 +53,7 @@ const Top10 = () => {
     <div className='relative w-full flex-col  md:px-25 p-3 flex  '>
         <h1 className='text-lg md:text-2xl lg:text-3xl text-white'>Top 10 Movies on Netflix</h1>
       <div ref={ref} className='relative [&::-webkit-scrollbar]:hidden overflow-x-auto flex mask-[linear-gradient(to_right,transparent_0%,black_10%_90%,transparent_100%)] flex-row items-center gap-10 w-full   p-5'>
-        <div className='relative shrink-0'>
-            <h1 className='absolute bottom-0 -left-6 text-8xl text-[rgb(17,17,17)] font-bold [-webkit-text-stroke:1px_#ddd]'>1</h1>
-            <img className='h-50   rounded-2xl cursor-pointer' src="./photos/hanuman ansh.jpg" alt="" />
-        </div>
-        <div className='relative shrink-0'>
-            <h1 className='absolute bottom-0 -left-6 text-8xl text-[rgb(17,17,17)] font-bold [-webkit-text-stroke:1px_#ddd]'>2</h1>
-            <img className='h-50   rounded-2xl cursor-pointer' src="./photos/hanuman ansh.jpg" alt="" />
-        </div>
-        <div className='relative shrink-0'>
-            <h1 className='absolute bottom-0 -left-6 text-8xl text-[rgb(17,17,17)] font-bold [-webkit-text-stroke:1px_#ddd]'>3</h1>
-            <img className='h-50   rounded-2xl cursor-pointer' src="./photos/hanuman ansh.jpg" alt="" />
-        </div>
-        <div className='relative shrink-0'>
-            <h1 className='absolute bottom-0 -left-6 text-8xl text-[rgb(17,17,17)] font-bold [-webkit-text-stroke:1px_#ddd]'>4</h1>
-            <img className='h-50   rounded-2xl cursor-pointer' src="./photos/hanuman ansh.jpg" alt="" />
-        </div>
-        <div className='relative shrink-0'>
-            <h1 className='absolute bottom-0 -left-6 text-8xl text-[rgb(17,17,17)] font-bold [-webkit-text-stroke:1px_#ddd]'>5</h1>
-            <img className='h-50   rounded-2xl cursor-pointer' src="./photos/hanuman ansh.jpg" alt="" />
-        </div>
-        <div className='relative shrink-0'>
-            <h1 className='absolute bottom-0 -left-6 text-8xl text-[rgb(17,17,17)] font-bold [-webkit-text-stroke:1px_#ddd]'>6</h1>
-            <img className='h-50   rounded-2xl cursor-pointer' src="./photos/hanuman ansh.jpg" alt="" />
-        </div>
-        <div className='relative shrink-0'>
-            <h1 className='absolute bottom-0 -left-6 text-8xl text-[rgb(17,17,17)] font-bold [-webkit-text-stroke:1px_#ddd]'>7</h1>
-            <img className='h-50   rounded-2xl cursor-pointer' src="./photos/hanuman ansh.jpg" alt="" />
-        </div>
-        <div className='relative shrink-0'>
-            <h1 className='absolute bottom-0 -left-6 text-8xl text-[rgb(17,17,17)] font-bold [-webkit-text-stroke:1px_#ddd]'>8</h1>
-            <img className='h-50   rounded-2xl cursor-pointer' src="./photos/hanuman ansh.jpg" alt="" />
-        </div>
-        <div className='relative shrink-0'>
-            <h1 className='absolute bottom-0 -left-6 text-8xl text-[rgb(17,17,17)] font-bold [-webkit-text-stroke:1px_#ddd]'>9</h1>
-            <img className='h-50   rounded-2xl cursor-pointer' src="./photos/hanuman ansh.jpg" alt="" />
-        </div>
-        <div className='relative shrink-0'>
-            <h1 className='absolute bottom-0 -left-6 text-8xl text-[rgb(17,17,17)] font-bold [-webkit-text-stroke:1px_#ddd]'>10</h1>
-            <img className='h-50   rounded-2xl cursor-pointer' src="./photos/hanuman ansh.jpg" alt="" />
-        </div>
+        {topMovies}
       </div>
       {/* Left button which will scroll left after clicking */}
             <div  onClick={()=>{

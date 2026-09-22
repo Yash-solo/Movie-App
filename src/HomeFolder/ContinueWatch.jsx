@@ -33,9 +33,9 @@ const ContinueWatch = () => {
                 setWathed(true);
                 //reduce the usablitily
                 const watchingId = [];
-                getKey.map((id)=>{
-                    if(!watchingId.includes(id)){
-                        watchingId.push(id);
+                getKey.map((movieName)=>{
+                    if(!watchingId.includes(movieName)){
+                        watchingId.push(movieName);
                     }
                 })
                 
@@ -45,7 +45,7 @@ const ContinueWatch = () => {
                     const data = await response.json();
         
                     const filtered_list = data.filter((movie)=>{
-                        return watchingId.includes(movie.id);
+                        return watchingId.includes(movie.MovieName);
                     })
                     //make movies pictures
                     const watchingList = filtered_list.map((movie)=>{
@@ -55,9 +55,9 @@ const ContinueWatch = () => {
                             //open link where you can see your movie in 0 payment
                             if(movie.path!=="xyz"){
                                 if(getKey!==null){
-                                    localStorage.setItem("watching",JSON.stringify([...getKey,movie.id]));
+                                    localStorage.setItem("watching",JSON.stringify([...getKey,movie.MovieName]));
                                 }else{
-                                    localStorage.setItem("watching",JSON.stringify([movie.id]));
+                                    localStorage.setItem("watching",JSON.stringify([movie.Movie]));
                                 }
                                 window.open(movie.path,"_blank")
                                 

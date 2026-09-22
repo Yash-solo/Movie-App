@@ -54,9 +54,9 @@ const Recommanded = () => {
 
                                 const getKey = JSON.parse(localStorage.getItem("watching"))
                                 if(getKey!==null){
-                                    localStorage.setItem("watching",JSON.stringify([...getKey,movie.id]));
+                                    localStorage.setItem("watching",JSON.stringify([...getKey,movie.MovieName]));
                                 }else{
-                                    localStorage.setItem("watching",JSON.stringify([movie.id]));
+                                    localStorage.setItem("watching",JSON.stringify([movie.MovieName]));
                                 }
                                 window.open(movie.path,"_blank")
                             }else{
