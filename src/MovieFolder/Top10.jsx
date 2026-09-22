@@ -57,7 +57,7 @@ const Top10 = () => {
       </div>
       {/* Left button which will scroll left after clicking */}
             <div  onClick={()=>{
-                scroll(-400)
+                scroll(-550)
             }} className="p-1 absolute top-[50%] md:flex hidden left-25  w-min rounded-2xl bg-white">
                 <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="15 18 9 12 15 6"></polyline>
@@ -65,7 +65,7 @@ const Top10 = () => {
             </div>
             {/* Right button to scroll right */}
             <button   onClick={()=>{
-                scroll(400);
+                scroll(550);
 
             }}  className="z-30 p-1 absolute top-[50%] md:flex hidden right-25 w-min rounded-2xl bg-white">
                 <svg  xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
