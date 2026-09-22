@@ -2,6 +2,7 @@ import React from 'react'
 import HeroSection from '../componants/HeroSection'
 import { motion } from 'framer-motion'
 import Top10 from "./Top10.jsx"
+import ActionxAdv from './ActionxAdv.jsx'
 const Movie = () => {
   return (
     <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
@@ -10,7 +11,7 @@ const Movie = () => {
         <h1 className='text-3xl text-[#ddd]'>See your Favorite Movies For Free From Any where</h1>
       </div>
       <Top10/>
-      
+      <ActionxAdv/>
     </motion.div>
   )
 }
