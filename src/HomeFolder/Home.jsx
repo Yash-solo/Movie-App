@@ -3,7 +3,7 @@ import SearchBar from "./Search.jsx"
 import Latest from './Latest.jsx'
 import Recommanded from './Recommanded.jsx'
 import ContinueWatch from './ContinueWatch.jsx'
-import About from './About.jsx'
+import About from '../componants/About.jsx'
 import HeroSection from '../componants/HeroSection.jsx'
 import { motion } from 'framer-motion'
 const Home = () => {

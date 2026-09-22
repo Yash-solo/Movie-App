@@ -20,7 +20,7 @@
         "MovieName":"Kalki 2898 AD",
         "picture":"./photos/kalki.jpg",
         "iswatching":false,
-        "category":["sci-fi","dystopian","epic","science","fiction","action","adventure"],
+        "category":["sci-fi","dystopian","epic","South movies","science","fiction","action","adventure"],
         "path":"https://www.youtube.com/watch?v=ed7DxXQgTKk&t=10216s"
     },
     {
@@ -28,7 +28,7 @@
         "MovieName":"Kalki (2019)",
         "picture":"./photos/Kalki_film_poster.jpg",
         "iswatching":false,
-        "category":["action","Mystery","Investigative","thriller"],
+        "category":["action","Mystery","South movies","Investigative","thriller"],
         "path":"https://net77.cc/home"
     },
     {
@@ -36,7 +36,7 @@
         "MovieName":"RRR",
         "picture":"./photos/rrr.jpg",
         "iswatching":false,
-        "category":["action","adventure","sci-fi","drama","historical fiction"],
+        "category":["action","adventure","South movies","sci-fi","drama","historical fiction"],
         "path":"https://net77.cc/home"
     },
     {
@@ -44,7 +44,7 @@
         "MovieName":"policeman",
         "picture":"./photos/sdf.jpg",
         "iswatching":false,
-        "category":["action","crime","drama"],
+        "category":["action","crime","South movies","drama"],
         "path":"https://net77.cc/home"
     },
     {
@@ -52,7 +52,7 @@
         "MovieName":"VVAAN",
         "picture":"./photos/vvan.jpg",
         "iswatching":false,
-        "category":["action","mystery","thriller"],
+        "category":["action","mystery","South movies","thriller"],
         "path":"https://net77.cc/home"
     },
     {

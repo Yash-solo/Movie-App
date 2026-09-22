@@ -1,8 +1,10 @@
 import React from 'react'
+import About from '../componants/About.jsx'
 import HeroSection from '../componants/HeroSection'
 import { motion } from 'framer-motion'
 import Top10 from "./Top10.jsx"
 import ActionxAdv from './ActionxAdv.jsx'
+import SouthSec from './SouthSec.jsx'
 const Movie = () => {
   return (
     <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
@@ -12,6 +14,8 @@ const Movie = () => {
       </div>
       <Top10/>
       <ActionxAdv/>
+      <SouthSec/>
+      <About/>
     </motion.div>
   )
 }
