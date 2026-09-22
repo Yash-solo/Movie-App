@@ -14,7 +14,7 @@ const Top10 = () => {
 
     useEffect(()=>{
         async function getTopMovies(){
-            const response = await fetch(`src/MovieFolder/TopMovies.json`)
+            const response = await fetch(`${import.meta.env.BASE_URL}/data/TopMovies.json`)
             const data = await response.json();
             const TopMovies = data.map((movie)=>{
                 return <img src={movie.picture} alt="Moviepic" />
