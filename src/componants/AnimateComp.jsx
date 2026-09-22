@@ -2,9 +2,9 @@ import { useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
 import { Routes , Route } from 'react-router-dom';
 import TV from '../componants/TV.jsx'
-import Movies from '../componants/Movies.jsx'
+import Movies from '../MovieFolder/Movies.jsx'
 import History from '../componants/History.jsx'
-import Home from '../componants/Home.jsx'
+import Home from '../HomeFolder/Home.jsx'
 const AnimateComp = () => {
     const location = useLocation();
   return (

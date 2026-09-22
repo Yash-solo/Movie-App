@@ -4,7 +4,7 @@ import Latest from './Latest.jsx'
 import Recommanded from './Recommanded.jsx'
 import ContinueWatch from './ContinueWatch.jsx'
 import About from './About.jsx'
-import HeroSection from './HeroSection.jsx'
+import HeroSection from '../componants/HeroSection.jsx'
 import { motion } from 'framer-motion'
 const Home = () => {
   const [isLoder,setLoder] = useState(true);

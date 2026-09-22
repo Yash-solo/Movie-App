@@ -90,7 +90,7 @@ const SearchBar = () => {
           </svg>
           <input className="focus:outline-0 w-full" onChange={(e)=>{
             handleChange(e);
-          }} type="text" placeholder="Search movie..."/>
+          }} type="text" placeholder="Search anything..."/>
         </div>
       </div>
 
