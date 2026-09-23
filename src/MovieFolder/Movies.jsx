@@ -1,4 +1,3 @@
-import React from 'react'
 import About from '../componants/About.jsx'
 import HeroSection from '../componants/HeroSection'
 import { motion } from 'framer-motion'
