@@ -43,7 +43,7 @@ const Movie = () => {
       }else{
           alert("Movie not found");
       }      
-    }} key={movie.id} picture={movie.picture} id={movie.id} MovieName={movie.MovieName}/>
+    }} path={movie.path} key={movie.id} picture={movie.picture} id={movie.id} MovieName={movie.MovieName}/>
   })
 
   return (
