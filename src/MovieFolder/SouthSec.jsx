@@ -30,7 +30,7 @@ const SouthSec = () => {
     updateList = updateList.reverse().slice(0,10);
     //choosing only movies that should rander
     const renderUpdate = updateList.map((movie)=>{
-        return <img onClick = {()=>{
+        return <img key={movie.id} onClick = {()=>{
                     const getKey = JSON.parse(localStorage.getItem("watching"));
                     localStorage.setItem("categories",JSON.stringify(movie.category));
                     //open link where you can see your movie in 0 payment

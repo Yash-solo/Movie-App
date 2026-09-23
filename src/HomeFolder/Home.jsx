@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(()=>{
     setTimeout(()=>{
       setLoder(false);
-    },300);
+    },500);
   },[])
   const ReloderTemplate = (
     <>

@@ -17,7 +17,7 @@ const ActionxAdv = () => {
     useEffect(()=>{
         //get action advanture movies
         async function getMovie(){
-            const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
+            const response = await fetch(`${import.meta.env.BASE_URL}data/movies.json`);
             const data = await response.json();
             setMoviesList(data);
         }
@@ -32,7 +32,7 @@ const ActionxAdv = () => {
     updateList = updateList.reverse().slice(0,10);
     //choosing only movies that should rander
     const renderUpdate = updateList.map((movie)=>{
-        return <img onClick = {()=>{
+        return <img key={movie.id} onClick = {()=>{
                     const getKey = JSON.parse(localStorage.getItem("watching"));
                     localStorage.setItem("categories",JSON.stringify(movie.category));
                     //open link where you can see your movie in 0 payment
