@@ -1,10 +1,9 @@
 import About from '../componants/About.jsx'
 import HeroSection from '../componants/HeroSection'
-import { motion, useReducedMotion, useScroll } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Top10 from "./Top10.jsx"
 import ActionxAdv from './ActionxAdv.jsx'
 import SouthSec from './SouthSec.jsx'
-import { nanoid } from 'nanoid'
 import { useRef , useEffect ,useState } from 'react'
 const Movie = () => {
   const ref = useRef(null);
@@ -22,29 +21,30 @@ const Movie = () => {
         //fetch data from anywhere
         const response = await fetch(`${import.meta.env.BASE_URL}/data/TopMovies.json`)
         const data = await response.json();
-        setTopMovies(data);
+
+        const TopMoviesNet = data.map((movie)=>{
+          return <Top10 onClick={()=>{
+            const getKey = JSON.parse(localStorage.getItem("watching"));
+            localStorage.setItem("categories",JSON.stringify(movie.category));
+            //open link where you can see your movie in 0 payment
+            if(movie.path!=="xyz"){
+                if(getKey!==null){
+                    localStorage.setItem("watching",JSON.stringify([...getKey,movie.MovieName]));
+                }else{
+                    localStorage.setItem("watching",JSON.stringify([movie.MovieName]));
+                }
+                window.open(movie.path,"_blank")
+                
+            }else{
+                alert("Movie not found");
+            }      
+          }} category = {movie.category} path={movie.path} key={movie.id} picture={movie.picture} id={movie.id} MovieName={movie.MovieName}/>
+        })
+        setTopMovies(TopMoviesNet);
     }
     getTopMovies();
   },[])
 
-  const TopMoviesNet = topMovies.map((movie)=>{
-    return <Top10 onClick={()=>{
-      const getKey = JSON.parse(localStorage.getItem("watching"));
-      localStorage.setItem("categories",JSON.stringify(movie.category));
-      //open link where you can see your movie in 0 payment
-      if(movie.path!=="xyz"){
-          if(getKey!==null){
-              localStorage.setItem("watching",JSON.stringify([...getKey,movie.MovieName]));
-          }else{
-              localStorage.setItem("watching",JSON.stringify([movie.MovieName]));
-          }
-          window.open(movie.path,"_blank")
-          
-      }else{
-          alert("Movie not found");
-      }      
-    }} category = {movie.category} path={movie.path} key={movie.id} picture={movie.picture} id={movie.id} MovieName={movie.MovieName}/>
-  })
 
   return (
     <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
@@ -52,10 +52,10 @@ const Movie = () => {
       <div className='w-full p-3 text-center flex flex-col gap-5 items-center justify-around'>
         <h1 className='text-3xl text-[#ddd]'>See your Favorite Movies For Free From Any where</h1>
       </div>
-      <div key={nanoid()} className='relative w-full flex-col  md:px-25 px-3 flex gap-3 '>
+      <div className='relative w-full flex-col  md:px-25 px-3 flex gap-3 '>
           <h1 className='text-lg md:text-2xl lg:text-3xl text-white'>Top 10 Movies on Netflix</h1>
           <div ref={ref} className='flex gap-10 px-5 [&::-webkit-scrollbar]:hidden overflow-x-auto'>
-            {TopMoviesNet}
+            {topMovies}
           </div>
           {/* Left button which will scroll left after clicking */}
           <button  onClick={()=>{

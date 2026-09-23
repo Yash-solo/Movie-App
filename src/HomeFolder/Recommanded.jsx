@@ -4,10 +4,11 @@ import { nanoid } from "nanoid";
 const Recommanded = () => {
     //get categories
     const category= JSON.parse(localStorage.getItem("categories"));
+    
     let ref = useRef(null);
     //movies that will going to render
     const [movies,setMovie] = useState([]);
-    const [showBtn,setShowBtn] = useState(true);
+    
     let showBtnLeft = useRef();
     let showBtnRight = useRef();
     //return if no recommandations
