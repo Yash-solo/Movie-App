@@ -65,14 +65,14 @@ const SearchBar = () => {
   const fakeSearch=(
     <>
       <div className="p-3 px-25">
-        <h1 className="w-full text-center text-2xl font-bold text-white">Not Found</h1>
+        <h1 className="w-full text-center text-2xl font-bold text-white"></h1>
       </div>
     </>
   )
   const realSearch=(
     <>
       <div className="w-full md:px-25 p-2 flex items-center justify-around">
-        <div className="h-full w-full rounded-3xl border px-10 border-[#9b9b9b] p-3 grid-cols-3 grid md:grid-cols-4 lg:grid-cols-7 gap-3 bg-[rgba(255,255,255,0.1)]">
+        <div className="h-full w-full rounded-3xl border md:px-10 px-3 border-[#9b9b9b] p-3 grid-cols-3 grid md:grid-cols-4 lg:grid-cols-7 gap-3 bg-[rgba(255,255,255,0.1)]">
             {newList}
         </div>
       </div>
