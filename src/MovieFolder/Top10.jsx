@@ -15,7 +15,7 @@ const Top10 = (props) => {
                     <span className='h-0.5 -rotate-45 translate-y-2 w-6 bg-[rgba(255,255,255,0.5)]'></span>
                     <span className='h-0.5 w-6 rotate-45 -translate-y-0.5 translate-x-0.2 bg-[rgba(255,255,255,0.5)]'></span>
                 </button>
-                <div className='flex flex-row gap-7'>
+                <div className='flex flex-row gap-5'>
                     <img className="h-50 md:h-70 rounded-2xl" src={props.picture} alt="" />
                     <div className='flex flex-col gap-2'>
                         <h1 className='text-[#ddd] font-semibold text-[20px] md:text-4xl'>{props.MovieName}</h1>
