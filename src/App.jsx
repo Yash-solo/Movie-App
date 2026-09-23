@@ -7,7 +7,6 @@ function App() {
 
   return (
     <>
-
       <BrowserRouter basename='/Movie-App/'>
         <Navbar/>
         <AnimateComp/>
