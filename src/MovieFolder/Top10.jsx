@@ -22,10 +22,7 @@ const Top10 = (props) => {
                         <h2 className='text-[#ddd] md:text-[25px]'>⭐8.2 rating</h2>
                         <h2 className='text-[#ddd] text-[17px] md:text-[20px]'>Category</h2>
                         <ul className='px-5 text-gray-300  md:text-[20px] list-decimal'>
-                            <li>history</li>
-                            <li>biography</li>
-                            <li>spiritual biopic</li>
-                            <li>drama</li>
+                            {props.category.slice(0,5).map((cate)=><li>{cate}</li>)}
                         </ul>
                     </div>
                 </div>
