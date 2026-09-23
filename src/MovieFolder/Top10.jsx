@@ -29,6 +29,14 @@ const Top10 = (props) => {
                 <div className='w-full py-2 md:py-5 flex flex-col md:flex-row items-center gap-2 justify-around'>
                     <button onClick={()=>{
                         if(props.path!=="xyz"){
+                            const getKey = JSON.parse(localStorage.getItem("watching"))
+                            //set categories of the movie you selected
+                            localStorage.setItem("categories",JSON.stringify(props.category));
+                            if(getKey!==null){
+                                localStorage.setItem("watching",JSON.stringify([...getKey,props.MovieName]));
+                            }else{
+                                localStorage.setItem("watching",JSON.stringify([props.MovieName]));
+                            }
                             window.open(props.path,"_blank")
                         }else{
                             alert("Movie Not Found")
