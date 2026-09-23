@@ -5,9 +5,13 @@ import Top10 from "./Top10.jsx"
 import ActionxAdv from './ActionxAdv.jsx'
 import SouthSec from './SouthSec.jsx'
 import { useRef , useEffect ,useState } from 'react'
+
 const Movie = () => {
+  //select element for scroll
   const ref = useRef(null);
+  //store topMovies cards
   const [topMovies,setTopMovies] = useState([]);
+  //scroll template
   const scroll = (scrollByNum)=>{
     if(ref.current){
       ref.current.scrollBy({
@@ -16,12 +20,13 @@ const Movie = () => {
       })
     }
   }
+
   useEffect(()=>{
     async function getTopMovies(){
         //fetch data from anywhere
         const response = await fetch(`${import.meta.env.BASE_URL}/data/TopMovies.json`)
         const data = await response.json();
-
+        //store the movie template choosen from the Top10 componants
         const TopMoviesNet = data.map((movie)=>{
           return <Top10 onClick={()=>{
             const getKey = JSON.parse(localStorage.getItem("watching"));
@@ -40,6 +45,7 @@ const Movie = () => {
             }      
           }} category = {movie.category} path={movie.path} key={movie.id} picture={movie.picture} id={movie.id} MovieName={movie.MovieName}/>
         })
+        //save in the state as a local save
         setTopMovies(TopMoviesNet);
     }
     getTopMovies();
@@ -49,6 +55,7 @@ const Movie = () => {
   return (
     <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
       <HeroSection aboutMovie = "Set in a fictional village of Dakshina Kannada, the story centers around a human-versus-nature conflict and a multi-generational land dispute"heroMovie="./photos/heroOf Movie.png" path="https://www.youtube.com/watch?v=x6Xemdjqrlw"MovieName = "KANTARA"/>
+      {/* Top 10 Movies Section*/}
       <div className='w-full p-3 text-center flex flex-col gap-5 items-center justify-around'>
         <h1 className='text-3xl text-[#ddd]'>See your Favorite Movies For Free From Any where</h1>
       </div>
@@ -75,6 +82,7 @@ const Movie = () => {
               </svg>
           </button>
       </div>
+      
       <ActionxAdv/>
       <SouthSec/>
       <About/>
