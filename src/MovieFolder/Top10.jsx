@@ -9,7 +9,7 @@ const Top10 = (props) => {
     }
     const FakeTemplate = [(
         <>
-        <div className='h-full w-full top-0 z-1000 p-2 backdrop-blur-[10px] bg-[rgba(17,17,17,0.3)] fixed  flex items-center justify-center'>
+        <div className='h-full w-full top-0 left-0 z-1000 p-2 backdrop-blur-[10px] bg-[rgba(17,17,17,0.3)] fixed  flex items-center justify-center'>
             <div className='p-3 px-6 shadow-[0px_0px_20px_rgba(255,255,255,0.2)] rounded-2xl border border-[#535252] flex-col w-3/4 bg-[rgba(17,17,17)] fixed  flex items-start justify-start'>
                 <button onClick={()=>setopen(false)} className='cursor-pointer flex py-3 flex-col gap-2 items-end justify-end w-full text-end text-2xl font-mono text-white font-bold '>
                     <span className='h-0.5 -rotate-45 translate-y-2 w-6 bg-[rgba(255,255,255,0.5)]'></span>

@@ -52,14 +52,14 @@ const Movie = () => {
       <div className='w-full p-3 text-center flex flex-col gap-5 items-center justify-around'>
         <h1 className='text-3xl text-[#ddd]'>See your Favorite Movies For Free From Any where</h1>
       </div>
-      <div key={nanoid()} className='relative w-full flex-col  md:px-25 p-3 flex  '>
+      <div key={nanoid()} className='relative w-full flex-col  md:px-25 px-3 flex gap-3 '>
           <h1 className='text-lg md:text-2xl lg:text-3xl text-white'>Top 10 Movies on Netflix</h1>
-          <div ref={ref} className='relative [&::-webkit-scrollbar]:hidden overflow-x-auto flex mask-[linear-gradient(to_right,transparent_0%,black_10%_90%,transparent_100%)] flex-row items-center gap-10 w-full   p-5'>
-              {TopMoviesNet}
+          <div ref={ref} className='flex gap-10 px-5 [&::-webkit-scrollbar]:hidden overflow-x-auto'>
+            {TopMoviesNet}
           </div>
           {/* Left button which will scroll left after clicking */}
           <button  onClick={()=>{
-              scroll(-550)
+            scroll(-550)
           }} className="p-1 absolute top-[50%] md:flex hidden left-25  w-min rounded-2xl bg-white">
               <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6"></polyline>
