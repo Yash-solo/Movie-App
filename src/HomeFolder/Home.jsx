@@ -8,11 +8,13 @@ import HeroSection from '../componants/HeroSection.jsx'
 import { motion } from 'framer-motion'
 import { nanoid } from 'nanoid'
 import Top10 from '../MovieFolder/Top10.jsx'
+import ScrollBtn from '../componants/ScrollBtn.jsx'
 
 const Home = () => {
   //load the page or not?
   const [isLoder,setLoder] = useState(true);
   const ref = useRef(null);
+  const ref2 = useRef(null);
   const [topMovies,setTopMovies] = useState([]);
   //scroll template
   const scroll = (scrollByNum)=>{
@@ -23,6 +25,43 @@ const Home = () => {
       })
     }
   }
+  const scrollLatest = (scrollByNum)=>{
+    if(ref2.current){
+      ref2.current.scrollBy({
+        left:scrollByNum,
+        behavior:"smooth"
+      })
+    }
+  }
+  //Latest Movies
+  //movie list to show latest Movies
+  const [LatestMovies,setMovie] = useState([]);
+  //render movie when rendering the page
+  useEffect(()=>{
+      async function getMovie(){
+          //fetch movies from json 
+          const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
+          const data = await response.json();//convert data as normal list object
+              
+          //contains latest movies
+          let lMovieList = [];
+               
+          const movieAdded = 13;
+          //show only last 10 movies
+          for(let i= data.length-1  ;i > data.length-movieAdded+1;i--){
+              lMovieList.push(data[i]);
+          };
+          //set movies for randering
+          setMovie(lMovieList);
+  
+      }
+      //call the function imidiatly after rendering 
+      getMovie();
+  },[])
+  const RenderLatest = LatestMovies.map((movie)=>{
+    return <Latest picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id} />
+  })
+  //top 10 movies
   useEffect(()=>{
     async function getTopMovies(){
         //fetch data from anywhere
@@ -73,9 +112,24 @@ const Home = () => {
       <HeroSection MovieName="KALKI"aboutMovie="The story follows a modern avatar of Vishnu, inspired by Hindu mythology, who arrives on Earth to protect the world from evil forces" path="https://www.youtube.com/watch?v=ed7DxXQgTKk&t=10216s" ShortNote="== 2898AD ==" heroMovie="./photos/herosection.png"/>
       <h1 className='text-2xl text-white font-bold md:text-4xl font-mono w-full text-center'>Home</h1>
       <SearchBar/>
-      <Latest/>
+
+
+      
+    <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
+      <div className=' w-full flex flex-col gap-2'>    
+          {/* Here your movies will render */}
+          <h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Latest Movies</h1>
+          <div ref={ref2} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-around'>
+            {RenderLatest}
+          </div>
+          <ScrollBtn scroll={scrollLatest}/>
+        </div>
+      </div>
+
       <Recommanded/>
       <ContinueWatch/>
+
+
       {/* Top 10 Movies On Netflix Section */}
       <div key={nanoid()} className='py-3 relative w-full flex-col  md:px-25 px-3 flex gap-3 '>
           <h1 className='text-lg md:text-2xl lg:text-2xl text-white'>Top 10 Movies on Netflix</h1>
@@ -83,23 +137,7 @@ const Home = () => {
             {/* list of movies */}
             {TopMoviesNet}
           </div>
-          {/* Left button which will scroll left after clicking */}
-          <button  onClick={()=>{
-            scroll(-550)
-          }} className="p-1 absolute top-[50%] md:flex hidden left-25  w-min rounded-2xl bg-white">
-              <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-          </button>
-          {/* Right button to scroll right */}
-          <button   onClick={()=>{
-              scroll(550);
-          
-          }}  className="z-30 p-1 absolute top-[50%] md:flex hidden right-25 w-min rounded-2xl bg-white">
-              <svg  xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-          </button>
+          <ScrollBtn scroll={scroll}/>
       </div>
       
       <About/>
