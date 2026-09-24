@@ -1,5 +1,5 @@
 import { useRef , useState , useEffect} from 'react'
-import MovieCard from './MovieCard';
+import MovieCard from '../componants/MovieCard';
 const SouthSec = (props) => {
     
     const ref = useRef(null);

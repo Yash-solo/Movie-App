@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 import { useEffect, useState, useRef } from 'react'
 //main top function 
-import MovieCard from './MovieCard';
+import MovieCard from '../componants/MovieCard';
 const Top10 = (props) => {
     //open section or not?
     const [isopen, setopen] = useState(false);

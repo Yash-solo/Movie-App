@@ -10,9 +10,11 @@ const Movie = () => {
   //select element for scroll
   const ref = useRef(null);
   const ref2 = useRef(null);
+  const ref3 = useRef(null);
   //store topMovies cards
   const [topMovies,setTopMovies] = useState([]);
   const [moviesList,setMoviesList] = useState([]);
+  const [actionMovie,setactionMovieList] = useState([]);
   //scroll template
   const scroll = (scrollByNum)=>{
     if(ref.current){
@@ -31,6 +33,34 @@ const Movie = () => {
       })
     }
   }
+  const scrollAdventure=(scrollByNum)=>{
+    if(ref3.current){
+      ref3.current.scrollBy({
+        left:scrollByNum,
+        behavior:"smooth"
+      })
+    }
+  }
+  //for action and adventure 
+  useEffect(()=>{
+        //get action advanture movies
+        async function getMovie(){
+            const response = await fetch(`${import.meta.env.BASE_URL}data/movies.json`);
+            const data = await response.json();
+            setactionMovieList(data);
+        }
+        getMovie();
+    },[])
+    
+    //filtering movies from the data 
+    let ActionMovieList = actionMovie.filter((movie)=>{
+        return movie.category.includes("action") || movie.category.includes("adventure");
+    })
+    //select only 10 movies
+    ActionMovieList = ActionMovieList.reverse().slice(0,10);
+    const Actionrender = ActionMovieList.map((movie)=>{
+      return <ActionxAdv picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id}  />
+    })
 
   useEffect(()=>{
     async function getTopMovies(){
@@ -82,11 +112,12 @@ const Movie = () => {
     const renderUpdate = updateList.map((movie)=>{
       return <SouthSec picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id} />
     })
-
+    
 
   return (
     <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
       <HeroSection aboutMovie = "Set in a fictional village of Dakshina Kannada, the story centers around a human-versus-nature conflict and a multi-generational land dispute"heroMovie="./photos/heroOf Movie.png" path="https://www.youtube.com/watch?v=x6Xemdjqrlw"MovieName = "KANTARA"/>
+      
       {/* Top 10 Movies Section*/}
       <div className='w-full p-3 text-center flex flex-col  items-center justify-around'>
         <h1 className='text-3xl lg:tracking-[5px] lg:text-4xl font-serif text-[#ddd]'>See your Favorite Movies For Free From Any where</h1>
@@ -99,7 +130,20 @@ const Movie = () => {
           <ScrollBtn scroll={scroll}/>
       </div>
       
-      <ActionxAdv/>
+      {/* Adventure Movies section */}
+      <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
+            <div className=' w-full flex flex-col gap-2'>
+                
+                {/* Here your movies will render */}
+                <h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Action & Adventure Movies</h1>
+                <div ref={ref3} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-around'>
+                    {Actionrender}
+                </div>
+              <ScrollBtn scroll={scrollAdventure}/>
+            </div>
+        </div>
+
+      {/* South movies Section */}
       <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
             <div className=' w-full flex flex-col gap-2'>
                 
@@ -111,6 +155,7 @@ const Movie = () => {
                 <ScrollBtn scroll={scrollSouth}/>
             </div>
         </div>
+
       <About/>
     </motion.div>
   )
