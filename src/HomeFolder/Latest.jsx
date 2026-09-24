@@ -5,8 +5,8 @@ import MovieCard from "../componants/MovieCard"
 
 const Latest = (props) => {
     //add variable to an element
-    let ref = useRef(null);
     const [isopen,setopen] = useState(false);
+    
     const realTemplate= [(
        <img key={props.id} onClick = {()=>{
             setopen(true);

@@ -9,6 +9,7 @@ import { motion } from 'framer-motion'
 import { nanoid } from 'nanoid'
 import Top10 from '../MovieFolder/Top10.jsx'
 import ScrollBtn from '../componants/ScrollBtn.jsx'
+import { filter } from 'framer-motion/client'
 
 const Home = () => {
   //load the page or not?
@@ -16,8 +17,10 @@ const Home = () => {
   const ref = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
+  const ref4 = useRef(null);
   const [topMovies,setTopMovies] = useState([]);
   const [RdMovie,setRdMovie] = useState([]);
+  const [watchingList,setWathingList] = useState([]);
   const category= JSON.parse(localStorage.getItem("categories"));
 
   if(category===null){
@@ -49,7 +52,46 @@ const Home = () => {
       })
     }
   } 
-
+  const scrollContinue = (scrollByNum)=>{
+    if(ref4.current){
+      ref4.current.scrollBy({
+        left:scrollByNum,
+        behavior:"smooth"
+      })
+    }
+  } 
+  //continue Watching
+  useEffect(()=>{
+            const getKey = JSON.parse(localStorage.getItem("watching"));
+            if(getKey===null){
+                console.log("getKey is null");
+            }else{
+                //reduce the usablitily
+                const watchingId = [];
+                getKey.map((movieName)=>{
+                    if(!watchingId.includes(movieName)){
+                        watchingId.push(movieName);
+                    }
+                })
+                
+                //fetch data and filter items that contains that id
+                async function getWatch(){
+                    const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
+                    const data = await response.json();
+        
+                    const filtered_list = data.filter((movie)=>{
+                        return watchingId.includes(movie.MovieName);
+                    })
+                    
+                    setWathingList(filtered_list)
+                }
+                getWatch();
+            }
+                
+        },[])
+  const renderWatch = watchingList.map((movie)=>{
+    return <ContinueWatch picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id}/>
+  })
   //Recommand Movies
   useEffect(()=>{
     async function getRecommand(){
@@ -172,16 +214,23 @@ const Home = () => {
         <div className=' w-full flex flex-col gap-2'>    
             {/* Here your movies will render */}
             <h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Recommand Movies</h1>
-            <div ref={ref2} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-start justify-start'>
+            <div ref={ref3} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-start justify-start'>
               {renderRdMovie}
             </div>
-            <ScrollBtn scroll={scrollLatest}/>
+            <ScrollBtn scroll={scrollRd}/>
         </div>
       </div>
 
-      
-
-      <ContinueWatch/>
+      <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
+        <div className=' w-full flex flex-col gap-2'>    
+            {/* Here your movies will render */}
+            <h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Continue watching</h1>
+            <div ref={ref4} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-start justify-start'>
+              {renderWatch}
+            </div>
+            <ScrollBtn scroll={scrollContinue}/>
+        </div>
+      </div>
 
 
       {/* Top 10 Movies On Netflix Section */}
