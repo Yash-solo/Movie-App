@@ -24,12 +24,11 @@ const Home = () => {
   const [RdMovie,setRdMovie] = useState([]);
   const [watchingList,setWathingList] = useState([]);
   //take categories from the localstorage
-  const category= JSON.parse(localStorage.getItem("categories"));
+  let category= JSON.parse(localStorage.getItem("categories"));
   //handle category undefined error
   if(category===null){
-    return 
+    console.log("No category");
   }
-
   //scroll template
   const scroll = (scrollByNum)=>{
     if(ref.current){
