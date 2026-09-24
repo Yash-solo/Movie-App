@@ -5,16 +5,27 @@ import Top10 from "./Top10.jsx"
 import ActionxAdv from './ActionxAdv.jsx'
 import SouthSec from './SouthSec.jsx'
 import { useRef , useEffect ,useState } from 'react'
-
+import ScrollBtn from '../componants/ScrollBtn.jsx'
 const Movie = () => {
   //select element for scroll
   const ref = useRef(null);
+  const ref2 = useRef(null);
   //store topMovies cards
   const [topMovies,setTopMovies] = useState([]);
+  const [moviesList,setMoviesList] = useState([]);
   //scroll template
   const scroll = (scrollByNum)=>{
     if(ref.current){
       ref.current.scrollBy({
+        left:scrollByNum,
+        behavior:"smooth"
+      })
+    }
+    
+  }
+  const scrollSouth=(scrollByNum)=>{
+    if(ref2.current){
+      ref2.current.scrollBy({
         left:scrollByNum,
         behavior:"smooth"
       })
@@ -51,40 +62,55 @@ const Movie = () => {
     getTopMovies();
   },[])
 
+  useEffect(()=>{
+        //get action advanture movies
+        async function getMovie(){
+            const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
+            const data = await response.json();
+            setMoviesList(data);
+        }
+        getMovie();
+    },[])
+    
+    //filtering movies from the data 
+    let updateList = moviesList.filter((movie)=>{
+        return movie.category.includes("South movies");
+    })
+    //select only 10 movies
+    updateList = updateList.reverse().slice(0,10);
+    //choosing only movies that should rander
+    const renderUpdate = updateList.map((movie)=>{
+      return <SouthSec picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id} />
+    })
+
 
   return (
     <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
       <HeroSection aboutMovie = "Set in a fictional village of Dakshina Kannada, the story centers around a human-versus-nature conflict and a multi-generational land dispute"heroMovie="./photos/heroOf Movie.png" path="https://www.youtube.com/watch?v=x6Xemdjqrlw"MovieName = "KANTARA"/>
       {/* Top 10 Movies Section*/}
-      <div className='w-full p-3 text-center flex flex-col gap-5 items-center justify-around'>
-        <h1 className='text-3xl text-[#ddd]'>See your Favorite Movies For Free From Any where</h1>
+      <div className='w-full p-3 text-center flex flex-col  items-center justify-around'>
+        <h1 className='text-3xl lg:tracking-[5px] lg:text-4xl font-serif text-[#ddd]'>See your Favorite Movies For Free From Any where</h1>
       </div>
-      <div className='relative w-full flex-col  md:px-25 px-3 flex gap-3 '>
-          <h1 className='text-lg md:text-2xl lg:text-3xl text-white'>Top 10 Movies on Netflix</h1>
-          <div ref={ref} className='flex gap-10 px-5 [&::-webkit-scrollbar]:hidden overflow-x-auto'>
+      <div className='relative w-full flex-col py-5   md:px-25 px-3 flex gap-3 '>
+          <h1 className='text-[20px] font-semibold md:text-2xl  lg:text-2xl text-white'>Top 10 Movies on Netflix</h1>
+          <div ref={ref} className='flex gap-10 py-4 px-5 [&::-webkit-scrollbar]:hidden  overflow-x-auto'>
             {topMovies}
           </div>
-          {/* Left button which will scroll left after clicking */}
-          <button  onClick={()=>{
-            scroll(-550)
-          }} className="p-1 absolute top-[50%] md:flex hidden left-25  w-min rounded-2xl bg-white">
-              <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-          </button>
-          {/* Right button to scroll right */}
-          <button   onClick={()=>{
-              scroll(550);
-      
-          }}  className="z-30 p-1 absolute top-[50%] md:flex hidden right-25 w-min rounded-2xl bg-white">
-              <svg  xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-          </button>
+          <ScrollBtn scroll={scroll}/>
       </div>
       
       <ActionxAdv/>
-      <SouthSec/>
+      <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
+            <div className=' w-full flex flex-col gap-2'>
+                
+                {/* Here your movies will render */}
+                <h1 className='text-lg md:text-2xl lg:text-4xl text-white'>South Indian Movies</h1>
+                <div ref={ref2} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-around'>
+                    {renderUpdate}
+                </div>
+                <ScrollBtn scroll={scrollSouth}/>
+            </div>
+        </div>
       <About/>
     </motion.div>
   )
