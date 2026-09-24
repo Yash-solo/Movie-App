@@ -2,7 +2,6 @@ import "./style.css"
 import { useState } from "react"
 import videoCam from "/photos/video-camera (1).png"
 import { Link } from "react-router-dom"
-
 const Navbar = () => {
     const [isOpen ,setOpen] = useState(false);
   return (
@@ -27,7 +26,7 @@ const Navbar = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/Fav">TV Series</Link></li>
                         <li><Link to="/Saved">Movies</Link></li>
-                        <li><Link to="/History">History</Link></li>
+                        <li><Link to="/MyList">My List</Link></li>
                     </ul>
                 </div>
                 <div className={`sidebar rounded-4xl  md:hidden transform transition-all duration-300 w-full p-3 h-1/2 flex items-center flex-col justify-around backdrop-blur-[5px] fixed bg-[rgba(0,0,0,0.4)] ${isOpen?"left-0":"-left-full"} top-18   `}>
@@ -36,7 +35,7 @@ const Navbar = () => {
                         <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/">Home</Link></li>
                         <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/Fav">TV Series</Link></li>
                         <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/Saved">Movies</Link></li>
-                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/History">History</Link></li>
+                        <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/MyList">My List</Link></li>
                     </ul>
                 </div>
             </div>

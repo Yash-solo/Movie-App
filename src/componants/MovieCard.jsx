@@ -35,7 +35,16 @@ const MovieCard = (props) => {
                                     alert("Movie Not Found")
                                 }
                             }} className='text-lg bg-red-500 px-3 cursor-pointer p-2 w-full rounded-lg font-bold text-[#ddd]'>&#9655;Watch Now</button>
-                            <button className='text-lg border border-[#ddd] cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >+Add To Watch Later</button>
+                            <button onClick={()=>{
+                                const previousItem = JSON.parse(localStorage.getItem("WatchLater"));
+                                
+                                if(previousItem!==null){
+                                    localStorage.setItem("WatchLater",JSON.stringify([...previousItem,{"id":props.id,"movieName":props.MovieName,"category":props.category,"picture":props.picture,"path":props.path}]))
+                                }else{
+                                    localStorage.setItem("WatchLater",JSON.stringify([{"id":props.id,"movieName":props.MovieName,"category":props.category,"picture":props.picture,"path":props.path}]))
+                                }
+
+                            }} className='text-lg border border-[#ddd] cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >+Add To Watch Later</button>
                         </div>
                     </div>
                 </div>

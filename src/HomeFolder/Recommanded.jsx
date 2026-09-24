@@ -6,7 +6,7 @@ import MovieCard from "../componants/MovieCard";
 const Recommanded = (props) => {
     const [isopen ,setopen ] = useState(false);
     const realTemplate= [(
-       <img key={props.id} onClick = {()=>{
+       <img key={nanoid()} onClick = {()=>{
             setopen(true);
             const getKey = JSON.parse(localStorage.getItem("watching"));
             localStorage.setItem("categories",JSON.stringify(props.category));
