@@ -9,20 +9,23 @@ import { motion } from 'framer-motion'
 import { nanoid } from 'nanoid'
 import Top10 from '../MovieFolder/Top10.jsx'
 import ScrollBtn from '../componants/ScrollBtn.jsx'
-import { filter } from 'framer-motion/client'
 
 const Home = () => {
   //load the page or not?
   const [isLoder,setLoder] = useState(true);
+
+  //4 section 
   const ref = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
+  //movies filter
   const [topMovies,setTopMovies] = useState([]);
   const [RdMovie,setRdMovie] = useState([]);
   const [watchingList,setWathingList] = useState([]);
+  //take categories from the localstorage
   const category= JSON.parse(localStorage.getItem("categories"));
-
+  //handle category undefined error
   if(category===null){
     return 
   }
@@ -236,7 +239,7 @@ const Home = () => {
       {/* Top 10 Movies On Netflix Section */}
       <div key={nanoid()} className='py-3 relative w-full flex-col  md:px-25 px-3 flex gap-3 '>
           <h1 className='text-lg md:text-2xl lg:text-2xl text-white'>Top 10 Movies on Netflix</h1>
-          <div ref={ref} className='flex gap-10 px-5 [&::-webkit-scrollbar]:hidden overflow-x-auto'>
+          <div ref={ref} className='flex py-5 [&::-webkit-scrollbar]:hidden gap-10 px-5  overflow-x-auto'>
             {/* list of movies */}
             {TopMoviesNet}
           </div>

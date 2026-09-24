@@ -62,6 +62,7 @@ const Movie = () => {
       return <ActionxAdv picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id}  />
     })
 
+  //top 10 movies
   useEffect(()=>{
     async function getTopMovies(){
         //fetch data from anywhere
@@ -92,6 +93,7 @@ const Movie = () => {
     getTopMovies();
   },[])
 
+  //south indian movies
   useEffect(()=>{
         //get action advanture movies
         async function getMovie(){
@@ -104,7 +106,7 @@ const Movie = () => {
     
     //filtering movies from the data 
     let updateList = moviesList.filter((movie)=>{
-        return movie.category.includes("South movies");
+        return movie.region ==="South Movie"
     })
     //select only 10 movies
     updateList = updateList.reverse().slice(0,10);
