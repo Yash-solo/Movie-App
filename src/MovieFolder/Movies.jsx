@@ -6,6 +6,7 @@ import ActionxAdv from './ActionxAdv.jsx'
 import SouthSec from './SouthSec.jsx'
 import { useRef , useEffect ,useState } from 'react'
 import ScrollBtn from '../componants/ScrollBtn.jsx'
+
 const Movie = () => {
   //select element for scroll
   const ref = useRef(null);
