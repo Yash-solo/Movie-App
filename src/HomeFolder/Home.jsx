@@ -15,7 +15,15 @@ const Home = () => {
   const [isLoder,setLoder] = useState(true);
   const ref = useRef(null);
   const ref2 = useRef(null);
+  const ref3 = useRef(null);
   const [topMovies,setTopMovies] = useState([]);
+  const [RdMovie,setRdMovie] = useState([]);
+  const category= JSON.parse(localStorage.getItem("categories"));
+
+  if(category===null){
+    return 
+  }
+
   //scroll template
   const scroll = (scrollByNum)=>{
     if(ref.current){
@@ -33,6 +41,40 @@ const Home = () => {
       })
     }
   }
+  const scrollRd = (scrollByNum)=>{
+    if(ref3.current){
+      ref3.current.scrollBy({
+        left:scrollByNum,
+        behavior:"smooth"
+      })
+    }
+  } 
+
+  //Recommand Movies
+  useEffect(()=>{
+    async function getRecommand(){
+        const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
+        const data = await response.json();
+  
+        const newList = data.filter((movie)=>{
+            let cateAgree = 0;
+            for(let cate of category){
+                if(movie.category.includes(cate)){
+                    cateAgree+=1;
+                }
+                if(cateAgree===2){
+                    return true
+                }
+            }
+        })
+        setRdMovie(newList);
+    }
+    getRecommand();
+  },[])
+  const renderRdMovie = RdMovie.map((movie)=>{
+    return <Recommanded picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id}/>
+  })
+
   //Latest Movies
   //movie list to show latest Movies
   const [LatestMovies,setMovie] = useState([]);
@@ -115,18 +157,30 @@ const Home = () => {
 
 
       
-    <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
-      <div className=' w-full flex flex-col gap-2'>    
-          {/* Here your movies will render */}
-          <h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Latest Movies</h1>
-          <div ref={ref2} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-around'>
-            {RenderLatest}
-          </div>
-          <ScrollBtn scroll={scrollLatest}/>
+      <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
+        <div className=' w-full flex flex-col gap-2'>    
+            {/* Here your movies will render */}
+            <h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Latest Movies</h1>
+            <div ref={ref2} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-around'>
+              {RenderLatest}
+            </div>
+            <ScrollBtn scroll={scrollLatest}/>
         </div>
       </div>
 
-      <Recommanded/>
+      <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
+        <div className=' w-full flex flex-col gap-2'>    
+            {/* Here your movies will render */}
+            <h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Recommand Movies</h1>
+            <div ref={ref2} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-start justify-start'>
+              {renderRdMovie}
+            </div>
+            <ScrollBtn scroll={scrollLatest}/>
+        </div>
+      </div>
+
+      
+
       <ContinueWatch/>
 
 
