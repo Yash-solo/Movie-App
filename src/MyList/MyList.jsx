@@ -1,14 +1,22 @@
 import React from 'react'
 import "./stylelist.css"
 import WatchMe from './WatchMe';
+import { nanoid } from 'nanoid';
 const MyList = () => {
   const WatchList = JSON.parse(localStorage.getItem("WatchLater"))
-  console.log(WatchList);
+  
   if(WatchList===null){
     return <h1 className='w-full text-center text-[#ddd] tracking-[2px] text-lg font-bold p-2 '>No Item added Yet</h1>
   }
-  const watchLaterList = WatchList.map((movie)=>{
-    return <WatchMe key={movie.id} picture={movie.picture} movieName={movie.movieName}/>
+  const newWatchList = [];
+  WatchList.map((movie)=>{
+    if(!newWatchList.includes(movie)){
+      newWatchList.push(movie)
+    }
+  })
+  console.log(newWatchList);
+  const watchLaterList = newWatchList.map((movie)=>{
+    return <WatchMe key={nanoid()} path={movie.path} category={movie.category} picture={movie.picture} movieName={movie.movieName}/>
   })
   return (
     <>
