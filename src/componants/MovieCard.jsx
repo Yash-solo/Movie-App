@@ -39,9 +39,12 @@ const MovieCard = (props) => {
                                 const previousItem = JSON.parse(localStorage.getItem("WatchLater"));
                                 
                                 if(previousItem!==null){
-                                    localStorage.setItem("WatchLater",JSON.stringify([...previousItem,{"id":props.id,"movieName":props.MovieName,"category":props.category,"picture":props.picture,"path":props.path}]))
+                                    if(previousItem.includes(props.MovieName)){
+                                        return 
+                                    }
+                                    localStorage.setItem("WatchLater",JSON.stringify([...previousItem,props.MovieName]))
                                 }else{
-                                    localStorage.setItem("WatchLater",JSON.stringify([{"id":props.id,"movieName":props.MovieName,"category":props.category,"picture":props.picture,"path":props.path}]))
+                                    localStorage.setItem("WatchLater",JSON.stringify([props.MovieName]))
                                 }
 
                             }} className='text-lg border border-[#ddd] cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >+Add To Watch Later</button>
