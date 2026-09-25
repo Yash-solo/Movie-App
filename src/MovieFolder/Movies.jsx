@@ -6,16 +6,19 @@ import ActionxAdv from './ActionxAdv.jsx'
 import SouthSec from './SouthSec.jsx'
 import { useRef , useEffect ,useState } from 'react'
 import ScrollBtn from '../componants/ScrollBtn.jsx'
+import Onlynetflix from './Onlynetflix.jsx'
 
 const Movie = () => {
   //select element for scroll
   const ref = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
+  const ref4 = useRef(null);
   //store topMovies cards
   const [topMovies,setTopMovies] = useState([]);
   const [moviesList,setMoviesList] = useState([]);
   const [actionMovie,setactionMovieList] = useState([]);
+  const [onlynetData,setOnlynetdata] = useState([]);
   //scroll template
   const scroll = (scrollByNum)=>{
     if(ref.current){
@@ -42,6 +45,38 @@ const Movie = () => {
       })
     }
   }
+  //scrollBlockbuster
+  const scrollBlockbuster=(scrollByNum)=>{
+    if(ref4.current){
+      ref4.current.scrollBy({
+        left:scrollByNum,
+        behavior:"smooth"
+      })
+    }
+  }
+
+  //for only on netflix movies rendering 
+  useEffect(()=>{
+    async function getnetmovie(){
+      const response = await fetch(`${import.meta.env.BASE_URL}/data/onlynet.json`)
+      const data = await response.json();
+      setOnlynetdata(data);
+    }
+    getnetmovie();
+  },[])
+  const onlynetmovies = onlynetData.map((movie)=>{
+    return <Onlynetflix key={movie.id} picture={movie.picture}/>
+  })
+
+  //for blockbuster movies
+  const blockbustermovie = actionMovie.filter((movie)=>{
+    return movie.status==="Blockbuster"
+  })
+  
+  const renderBuster = blockbustermovie.map((movie)=>{
+    return <ActionxAdv picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id}  />
+  })
+
   //for action and adventure 
   useEffect(()=>{
         //get action advanture movies
@@ -156,6 +191,32 @@ const Movie = () => {
                     {renderUpdate}
                 </div>
                 <ScrollBtn scroll={scrollSouth}/>
+            </div>
+        </div>
+
+      {/* block buster Movies section */}
+      <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
+            <div className=' w-full flex flex-col gap-2'>
+                
+                {/* Here your movies will render */}
+                <h1 className='text-lg md:text-2xl lg:text-3xl text-white'>Blockbuster Movies</h1>
+                <div ref={ref4} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-around'>
+                    {renderBuster}
+                </div>
+              <ScrollBtn scroll={scrollBlockbuster}/>
+            </div>
+        </div>
+
+        {/* Only on netflix section */}
+        <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
+            <div className=' w-full flex flex-col gap-2'>
+                
+                {/* Here your movies will render */}
+                <h1 className='text-lg md:text-2xl lg:text-3xl text-white'>Only on Netflix</h1>
+                <div ref={ref4} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-around'>
+                    {onlynetmovies}
+                </div>
+              <ScrollBtn scroll={scrollBlockbuster}/>
             </div>
         </div>
 
