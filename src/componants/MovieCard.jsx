@@ -19,7 +19,7 @@ const MovieCard = (props) => {
             localStorage.setItem("WatchLater",JSON.stringify([...afterMovie]))
             //reload the page
             nevigate("/MyList")
-            }} className='text-lg border border-[#ddd] hover:bg-[#ddd] hover:text-black cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >
+            }} className='text-lg border border-[#ddd] hover:bg-[#ddd] hover:text-black transition-all duration-75  cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >
             Remove Watch Later</button>
     )
     //add the movie
@@ -37,7 +37,7 @@ const MovieCard = (props) => {
                 }else{
                     localStorage.setItem("WatchLater",JSON.stringify([props.MovieName]))
                 }
-            }} className='text-lg border border-[#ddd]  hover:bg-[#ddd] hover:text-black cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >
+            }} className='text-lg border border-[#ddd]  hover:bg-[#ddd] hover:text-black transition-all duration-75 cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >
             + Add To Watch Later</button>
         </>
     )
