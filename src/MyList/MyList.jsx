@@ -5,24 +5,24 @@ import { nanoid } from 'nanoid';
 const MyList = () => {
   const [moviedata,setMovieData] = useState([]);
   const WatchList = JSON.parse(localStorage.getItem("WatchLater"))||null
-
+  
   //get data of movies
   useEffect(()=>{
     async function getMovies(){
       const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
       const data = await response.json();
       console.log("console",data);
-  
+      
       setMovieData(data);
     }
     getMovies()
   },[])
-
   
   //check whether the watch list is null?
-  if(WatchList===null){
+  if(WatchList===null || WatchList.length===0){
     return <h1 className='w-full text-center text-[#ddd] tracking-[2px] text-lg font-bold p-2 '>No Item added Yet</h1>
   }
+  
 
   //if you don't have movie data
   if(moviedata.length===0){
@@ -38,7 +38,7 @@ const MyList = () => {
   const watchLaterList = newWatchList
   .filter((arr)=>arr.length>0)
   .map((movie)=>{
-    return <WatchMe key={nanoid()} path={movie[0].path} category={movie[0].category} picture={movie[0].picture} movieName={movie[0].movieName}/>
+    return <WatchMe key={nanoid()} path={movie[0].path} category={movie[0].category} picture={movie[0].picture} movieName={movie[0].MovieName}/>
   })
 
   //render everthing

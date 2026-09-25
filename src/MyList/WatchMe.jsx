@@ -14,7 +14,7 @@ const WatchMe = (props) => {
     )
   return (
     <>
-        {isopen?<MovieCard setopen={setopen} MovieName = {props.movieName} path={props.path} category={props.category} picture={props.picture}/>:realTemplate}
+        {isopen?<MovieCard setopen={setopen} inList={true} MovieName = {props.movieName} path={props.path} category={props.category} picture={props.picture}/>:realTemplate}
     </>
   )
 }
