@@ -19,7 +19,7 @@ const MovieCard = (props) => {
             localStorage.setItem("WatchLater",JSON.stringify([...afterMovie]))
             //reload the page
             nevigate("/MyList")
-            }} className='text-lg border border-[#ddd] cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >
+            }} className='text-lg border border-[#ddd] hover:bg-[#ddd] hover:text-black cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >
             Remove Watch Later</button>
     )
     //add the movie
@@ -37,7 +37,7 @@ const MovieCard = (props) => {
                 }else{
                     localStorage.setItem("WatchLater",JSON.stringify([props.MovieName]))
                 }
-            }} className='text-lg border border-[#ddd] cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >
+            }} className='text-lg border border-[#ddd]  hover:bg-[#ddd] hover:text-black cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >
             + Add To Watch Later</button>
         </>
     )
@@ -45,7 +45,7 @@ const MovieCard = (props) => {
   return (
     <>
         <div key={props.id + 1} className='h-full w-full top-0 left-0 z-1000 p-2 backdrop-blur-[10px] bg-[rgba(17,17,17,0.3)] fixed  flex items-center justify-center'>
-            <div className='p-3 px-6 shadow-[0px_0px_20px_rgba(255,255,255,0.2)] rounded-2xl border border-[#535252] flex-col w-9/10 md:w-9/10 lg:w-1/2 bg-[rgba(17,17,17)] fixed  flex items-start justify-start'>
+            <div className='changeColor p-3 transform transition-colors duration-150 ease-in-out px-6 shadow-[0px_0px_20px_rgba(255,255,255,0.2)] rounded-2xl border border-[#535252] flex-col w-9/10 md:w-9/10 lg:w-1/2 bg-[rgba(17,17,17)] fixed  flex items-start justify-start'>
                 <button onClick={() => props.setopen(false)} className='cursor-pointer flex py-3 flex-col gap-2 items-end justify-end w-full text-end text-2xl font-mono text-white font-bold '>
                     <span className='h-0.5 -rotate-45 translate-y-2 w-6 bg-[rgba(255,255,255,0.5)]'></span>
                     <span className='h-0.5 w-6 rotate-45 -translate-y-0.5 translate-x-0.2 bg-[rgba(255,255,255,0.5)]'></span>
@@ -61,7 +61,7 @@ const MovieCard = (props) => {
                         </ul>
                     </div>
                 </div>
-                <div className='w-full py-2 md:py-5 flex flex-col md:flex-row items-center gap-2 justify-around'>
+                <div className='w-full py-2  md:py-5 flex flex-col md:flex-row items-center gap-2 justify-around'>
                     <button onClick={() => {
                         if (props.path !== "xyz") {
                             const getKey = JSON.parse(localStorage.getItem("watching"))
@@ -76,7 +76,7 @@ const MovieCard = (props) => {
                         } else {
                             alert("Movie Not Found")
                         }
-                    }} className='text-lg bg-red-500 px-3 cursor-pointer p-2 w-full rounded-lg font-bold text-[#ddd]'>&#9655;Watch Now</button>
+                    }} className='text-lg bg-red-500 hover:bg-red-700 px-3 cursor-pointer p-2 w-full rounded-lg font-bold text-[#ddd]'>&#9655; Watch Now</button>
                     {props.inList?removeBtn:addbtn}
                 </div>
             </div>

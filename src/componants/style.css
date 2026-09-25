@@ -3,9 +3,7 @@
     animation:FadeIn both;
     animation-timeline: view(50% 10%);
 }
-.rotate{
-    animation :Rotate 2s linear infinite;
-}
+
 @keyframes FadeIn{
     from{
         opacity: 0;
