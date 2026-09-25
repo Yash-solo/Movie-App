@@ -14,6 +14,7 @@ const Movie = () => {
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
+  const ref5 = useRef(null);
   //store topMovies cards
   const [topMovies,setTopMovies] = useState([]);
   const [moviesList,setMoviesList] = useState([]);
@@ -54,6 +55,25 @@ const Movie = () => {
       })
     }
   }
+  //scrollFc
+  const scrollFc=(scrollByNum)=>{
+    if(ref5.current){
+      ref5.current.scrollBy({
+        left:scrollByNum,
+        behavior:"smooth"
+      })
+    }
+  }
+  
+  //for family comedies rendering
+  //for blockbuster movies
+  const FamilyComedies = actionMovie.filter((movie)=>{
+    return movie.familyComedies === true;
+  })
+  
+  const renderFc = FamilyComedies.map((movie)=>{
+    return <ActionxAdv picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id}  />
+  })
 
   //for only on netflix movies rendering 
   useEffect(()=>{
@@ -217,6 +237,19 @@ const Movie = () => {
                     {onlynetmovies}
                 </div>
               <ScrollBtn scroll={scrollBlockbuster}/>
+            </div>
+        </div>
+
+        {/* Family Comedies section */}
+        <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
+            <div className=' w-full flex flex-col gap-2'>
+                
+                {/* Here your movies will render */}
+                <h1 className='text-lg md:text-2xl lg:text-3xl text-white'>Family Comedies</h1>
+                <div ref={ref5} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-start'>
+                    {renderFc}
+                </div>
+              <ScrollBtn scroll={scrollFc}/>
             </div>
         </div>
 
