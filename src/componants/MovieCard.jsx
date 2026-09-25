@@ -1,8 +1,10 @@
 import { nanoid } from "nanoid";
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 const MovieCard = (props) => {
     const [inlist,setinlist] = useState(false);
     //remove the movie
+    const nevigate = useNavigate();
     const removeBtn = (
         <button onClick={()=>{
             //give a user friendly message
@@ -16,7 +18,7 @@ const MovieCard = (props) => {
             //update the data
             localStorage.setItem("WatchLater",JSON.stringify([...afterMovie]))
             //reload the page
-            window.location.reload();
+            nevigate("/MyList")
             }} className='text-lg border border-[#ddd] cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >
             Remove Watch Later</button>
     )
