@@ -24,10 +24,14 @@ const Home = () => {
   const [RdMovie,setRdMovie] = useState([]);
   const [watchingList,setWathingList] = useState([]);
   //take categories from the localstorage
+  let iscate = useRef(true);
+  let iswatch = useRef(true);
+
   let category= JSON.parse(localStorage.getItem("categories"));
   //handle category undefined error
   if(category===null){
     console.log("No category");
+    iscate = false;
   }
   //scroll template
   const scroll = (scrollByNum)=>{
@@ -66,7 +70,7 @@ const Home = () => {
   useEffect(()=>{
             const getKey = JSON.parse(localStorage.getItem("watching"));
             if(getKey===null){
-                console.log("getKey is null");
+              console.log("don't know")
             }else{
                 //reduce the usablitily
                 const watchingId = [];
@@ -97,21 +101,28 @@ const Home = () => {
   //Recommand Movies
   useEffect(()=>{
     async function getRecommand(){
+
         const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
         const data = await response.json();
-  
-        const newList = data.filter((movie)=>{
-            let cateAgree = 0;
-            for(let cate of category){
-                if(movie.category.includes(cate)){
-                    cateAgree+=1;
-                }
-                if(cateAgree===2){
-                    return true
-                }
-            }
-        })
-        setRdMovie(newList);
+
+        try{
+
+          const newList = data.filter((movie)=>{
+              let cateAgree = 0;
+              for(let cate of category){
+                  if(movie.category.includes(cate)){
+                      cateAgree+=1;
+                  }
+                  if(cateAgree===2){
+                      return true
+                  }
+              }
+          })
+          setRdMovie(newList);
+        }catch(error){
+          console.log("errorCame");
+        }
+      
     }
     getRecommand();
   },[])
@@ -215,11 +226,11 @@ const Home = () => {
       <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
         <div className=' w-full flex flex-col gap-2'>    
             {/* Here your movies will render */}
-            <h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Recommand Movies</h1>
+            {iscate?<h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Recommand Movies</h1>:""}
             <div ref={ref3} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-start justify-start'>
               {renderRdMovie}
             </div>
-            <ScrollBtn scroll={scrollRd}/>
+            {iscate?<ScrollBtn scroll={scrollRd}/>:""}
         </div>
       </div>
 
