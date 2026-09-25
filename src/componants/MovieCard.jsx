@@ -2,25 +2,30 @@ import { nanoid } from "nanoid";
 import { useState } from "react";
 const MovieCard = (props) => {
     const [inlist,setinlist] = useState(false);
+    //remove the movie
     const removeBtn = (
         <button onClick={()=>{
+            //give a user friendly message
             alert(`deleted ${props.MovieName}`)
+            //take data
             let previousItem = JSON.parse(localStorage.getItem("WatchLater"));
-            console.log("Later",previousItem);
-            console.log("props:-",props.MovieName)
+            //filter data
             const afterMovie = previousItem.filter((movie)=>{
                 return movie!==props.MovieName
             })
-            console.log(afterMovie)
+            //update the data
             localStorage.setItem("WatchLater",JSON.stringify([...afterMovie]))
-            
+            //reload the page
             window.location.reload();
             }} className='text-lg border border-[#ddd] cursor-pointer px-3 p-2 w-full rounded-lg font-bold text-[#ddd]' >
             Remove Watch Later</button>
     )
+    //add the movie
     const addbtn = (
         <>
         <button onClick={()=>{
+            //user friendly message
+            alert(`${props.MovieName} successfully Added to MyList`)
             const previousItem = JSON.parse(localStorage.getItem("WatchLater"));
             if(previousItem!==null){
                 if(previousItem.includes(props.MovieName)){
@@ -34,6 +39,7 @@ const MovieCard = (props) => {
             + Add To Watch Later</button>
         </>
     )
+    //card html
   return (
     <>
         <div key={props.id + 1} className='h-full w-full top-0 left-0 z-1000 p-2 backdrop-blur-[10px] bg-[rgba(17,17,17,0.3)] fixed  flex items-center justify-center'>

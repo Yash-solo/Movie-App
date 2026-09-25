@@ -1,6 +1,19 @@
 import "./style.css"
 import { motion } from "framer-motion"
 const HeroSection = (props) => {
+  function handleAdd(){
+    //user friendly message
+    alert(`${props.addwatch} successfully Added to MyList`)
+    const previousItem = JSON.parse(localStorage.getItem("WatchLater"));
+    if(previousItem!==null){
+        if(previousItem.includes(props.addwatch)){
+            return 
+        }
+            localStorage.setItem("WatchLater",JSON.stringify([...previousItem,props.addwatch]))
+        }else{
+            localStorage.setItem("WatchLater",JSON.stringify([props.addwatch]))
+        }
+  }
   return (
     <>
       <motion.div className="relative w-full md:mask-[linear-gradient(to_right,transparent_0%,black_5%_95%,transparent_100%)]  md:relative md:-top-25 md:p-0 md:py-0 p-3  py-5 flex items-center justify-around">
@@ -20,7 +33,9 @@ const HeroSection = (props) => {
           <p className="text-[#ddd] font-serif lg:w-1/2">{props.aboutMovie}</p>
           <div className="flex gap-7">
             <button onClick={()=>window.open(props.path,"_blank")} className="p-2 px-7 cursor-pointer flex bg-red-500">&#9655; Watch Now</button>
-            <button className="p-2 px-7 border cursor-pointer border-[#ddd]">+ Add Watch Later</button>
+            <button onClick={()=>{
+              handleAdd()
+            }} className="p-2 px-7 border cursor-pointer border-[#ddd]">+ Add Watch Later</button>
           </div>
         </div>
 
@@ -41,7 +56,9 @@ const HeroSection = (props) => {
 
             <div className="flex p-2 gap-2 items-center justify-around">
               <button onClick={()=>window.open(props.path,"_blank")} className="font-bold z-30 text-[15px] md:px-7 cursor-pointer md:text-lg rounded-2xl px-4 p-2 text-gray-900 bg-amber-200 ">&#9655; Watch Now</button>
-              <button className="font-bold z-30 rounded-2xl md:px-7 cursor-pointer md:text-lg  border border-[#ddd] px-3 text-[15px] p-2 text-[#ddd] bg-none">+ Add to my List</button>
+              <button onClick={()=>{
+                handleAdd()
+              }} className="font-bold z-30 rounded-2xl md:px-7 cursor-pointer md:text-lg  border border-[#ddd] px-3 text-[15px] p-2 text-[#ddd] bg-none">+ Add to my List</button>
 
             </div>
 
