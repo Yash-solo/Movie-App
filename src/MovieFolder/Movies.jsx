@@ -15,6 +15,8 @@ const Movie = () => {
   const ref3 = useRef(null);
   const ref4 = useRef(null);
   const ref5 = useRef(null);
+  const ref6 = useRef(null);
+  const ref7 = useRef(null);
   //store topMovies cards
   const [topMovies,setTopMovies] = useState([]);
   const [moviesList,setMoviesList] = useState([]);
@@ -55,6 +57,15 @@ const Movie = () => {
       })
     }
   }
+  //scroll only netflix section
+  const onlyNet = (scrollByNum)=>{
+    if(ref7.current){
+      ref7.current.scrollBy({
+        left:scrollByNum,
+        behavior:"smooth"
+      })
+    }
+  }
   //scrollFc
   const scrollFc=(scrollByNum)=>{
     if(ref5.current){
@@ -64,7 +75,25 @@ const Movie = () => {
       })
     }
   }
-  
+  //scrollHorror
+  const scrollHorror = (scrollByNum)=>{
+    if(ref6.current){
+      ref6.current.scrollBy({
+        left:scrollByNum,
+        behavior:"smooth"
+      })
+    }
+  }
+  //for supernatural horror
+  let horror = actionMovie.filter((movie)=>{
+      return movie.category.includes("natural Horror");
+  })
+  //select only 10 movies
+  horror = horror.reverse().slice(0,10);
+  const SuperHorror = horror.map((movie)=>{
+    return <ActionxAdv picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id}  />
+  })
+
   //for family comedies rendering
   //for blockbuster movies
   const FamilyComedies = actionMovie.filter((movie)=>{
@@ -233,10 +262,10 @@ const Movie = () => {
                 
                 {/* Here your movies will render */}
                 <h1 className='text-lg md:text-2xl lg:text-3xl text-white'>Only on Netflix</h1>
-                <div ref={ref4} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-around'>
+                <div ref={ref7} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-around'>
                     {onlynetmovies}
                 </div>
-              <ScrollBtn scroll={scrollBlockbuster}/>
+              <ScrollBtn scroll={onlyNet}/>
             </div>
         </div>
 
@@ -252,7 +281,19 @@ const Movie = () => {
               <ScrollBtn scroll={scrollFc}/>
             </div>
         </div>
-
+        
+         {/* Family Comedies section */}
+        <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
+            <div className=' w-full flex flex-col gap-2'>
+                
+                {/* Here your movies will render */}
+                <h1 className='text-lg md:text-2xl lg:text-3xl text-white'>Supernatural Horror Movies</h1>
+                <div ref={ref6} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-start'>
+                    {SuperHorror}
+                </div>
+              <ScrollBtn scroll={scrollHorror}/>
+            </div>
+        </div>
       <About/>
     </motion.div>
   )
