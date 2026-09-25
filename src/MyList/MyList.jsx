@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./stylelist.css"
 import WatchMe from './WatchMe';
+import { motion } from 'framer-motion';
 import { nanoid } from 'nanoid';
 const MyList = () => {
   const [moviedata,setMovieData] = useState([]);
@@ -43,14 +44,14 @@ const MyList = () => {
 
   //render everthing
   return (
-    <>
+    <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
     <h1 className='w-full p-3 font-serif text-2xl text-center text-[#ddd]'>Content Saved for Later Watching</h1>
       <div className='w-full p-3  md:px-25 flex items-center justify-around'>
         <div className='w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 bg-[rgba(255,255,255,0.1)] py-3 rounded-3xl border border-[#505050] shadow-[0px_0px_10px_rgba(255,255,255,0.4)] gap-2  p-2'>
           {watchLaterList}
         </div>
       </div>
-    </>
+    </motion.div>
   )
 }
 

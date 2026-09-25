@@ -199,7 +199,7 @@ const Home = () => {
   const ReloderTemplate = (
     <>
       <div className='h-screen w-full flex items-center justify-around '>
-        <div className='rotate h-15 w-15 rounded-[50%] border-5 border-collapse border-t-gray-500 border-gray-300'></div>
+        <div className='rotate h-15 w-15 rounded-[50%] border-5 border-dotted border-t-gray-500 border-gray-300'></div>
       </div>
     </>
   )
