@@ -20,9 +20,6 @@ const SeriesCard = (props) => {
                             {categoryDis}
                         </ul>
                     </div>
-                    <div>
-                        <button></button>
-                    </div>
                 </div>
             </div>
         </div>
