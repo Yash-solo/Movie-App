@@ -205,7 +205,7 @@ const Movie = () => {
     <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
       <HeroSection aboutMovie = "Set in a fictional village of Dakshina Kannada, the story centers around a human-versus-nature conflict and a multi-generational land dispute"heroMovie="./photos/heroOf Movie.png" path="https://www.youtube.com/watch?v=x6Xemdjqrlw"MovieName = "KANTARA"/>
       
-      {/* Top 10 Movies Section*/}
+      {/*Top 10 Movies Section*/}
       <div className='w-full p-3 text-center flex flex-col  items-center justify-around'>
         <h1 className='text-3xl lg:tracking-[5px] lg:text-4xl font-serif text-[#ddd]'>See your Favorite Movies For Free From Any where</h1>
       </div>
