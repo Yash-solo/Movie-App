@@ -26,7 +26,7 @@ const TV = () => {
     gettopSeries();
   },[])
   const renderData = seriesData.map((series)=>{
-    return <SeriesPh key={series.id} picture = {series.picture} id={series.id} />
+    return <SeriesPh category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
   })
 
   return (
