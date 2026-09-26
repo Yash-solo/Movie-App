@@ -1,0 +1,72 @@
+[
+    {
+        "id":1,
+        "SeriesName":"kuruchetra",
+        "category":["Historical Fiction","Animation","Drama","Indian Animated Mythology"],
+        "picture":"./netPhoto/kuruchetra.jpg",
+        "path":"xyz"
+    },
+    {
+        "id":2,
+        "SeriesName":"ASUR",
+        "category":["Crime","Psychological Thriller","Mystery","Mythology"],
+        "picture":"./SeriesPhoto/Asur-Feature.jpg.jpeg",
+        "path":"xyz"
+    },
+    {
+        "id":3,
+        "SeriesName":"Money Heist",
+        "category":["crime drama", "heist"," thriller"],
+        "picture":"./SeriesPhoto/moneyheist.jpg",
+        "path":"xyz"
+    },
+    {
+        "id":4,
+        "SeriesName":"Silo",
+        "category":["Science Fiction","Dystopian","Psychological Drama","Mystery","Post-Apocalyptic Thriller"],
+        "picture":"./SeriesPhoto/silo.png",
+        "path":"xyz"
+    },
+    {
+        "id":5,
+        "SeriesName":"Breaking Bad",
+        "category":["neo-Western","crime drama","crime","drama","Psychological Thriller","prestige television series"],
+        "picture":"./SeriesPhoto/breaking.jpg",
+        "path":"xyz"
+    },
+    {
+        "id":6,
+        "SeriesName":"Game of Throne",
+        "category":["epic fantasy","drama","action-adventure"],
+        "picture":"./SeriesPhoto/thone.webp",
+        "path":"xyz"
+    },
+    {
+        "id":7,
+        "SeriesName":"The Mad Man",
+        "category":[" Period Drama","Psychology","Psychological Drama"],
+        "picture":"./SeriesPhoto/madMan.webp",
+        "path":"xyz"
+    },
+    {
+        "id":8,
+        "SeriesName":"The Wire",
+        "category":["Crime Drama","Tragedy","Realism"],
+        "picture":"./SeriesPhoto/thewire.webp",
+        "path":"xyz"
+    },
+    {
+        "id":9,
+        "SeriesName":"Mirzapur",
+        "category":["Action Thriller","Gangster Drama"],
+        "picture":"./SeriesPhoto/mirzapur.webp",
+        "path":"xyz"
+    },
+    {
+        "id":10,
+        "SeriesName":"The Family Man",
+        "category":["Espionage","Action","Comedy"],
+        "picture":"./SeriesPhoto/familyman.webp",
+        "path":"xyz"
+    }
+]
