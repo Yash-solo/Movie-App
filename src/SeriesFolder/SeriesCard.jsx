@@ -1,7 +1,10 @@
 import React, { useRef, useState } from 'react'
 import { nanoid } from 'nanoid'
+import { useNavigate } from 'react-router-dom';
 import Episode from './Episode';
 const SeriesCard = (props) => {
+    const navigator = useNavigate();
+
     const [openSeason,setseason] = useState(props.content.Season1);
     const [seasonname , setSeasonName] = useState("Season1");
     const renderEp = openSeason.map((err)=>{
@@ -20,6 +23,35 @@ const SeriesCard = (props) => {
             setseason(props.content[season])
         }} className='px-2 border border-[#343434] cursor-pointer p-1 text-[#ddd] bg-[#2b2a2a] rounded-[5px]'>{season}</li>
     })
+    const removeBtn = (
+        <>
+            <button onClick={()=>{
+                    //user friendly message
+                    alert(`${props.SeriesName} successfully Removed from MyList`)
+                    const previousItem = JSON.parse(localStorage.getItem("WatchSeriesLater"));
+                    const newList = previousItem.filter((series)=>series!==props.SeriesName)
+                    localStorage.setItem("WatchSeriesLater",JSON.stringify(newList))
+                    navigator("/MyList")
+                }} className='mt-3 p-2 rounded-lg hover:bg-[#ddd] cursor-pointer font-semibold hover:text-black w-full border border-[#ddd]'>Remove From Watchlist</button>
+        </>
+    )
+    const addBtn = (
+        <>
+            <button onClick={()=>{
+                    //user friendly message
+                    alert(`${props.SeriesName} successfully Added to MyList`)
+                    const previousItem = JSON.parse(localStorage.getItem("WatchSeriesLater"));
+                    if(previousItem!==null){
+                        if(previousItem.includes(props.SeriesName)){
+                            return 
+                        }
+                            localStorage.setItem("WatchSeriesLater",JSON.stringify([...previousItem,props.SeriesName]))
+                        }else{
+                            localStorage.setItem("WatchSeriesLater",JSON.stringify([props.SeriesName]))
+                        }
+                }} className='mt-3 p-2 rounded-lg hover:bg-[#ddd] cursor-pointer font-semibold hover:text-black w-full border border-[#ddd]'>+ Add To Watch Later</button>
+        </>
+    )
   return (
     <>
         <div className='w-full flex items-center justify-around fixed z-1000 top-0 left-0 h-screen bg-[rgba(17,17,17,0.3)] backdrop-blur-[5px] p-4'>
@@ -46,19 +78,7 @@ const SeriesCard = (props) => {
                         {renderEp}
                     </div>
                 </div>
-                <button onClick={()=>{
-                    //user friendly message
-                    alert(`${props.SeriesName} successfully Added to MyList`)
-                    const previousItem = JSON.parse(localStorage.getItem("WatchSeriesLater"));
-                    if(previousItem!==null){
-                        if(previousItem.includes(props.SeriesName)){
-                            return 
-                        }
-                            localStorage.setItem("WatchSeriesLater",JSON.stringify([...previousItem,props.SeriesName]))
-                        }else{
-                            localStorage.setItem("WatchSeriesLater",JSON.stringify([props.SeriesName]))
-                        }
-                }} className='mt-3 p-2 rounded-lg hover:bg-[#ddd] cursor-pointer font-semibold hover:text-black w-full border border-[#ddd]'>+ Add To Watch Later</button>
+                {props.inList?removeBtn:addBtn}
             </div>
         </div>
     </>

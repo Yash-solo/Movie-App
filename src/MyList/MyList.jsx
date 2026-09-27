@@ -3,6 +3,7 @@ import "./stylelist.css"
 import WatchMe from './WatchMe';
 import { motion } from 'framer-motion';
 import { nanoid } from 'nanoid';
+import WatchSiri from './WatchSiri';
 const MyList = () => {
   const [moviedata,setMovieData] = useState([]);
   const [seriesdata,setSeriesData] = useState([]);
@@ -44,7 +45,7 @@ const MyList = () => {
   const watchLaterseriesList = seriesList
   .filter((arr)=>arr.length>0)
   .map((series)=>{
-    return <WatchMe key={nanoid()} path="xyz" category={series[0].category} picture={series[0].picture} movieName={series[0].SeriesName}/>
+    return <WatchSiri  picture={series[0].picture} SeriesName={series[0].SeriesName}category={series[0].category}content={series[0].content}key={nanoid()}/>
   })
 
   //filter those movies from the data which added in the watchlist
