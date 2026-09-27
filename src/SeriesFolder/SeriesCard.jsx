@@ -42,11 +42,13 @@ const SeriesCard = (props) => {
                 </ul>
                 <div className='w-full p-2 bg-[rgba(40,39,39,0.7)] rounded-2xl border border-[#393939]'>
                     <h1 className='w-full p-1 font-mono text-center'>{seasonname}</h1>
-                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 overflow-y-auto [&::-webkit-scrollbar]:hidden  max-h-50 '>
+                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 overflow-y-auto [&::-webkit-scrollbar]:hidden  md:max-h-42 max-h-40 '>
                         {renderEp}
                     </div>
                 </div>
-                
+                <button onClick={()=>{
+                    alert("Item added successfully");
+                }} className='mt-3 p-2 rounded-lg hover:bg-[#ddd] cursor-pointer font-semibold hover:text-black w-full border border-[#ddd]'>+ Add To Watch Later</button>
             </div>
         </div>
     </>
