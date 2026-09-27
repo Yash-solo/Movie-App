@@ -47,7 +47,17 @@ const SeriesCard = (props) => {
                     </div>
                 </div>
                 <button onClick={()=>{
-                    alert("Item added successfully");
+                    //user friendly message
+                    alert(`${props.SeriesName} successfully Added to MyList`)
+                    const previousItem = JSON.parse(localStorage.getItem("WatchSeriesLater"));
+                    if(previousItem!==null){
+                        if(previousItem.includes(props.SeriesName)){
+                            return 
+                        }
+                            localStorage.setItem("WatchSeriesLater",JSON.stringify([...previousItem,props.SeriesName]))
+                        }else{
+                            localStorage.setItem("WatchSeriesLater",JSON.stringify([props.SeriesName]))
+                        }
                 }} className='mt-3 p-2 rounded-lg hover:bg-[#ddd] cursor-pointer font-semibold hover:text-black w-full border border-[#ddd]'>+ Add To Watch Later</button>
             </div>
         </div>
