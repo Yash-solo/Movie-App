@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { nanoid } from 'nanoid'
+import Episode from './Episode';
 const SeriesCard = (props) => {
-    const categoryDis = props.category.map((cate)=>{
-        return <li >{cate}</li>
+    const [openSeason,setseason] = useState(props.content.Season1);
+    const [seasonname , setSeasonName] = useState("Season1");
+    const renderEp = openSeason.map((err)=>{
+        return <Episode key={err.ep} ep={err.ep}/>
     })
+    
+    const categoryDis = props.category.map((cate)=>{
+        return <li>{cate}</li>
+    })
+
     console.log(props.content);
     const season = Object.keys(props.content);//get seasons
     const renderseason = season.map((season)=>{
         return <li key={nanoid()} onClick={()=>{
-            alert(`Hello ${season}`)
+            setSeasonName(`${season}`)
+            setseason(props.content[season])
         }} className='px-2 border border-[#343434] cursor-pointer p-1 text-[#ddd] bg-[#2b2a2a] rounded-[5px]'>{season}</li>
     })
   return (
@@ -28,9 +37,16 @@ const SeriesCard = (props) => {
                         </ul>
                     </div>
                 </div>
-                <ul className='flex items-center justify-start p-3 gap-3 '>
+                <ul className='w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6  p-1 py-3  gap-3 '>
                     {renderseason}
                 </ul>
+                <div className='w-full p-2 bg-[rgba(40,39,39,0.7)] rounded-2xl border border-[#393939]'>
+                    <h1 className='w-full p-1 font-mono text-center'>{seasonname}</h1>
+                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 overflow-y-auto [&::-webkit-scrollbar]:hidden  max-h-50 '>
+                        {renderEp}
+                    </div>
+                </div>
+                
             </div>
         </div>
     </>
