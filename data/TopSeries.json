@@ -5,34 +5,102 @@
         "category":["Historical Fiction","Animation","Drama","Indian Animated Mythology"],
         "picture":"./netPhoto/kuruchetra.jpg",
         "content":{
-            "Season1":{
-                "ep1":{
+            "Season1":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                },
+                {
+                    "ep":6,
+                    "path":"xyz"
+                },
+                {
+                    "ep":7,
+                    "path":"xyz"
+                },
+                {
+                    "ep":8,
                     "path":"xyz"
                 }
-            },
-            "Season2":{
-                "ep1":{
+            ],
+            "Season2":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
                     "path":"xyz"
                 }
-            }
+            ],
+            "Season3":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                },
+                {
+                    "ep":2,
+                    "path":"xyz"
+                },
+                {
+                    "ep":3,
+                    "path":"xyz"
+                },
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                }
+            ],
+            "Season4":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                },
+                {
+                    "ep":2,
+                    "path":"xyz"
+                },
+                {
+                    "ep":3,
+                    "path":"xyz"
+                },
+                {
+                    "ep":4,
+                    "path":"xyz"
+                }
+            ]
         }
     },
     {
@@ -41,20 +109,54 @@
         "category":["Crime","Psychological Thriller","Mystery","Mythology"],
         "picture":"./SeriesPhoto/Asur-Feature.jpg.jpeg",
         "content":{
-            "Season1":{
-                "ep1":{
+            "Season1":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                },
+                {
+                    "ep":6,
+                    "path":"xyz"
+                },
+                {
+                    "ep":7,
+                    "path":"xyz"
+                },
+                {
+                    "ep":8,
                     "path":"xyz"
                 }
-            }
+            ],
+            "Season2":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                },
+                {
+                    "ep":2,
+                    "path":"xyz"
+                },
+                {
+                    "ep":3,
+                    "path":"xyz"
+                }
+            ]
         }
     },
     {
@@ -63,37 +165,40 @@
         "category":["crime drama", "heist"," thriller"],
         "picture":"./SeriesPhoto/moneyheist.jpg",
         "content":{
-            "Season1":{
-                "ep1":{
+            "Season1":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                },
+                {
+                    "ep":6,
+                    "path":"xyz"
+                },
+                {
+                    "ep":7,
+                    "path":"xyz"
+                },
+                {
+                    "ep":8,
                     "path":"xyz"
                 }
-            },
-            "Season2":{
-                "ep1":{
-                    "path":"xyz"
-                },
-                "ep2":{
-                    "path":"xyz"
-                },
-                "ep3":{
-                    "path":"xyz"
-                },
-                "ep4":{
-                    "path":"xyz"
-                },
-                "ep5":{
-                    "path":"xyz"
-                }
-            }
+            ]
         }
     },
     {
@@ -102,37 +207,94 @@
         "category":["Science Fiction","Dystopian","Psychological Drama","Mystery","Post-Apocalyptic Thriller"],
         "picture":"./SeriesPhoto/silo.png",
         "content":{
-            "Season1":{
-                "ep1":{
+            "Season1":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                },
+                {
+                    "ep":6,
+                    "path":"xyz"
+                },
+                {
+                    "ep":7,
+                    "path":"xyz"
+                },
+                {
+                    "ep":8,
                     "path":"xyz"
                 }
-            },
-            "Season2":{
-                "ep1":{
+            ],
+            "Season2":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
                     "path":"xyz"
                 },
-                "ep5":{
+                {
+                    "ep":5,
                     "path":"xyz"
                 }
-            }
+            ],
+            "Season3":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                },
+                {
+                    "ep":2,
+                    "path":"xyz"
+                },
+                {
+                    "ep":3,
+                    "path":"xyz"
+                }
+            ],
+            "Season4":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                },
+                {
+                    "ep":2,
+                    "path":"xyz"
+                },
+                {
+                    "ep":3,
+                    "path":"xyz"
+                },
+                {
+                    "ep":4,
+                    "path":"xyz"
+                }
+            ]
         }
     },
     {
@@ -141,37 +303,62 @@
         "category":["neo-Western","crime drama","crime","drama","Psychological Thriller","prestige television series"],
         "picture":"./SeriesPhoto/breaking.jpg",
         "content":{
-            "Season1":{
-                "ep1":{
+            "Season1":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                },
+                {
+                    "ep":6,
+                    "path":"xyz"
+                },
+                {
+                    "ep":7,
+                    "path":"xyz"
+                },
+                {
+                    "ep":8,
                     "path":"xyz"
                 }
-            },
-            "Season2":{
-                "ep1":{
+            ],
+            "Season2":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
                     "path":"xyz"
                 },
-                "ep5":{
+                {
+                    "ep":5,
                     "path":"xyz"
                 }
-            }
+            ]
         }
     },
     {
@@ -180,37 +367,86 @@
         "category":["epic fantasy","drama","action-adventure"],
         "picture":"./SeriesPhoto/thone.webp",
         "content":{
-            "Season1":{
-                "ep1":{
+            "Season1":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                },
+                {
+                    "ep":6,
+                    "path":"xyz"
+                },
+                {
+                    "ep":7,
+                    "path":"xyz"
+                },
+                {
+                    "ep":8,
                     "path":"xyz"
                 }
-            },
-            "Season2":{
-                "ep1":{
+            ],
+            "Season2":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
-                    "path":"xyz"
-                },
-                "ep5":{
+                {
+                    "ep":4,
                     "path":"xyz"
                 }
-            }
+            ],
+            "Season3":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                },
+                {
+                    "ep":2,
+                    "path":"xyz"
+                },
+                {
+                    "ep":3,
+                    "path":"xyz"
+                },
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                }
+            ],
+            "Season4":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                }
+            ]
         }
     },
     {
@@ -219,25 +455,84 @@
         "category":[" Period Drama","Psychology","Psychological Drama"],
         "picture":"./SeriesPhoto/madMan.webp",
         "content":{
-            "Season1":{
-                "ep1":{
+            "Season1":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                },
+                {
+                    "ep":6,
+                    "path":"xyz"
+                },
+                {
+                    "ep":7,
+                    "path":"xyz"
+                },
+                {
+                    "ep":8,
                     "path":"xyz"
                 }
-            },
-            "Season2":{
-                "ep1":{
+            ],
+            "Season2":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                },
+                {
+                    "ep":2,
+                    "path":"xyz"
+                },
+                {
+                    "ep":3,
+                    "path":"xyz"
+                },
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
                     "path":"xyz"
                 }
-            }
+            ],
+            "Season3":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                },
+                {
+                    "ep":2,
+                    "path":"xyz"
+                },
+                {
+                    "ep":3,
+                    "path":"xyz"
+                },
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                }
+            ]
         }
     },
     {
@@ -246,34 +541,82 @@
         "category":["Crime Drama","Tragedy","Realism"],
         "picture":"./SeriesPhoto/thewire.webp",
         "content":{
-            "Season1":{
-                "ep1":{
+            "Season1":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                },
+                {
+                    "ep":6,
+                    "path":"xyz"
+                },
+                {
+                    "ep":7,
+                    "path":"xyz"
+                },
+                {
+                    "ep":8,
                     "path":"xyz"
                 }
-            },
-            "Season2":{
-                "ep1":{
+            ],
+            "Season2":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
                     "path":"xyz"
                 }
-            }
+            ],
+            "Season3":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                },
+                {
+                    "ep":2,
+                    "path":"xyz"
+                },
+                {
+                    "ep":3,
+                    "path":"xyz"
+                }
+            ],
+            "Season4":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                }
+            ]
         }
     },
     {
@@ -282,21 +625,74 @@
         "category":["Action Thriller","Gangster Drama"],
         "picture":"./SeriesPhoto/mirzapur.webp",
         "content":{
-            "Season1":{
-                "ep1":{
+            "Season1":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
                     "path":"xyz"
                 },
-                "ep4":{
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                },
+                {
+                    "ep":6,
+                    "path":"xyz"
+                },
+                {
+                    "ep":7,
+                    "path":"xyz"
+                },
+                {
+                    "ep":8,
                     "path":"xyz"
                 }
-            }
-            
+            ],
+            "Season2":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                },
+                {
+                    "ep":2,
+                    "path":"xyz"
+                },
+                {
+                    "ep":3,
+                    "path":"xyz"
+                },
+                {
+                    "ep":4,
+                    "path":"xyz"
+                },
+                {
+                    "ep":5,
+                    "path":"xyz"
+                }
+            ],
+            "Season3":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                }
+            ],
+            "Season4":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                }
+            ]
         }
     },
     {
@@ -305,25 +701,52 @@
         "category":["Espionage","Action","Comedy"],
         "picture":"./SeriesPhoto/familyman.webp",
         "content":{
-            "Season1":{
-                "ep1":{
+            "Season1":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
                     "path":"xyz"
                 },
-                "ep3":{
+                {
+                    "ep":3,
+                    "path":"xyz"
+                },
+                {
+                    "ep":4,
                     "path":"xyz"
                 }
-            },
-            "Season2":{
-                "ep1":{
+            ],
+            "Season2":[
+                {
+                    "ep":1,
                     "path":"xyz"
                 },
-                "ep2":{
+                {
+                    "ep":2,
+                    "path":"xyz"
+                },
+                {
+                    "ep":3,
                     "path":"xyz"
                 }
-            }
+            ],
+            "Season3":[
+                {
+                    "ep":1,
+                    "path":"xyz"
+                },
+                {
+                    "ep":2,
+                    "path":"xyz"
+                },
+                {
+                    "ep":3,
+                    "path":"xyz"
+                }
+            ]
         }
     }
 ]
