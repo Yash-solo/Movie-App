@@ -14,7 +14,7 @@ const SeriesPh = (props) => {
   )
   return (
     <>
-      {isopen?<SeriesCard category={props.category} SeriesName={props.SeriesName}picture={props.picture} setopen={setopen}/>:realTemplate}
+      {isopen?<SeriesCard content = {props.content} category={props.category} SeriesName={props.SeriesName}picture={props.picture} setopen={setopen}/>:realTemplate}
     </>
   )
 }

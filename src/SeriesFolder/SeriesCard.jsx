@@ -1,8 +1,15 @@
 import React from 'react'
-
+import { nanoid } from 'nanoid'
 const SeriesCard = (props) => {
     const categoryDis = props.category.map((cate)=>{
         return <li >{cate}</li>
+    })
+    console.log(props.content);
+    const season = Object.keys(props.content);//get seasons
+    const renderseason = season.map((season)=>{
+        return <li key={nanoid()} onClick={()=>{
+            alert(`Hello ${season}`)
+        }} className='px-2 border border-[#343434] cursor-pointer p-1 text-[#ddd] bg-[#2b2a2a] rounded-[5px]'>{season}</li>
     })
   return (
     <>
@@ -13,7 +20,7 @@ const SeriesCard = (props) => {
                     <span className='h-0.5 w-6 rotate-45 -translate-y-0.5 translate-x-0.2 bg-[rgba(255,255,255,0.5)]'></span>
                 </button>
                 <div className='flex flex-row gap-3 '>
-                    <img className="h-50 rounded-2xl" src={props.picture} alt="" />
+                    <img className="h-50 rounded-2xl" src={props.picture} alt="MovieName" />
                     <div>
                         <h1 className='text-lg font-bold'>{props.SeriesName}</h1>
                         <ul className='flex text-[#ddd] px-4 flex-col list-decimal'>
@@ -21,6 +28,9 @@ const SeriesCard = (props) => {
                         </ul>
                     </div>
                 </div>
+                <ul className='flex items-center justify-start p-3 gap-3 '>
+                    {renderseason}
+                </ul>
             </div>
         </div>
     </>
