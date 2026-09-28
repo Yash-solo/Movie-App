@@ -19,7 +19,7 @@ const MyList = () => {
       console.log("console",data);
       
       //get series data 
-      const response2 = await fetch(`${import.meta.env.BASE_URL}/data/TopSeries.json`);
+      const response2 = await fetch(`${import.meta.env.BASE_URL}/data/SeriesData.json`);
       const data2 = await response2.json();
 
       setMovieData(data);
