@@ -8,6 +8,7 @@ import Series_pic from './Series_pic'
 const TV = () => {
   let ref = useRef(null);
   let ref2 = useRef(null);
+  const ref3 = useRef(null);
 
   const [seriesData,setSeriesData] = useState([]);
 
@@ -31,6 +32,14 @@ const TV = () => {
     }
   }
 
+  const scrollIndia = (num)=>{
+    if(ref3.current){
+      ref3.current.scrollBy({
+        left:num,
+        behavior:"smooth"
+      })
+    }
+  }
   useEffect(()=>{
     async function gettopSeries(){
       const response = await fetch(`${import.meta.env.BASE_URL}/data/SeriesData.json`)
@@ -78,6 +87,16 @@ const TV = () => {
             {renderAdv}
           </div>
           <ScrollBtn scroll ={scrolladvanture}/>
+        </div>
+      </div>
+
+      <div className='relative w-full p-3 md:px-25 flex items-center justify-center'>
+        <div className=" w-full p-2  flex flex-col items-start justify-start gap-3 ">
+          <h1 className='font-bold text-lg text-[#ddd]'>Indian Tv Series</h1>
+          <div ref={ref3} className='w-full py-3  [&::-webkit-scrollbar]:hidden flex gap-8 overflow-x-auto'>
+            {renderAdv}
+          </div>
+          <ScrollBtn scroll ={scrollIndia}/>
         </div>
       </div>
     </motion.div>
