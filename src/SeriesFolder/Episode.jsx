@@ -3,7 +3,7 @@ import { useState } from 'react';
 function Episode(props) {
   //watching
   const watchingList = JSON.parse(localStorage.getItem("watching"))
-    
+  const categoryList = JSON.parse(localStorage.getItem("categories"))
   const [isopen,setopen] =useState(false);
   const temp2 = (
       <>
@@ -23,10 +23,17 @@ function Episode(props) {
                     alert("Episode not found");
                     return 
                   }
-                  if(watchingList!==null){
+                  //for continue wathing
+                  if(watchingList!==null ){
                     localStorage.setItem("watching",JSON.stringify([...watchingList,props.SeriesName]))
                   }else{
                     localStorage.setItem("watching",JSON.stringify([props.setItem]))
+                  }
+                  //for recommandations
+                  if(categoryList!==null){
+                    localStorage.setItem("categories",JSON.stringify([...categoryList,...props.category]))
+                  }else{
+                    localStorage.setItem("categories",JSON.stringify(props.category))
                   }
                   window.open(props.path)
                 }} className='cursor-pointer mt-3 w-full text-lg rounded-lg font-bold p-2 bg-red-500'>&#9655; WatchNow</button>

@@ -11,8 +11,10 @@ import Top10 from '../MovieFolder/Top10.jsx'
 import ScrollBtn from '../componants/ScrollBtn.jsx'
 import SeriesPh from '../SeriesFolder/SeriesPh.jsx'
 import Series_pic from '../SeriesFolder/Series_pic.jsx'
+
 const Home = () => {
   const [topSeries,setTopSeries] = useState([]);
+  const [totaldata,settotalData] = useState([]);
   //load the page or not?
   const [isLoder,setLoder] = useState(true);
 
@@ -77,12 +79,17 @@ const Home = () => {
       })
     }
   }
-
+  //series data
   useEffect(()=>{
     async function addTopSeries(){
-      const response3 = await fetch(`${import.meta.env.BASE_URL}/data/TopSeries.json`);
-      const data3 = await response3.json();
-      setTopSeries(data3);
+      const response = await fetch(`${import.meta.env.BASE_URL}/data/TopSeries.json`);
+      const data = await response.json();
+
+      const response2 = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
+      const data2 = await response2.json();
+
+      settotalData([...data,...data2]);
+      setTopSeries(data);
     }
     addTopSeries();
   },[])
@@ -92,74 +99,62 @@ const Home = () => {
 
   //continue Watching
   useEffect(()=>{
-            const getKey = JSON.parse(localStorage.getItem("watching"));
-            if(getKey===null){
-              console.log("don't know")
-            }else{
-                //reduce the usablitily
-                const watchingId = [];
-
-                getKey.map((movieName)=>{
-                    if(!watchingId.includes(movieName)){
-                        watchingId.push(movieName);
-                    }
-                })
-                
-                //fetch data and filter items that contains that id
-                async function getWatch(){
-                    const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
-                    const data = await response.json();
-                    
-                    const response2 = await fetch(`${import.meta.env.BASE_URL}/data/TopSeries.json`)
-                    const data2 = await response2.json();
-                    const totaldata = [...data,...data2];
-
-                    const filtered_list = totaldata.filter((item)=>{
-                        return watchingId.includes(item.MovieName||item.SeriesName);
-                    })
-                    
-                    setWathingList(filtered_list)
-                }
-                getWatch();
-            }
-                
-        },[])
+    const getKey = JSON.parse(localStorage.getItem("watching"));
+    if(getKey===null){
+      console.log("don't know")
+    }else{
+      //reduce the usablitily
+      const watchingId = [];
+      
+      getKey.map((movieName)=>{
+        if(!watchingId.includes(movieName)){
+          watchingId.push(movieName);
+        }
+      })
+                  
+      //filter data from both data
+      const filtered_list = totaldata.filter((item)=>{
+        return watchingId.includes(item.MovieName||item.SeriesName);
+      })
+      //set to render continue wathing list
+      setWathingList(filtered_list)
+    }
+  },[totaldata])
+  
   const renderWatch = watchingList.map((item)=>{
     if(item.MovieName===undefined){
       return <Series_pic content={item.content} category={item.category}SeriesName={item.SeriesName} key={item.id} picture = {item.picture} id={item.id} />
     }
     return <ContinueWatch picture={item.picture}key={item.id}path={item.path}MovieName={item.MovieName}category={item.category}id={item.id}/>
   })
+
+
   //Recommand Movies
   useEffect(()=>{
-    async function getRecommand(){
-
-        const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
-        const data = await response.json();
-
-        try{
-
-          const newList = data.filter((movie)=>{
-              let cateAgree = 0;
-              for(let cate of category){
-                  if(movie.category.includes(cate)){
-                      cateAgree+=1;
-                  }
-                  if(cateAgree===2){
-                      return true
-                  }
+    try{
+      const newList = totaldata.filter((movie)=>{
+          let cateAgree = 0;
+          for(let cate of category){
+              if(movie.category.includes(cate)){
+                  cateAgree+=1;
               }
-          })
-          setRdMovie(newList);
-        }catch(error){
-          console.log("errorCame");
-        }
-      
+              if(cateAgree===2){
+                  return true
+              }
+          }
+      })
+      setRdMovie(newList);
+
+    }catch(error){
+      console.log("errorCame");
     }
-    getRecommand();
-  },[])
-  const renderRdMovie = RdMovie.map((movie)=>{
-    return <Recommanded picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id}/>
+  },[totaldata])
+  
+  const renderRdMovie = RdMovie.map((item)=>{
+    if(item.MovieName===undefined){
+      return <Series_pic content={item.content} category={item.category}SeriesName={item.SeriesName} key={item.id} picture = {item.picture} id={item.id} />
+    }
+    return <Recommanded picture={item.picture}key={item.id}path={item.path}MovieName={item.MovieName}category={item.category}id={item.id}/>
   })
 
   //Latest Movies
@@ -190,6 +185,7 @@ const Home = () => {
   const RenderLatest = LatestMovies.map((movie)=>{
     return <Latest picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id} />
   })
+
   //top 10 movies
   useEffect(()=>{
     async function getTopMovies(){
@@ -201,6 +197,7 @@ const Home = () => {
     }
     getTopMovies();
   },[])
+
   //template from the Top10 movies componant
   const TopMoviesNet = topMovies.map((movie)=>{
     return <Top10 onClick={()=>{

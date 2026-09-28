@@ -10,7 +10,7 @@ const SeriesCard = (props) => {
     const [seasonname , setSeasonName] = useState("Season1");
     //render episodes
     const renderEp = openSeason.map((err)=>{
-        return <Episode SeriesName={props.SeriesName} season={seasonname} path={err.path} key={err.ep} ep={err.ep}/>
+        return <Episode category={props.category}SeriesName={props.SeriesName} season={seasonname} path={err.path} key={err.ep} ep={err.ep}/>
     })
     //render categories
     const categoryDis = props.category.map((cate)=>{
