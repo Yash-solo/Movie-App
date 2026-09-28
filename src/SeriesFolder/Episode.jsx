@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 function Episode(props) {
+  //watching
+  const watchingList = JSON.parse(localStorage.getItem("watching"))
+    
   const [isopen,setopen] =useState(false);
   const temp2 = (
       <>
@@ -19,6 +22,11 @@ function Episode(props) {
                   if(props.path==="xyz"){
                     alert("Episode not found");
                     return 
+                  }
+                  if(watchingList!==null){
+                    localStorage.setItem("watching",JSON.stringify([...watchingList,props.SeriesName]))
+                  }else{
+                    localStorage.setItem("watching",JSON.stringify([props.setItem]))
                   }
                   window.open(props.path)
                 }} className='cursor-pointer mt-3 w-full text-lg rounded-lg font-bold p-2 bg-red-500'>&#9655; WatchNow</button>

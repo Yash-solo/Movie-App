@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 import { nanoid } from 'nanoid'
 import Top10 from '../MovieFolder/Top10.jsx'
 import ScrollBtn from '../componants/ScrollBtn.jsx'
-
+import Series_pic from '../SeriesFolder/Series_pic.jsx'
 const Home = () => {
   //load the page or not?
   const [isLoder,setLoder] = useState(true);
@@ -74,6 +74,7 @@ const Home = () => {
             }else{
                 //reduce the usablitily
                 const watchingId = [];
+
                 getKey.map((movieName)=>{
                     if(!watchingId.includes(movieName)){
                         watchingId.push(movieName);
@@ -84,9 +85,13 @@ const Home = () => {
                 async function getWatch(){
                     const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
                     const data = await response.json();
-        
-                    const filtered_list = data.filter((movie)=>{
-                        return watchingId.includes(movie.MovieName);
+                    
+                    const response2 = await fetch(`${import.meta.env.BASE_URL}/data/TopSeries.json`)
+                    const data2 = await response2.json();
+                    const totaldata = [...data,...data2];
+
+                    const filtered_list = totaldata.filter((item)=>{
+                        return watchingId.includes(item.MovieName||item.SeriesName);
                     })
                     
                     setWathingList(filtered_list)
@@ -95,8 +100,11 @@ const Home = () => {
             }
                 
         },[])
-  const renderWatch = watchingList.map((movie)=>{
-    return <ContinueWatch picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id}/>
+  const renderWatch = watchingList.map((item)=>{
+    if(item.MovieName===undefined){
+      return <Series_pic content={item.content} category={item.category}SeriesName={item.SeriesName} key={item.id} picture = {item.picture} id={item.id} />
+    }
+    return <ContinueWatch picture={item.picture}key={item.id}path={item.path}MovieName={item.MovieName}category={item.category}id={item.id}/>
   })
   //Recommand Movies
   useEffect(()=>{

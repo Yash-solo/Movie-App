@@ -14,7 +14,7 @@ const SeriesCard = (props) => {
     })
     //render categories
     const categoryDis = props.category.map((cate)=>{
-        return <li>{cate}</li>
+        return <li key={nanoid()}>{cate}</li>
     })
     //get all seasons
     const season = Object.keys(props.content);//get seasons
