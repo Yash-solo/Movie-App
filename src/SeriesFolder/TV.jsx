@@ -2,6 +2,7 @@ import React, { useEffect, useState ,useRef } from 'react'
 import { motion } from 'framer-motion'
 import HeroSection from '../componants/HeroSection'
 import SeriesPh from './SeriesPh'
+import About from "../componants/About.jsx"
 import "./Tv.css"
 import ScrollBtn from '../componants/ScrollBtn'
 import Series_pic from './Series_pic'
@@ -202,6 +203,8 @@ const TV = () => {
           <ScrollBtn scroll ={scrollAnime}/>
         </div>
       </div>
+
+      <About/>
     </motion.div>
   )
 }
