@@ -2,48 +2,48 @@ import "./style.css"
 import React, { useEffect } from 'react'
 import { useState , useRef } from "react"
 import { nanoid } from "nanoid"
+import Series_pic from "../SeriesFolder/Series_pic"
+import ActionxAdv from "../MovieFolder/ActionxAdv"
 const SearchBar = () => {
   //make variable using destructuring
-  const [searchMovie,setSearchMovie] = useState(null);//variable that store search value
-  const [SearchList,setSearchList] = useState([]);//variable that stores searchMovies
-
+  const [searchMovie,setSearchMovie] = useState("");//variable that store search value
+  
+  const [AllData,setAlldata]  = useState([]);
   //please set a new search list that contains the movies that will come after search 
+  
+  
   useEffect(()=>{
     if(searchMovie === ""){
       console.log("No Search");
     }else{
       async function getSearch(){
         const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
-        
-        if(response.ok){
+        const response2 = await fetch(`${import.meta.env.BASE_URL}/data/SeriesData.json`)
+        if(response.ok && response2.ok){
           const data = await response.json();
-          const newSearchList = data.filter((movie)=>{
-            return movie.MovieName.toLowerCase().includes(searchMovie);
-          })
-          
-          setSearchList(newSearchList);
+          const data2 = await response2.json(); 
+
+          console.log("Data2 is here",data2);
+          setAlldata([...data,...data2]);
         }
       }
       getSearch();
     }
   },[searchMovie])
+  const searchList = AllData.filter((item)=>{
+    if(item.MovieName===undefined){
+      return item.SeriesName.toLowerCase().includes(searchMovie.toLowerCase())
+    }else{
+      return item.MovieName.toLowerCase().includes(searchMovie.toLowerCase())
+    }
+  })
 
-  const newList = SearchList.map((movie)=>{
-    return <img onClick = {()=>{
-      //open link where you can see your movie in 0 payment
-      if(movie.path!=="xyz"){
-    
-          const getKey = JSON.parse(localStorage.getItem("watching"))
-          if(getKey!==null){
-              localStorage.setItem("watching",JSON.stringify([...getKey,movie.id]));
-          }else{
-              localStorage.setItem("watching",JSON.stringify([movie.id]));
-          }
-          window.open(movie.path,"_blank")
-          }else{
-            alert("Movie not found");
-          }
-      }} key = {nanoid()} className={`rounded-2xl  w-30 h-50 object-cover shrink-0 `} src={`${movie.picture}`} alt="MoviePic" />
+  const newList = searchList.map((item)=>{
+    if(item.MovieName===undefined){
+      return <Series_pic key={nanoid()} content={item.content} category={item.category}SeriesName={item.SeriesName} picture = {item.picture} id={item.id} />
+    }else{
+      return <ActionxAdv picture={item.picture}key={nanoid()}path={item.path}MovieName={item.MovieName}category={item.category}id={item.id}  />
+    }
   })
 
   
@@ -72,7 +72,7 @@ const SearchBar = () => {
   const realSearch=(
     <>
       <div className="w-full md:px-25 p-2 flex items-center justify-around">
-        <div className="h-full w-full rounded-3xl border md:px-10 px-3 border-[#9b9b9b] p-3 grid-cols-3 grid md:grid-cols-4 lg:grid-cols-7 gap-3 bg-[rgba(255,255,255,0.1)]">
+        <div className="h-full w-full rounded-3xl border md:px-10  border-[#9b9b9b] p-3 px-5 grid-cols-2 grid md:grid-cols-4 lg:grid-cols-7 gap-3 bg-[rgba(255,255,255,0.1)]">
             {newList}
         </div>
       </div>
