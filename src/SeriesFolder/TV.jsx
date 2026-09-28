@@ -1,5 +1,5 @@
 import React, { useEffect, useState ,useRef } from 'react'
-import { motion } from 'framer-motion'
+import { animate, motion } from 'framer-motion'
 import HeroSection from '../componants/HeroSection'
 import SeriesPh from './SeriesPh'
 import About from "../componants/About.jsx"
@@ -99,55 +99,59 @@ const TV = () => {
   })
 
   //for rendering adventure series
-  const AdventureSeries = seriesData.filter((series)=>{
+  let AdventureSeries = seriesData.filter((series)=>{
     console.log(series.category);
     return series.category.includes("Adventure") || series.category.includes("adventure");
   })
+  AdventureSeries = AdventureSeries.reverse().slice(0,20);
   const renderAdv = AdventureSeries.map((series)=>{
     return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
   })
   
   //for rendering indian tv shows 
-  const indianSeries = seriesData.filter((series)=>{
+  let indianSeries = seriesData.filter((series)=>{
     return series.region==="IND";
   })
-
+  indianSeries = indianSeries.reverse().slice(0,20);
   const renderIndianSeries = indianSeries.map((series)=>{
     return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
   })
 
   //for rendering US TV shows
-  const USSeries = seriesData.filter((series)=>{
+  let USSeries = seriesData.filter((series)=>{
     return series.region==="USA";
   })
-
+  USSeries = USSeries.reverse().slice(0,20);
   const renderUSSeries = USSeries.map((series)=>{
     return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
   })
 
   //for horror series
-  const HorrorSeries = seriesData.filter((series)=>{
+  let HorrorSeries = seriesData.filter((series)=>{
     console.log(series.category);
     return series.category.includes("Horror") || series.category.includes("horror");
   })
+  HorrorSeries = HorrorSeries.reverse().slice(0,20)
   const renderHorror = HorrorSeries.map((series)=>{
     return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
   })
 
   //for rendering anime series 
-  const AnimeSeries = seriesData.filter((series)=>{
+  let AnimeSeries = seriesData.filter((series)=>{
     console.log(series.category);
     return series.category.includes("Anime") || series.category.includes("Animation");
   })
+  AnimeSeries = AnimeSeries.reverse().slice(0,20)
   const renderAnime = AnimeSeries.map((series)=>{
     return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
   })
 
   //for rendering Family comedies
-  const familySeries = seriesData.filter((series)=>{
+  let familySeries = seriesData.filter((series)=>{
     console.log(series.category);
     return series.category.includes("family-comedies") || series.category.includes("FC");
   })
+  familySeries = familySeries.reverse().slice(0,20)
   const renderFC = familySeries.map((series)=>{
     return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
   })

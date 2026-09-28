@@ -118,10 +118,10 @@ const Movie = () => {
   })
 
   //for blockbuster movies
-  const blockbustermovie = actionMovie.filter((movie)=>{
+  let blockbustermovie = actionMovie.filter((movie)=>{
     return movie.status==="Blockbuster"
   })
-  
+  blockbustermovie = blockbustermovie.reverse(0,20)
   const renderBuster = blockbustermovie.map((movie)=>{
     return <ActionxAdv picture={movie.picture}key={movie.id}path={movie.path}MovieName={movie.MovieName}category={movie.category}id={movie.id}  />
   })
