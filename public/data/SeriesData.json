@@ -106,12 +106,12 @@
     },
     {
         "id":11,
-        "SeriesName":"",
-        "category":[],
+        "SeriesName":"Patal Lok",
+        "category":["horror","Drama"],
         "region":"IND",
-        "picture":"",
+        "picture":"./SeriesPhoto/patal lok.jpg",
         "content":{
-            "Season1":[]
+            "Season1":[{"ep":1,"path":"xyz"}]
         }
     }
 ]

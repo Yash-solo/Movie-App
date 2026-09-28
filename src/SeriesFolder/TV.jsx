@@ -53,10 +53,12 @@ const TV = () => {
     }
     gettopSeries();
   },[])
-
+  //for rendering top 10 series
   const renderData = topseriesData.map((series)=>{
     return <SeriesPh content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
   })
+
+  //for rendering adventure series
   const AdventureSeries = seriesData.filter((series)=>{
     console.log(series.category);
     return series.category.includes("Adventure") || series.category.includes("adventure");
@@ -64,7 +66,16 @@ const TV = () => {
   const renderAdv = AdventureSeries.map((series)=>{
     return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
   })
-  console.log(AdventureSeries);
+  
+  //for rendering indian tv shows 
+  const indianSeries = seriesData.filter((series)=>{
+    return series.region==="IND";
+  })
+
+  const renderIndianSeries = indianSeries.map((series)=>{
+    return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
+  })
+
   return (
     <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
       <HeroSection path="https://www.youtube.com/watch?v=x6Xemdjqrlw" aboutMovie = 'The plot follows a brilliant, reclusive mastermind known as "The Professor" who recruits a team of eight skilled criminals to execute two incredibly complex, multi-day robberies' heroMovie="./SeriesPhoto/SeriesHero.png" MovieName = "Money Heist"/>
@@ -94,7 +105,7 @@ const TV = () => {
         <div className=" w-full p-2  flex flex-col items-start justify-start gap-3 ">
           <h1 className='font-bold text-lg text-[#ddd]'>Indian Tv Series</h1>
           <div ref={ref3} className='w-full py-3  [&::-webkit-scrollbar]:hidden flex gap-8 overflow-x-auto'>
-            {renderAdv}
+            {renderIndianSeries }
           </div>
           <ScrollBtn scroll ={scrollIndia}/>
         </div>
