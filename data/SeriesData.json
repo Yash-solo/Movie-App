@@ -123,5 +123,15 @@
         "content":{
             "Season1":[{"ep":1,"path":"xyz"}]
         }
+    },
+    {
+        "id":13,
+        "SeriesName":"Panchayat",
+        "category":["FC","comedy","drama",""],
+        "region":"IND",
+        "picture":"./SeriesPhoto/panchayat.jpg",
+        "content":{
+            "Season1":[{"ep":1,"path":"xyz"}]
+        }
     }
 ]
