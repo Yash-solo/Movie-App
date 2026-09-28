@@ -113,5 +113,15 @@
         "content":{
             "Season1":[{"ep":1,"path":"xyz"}]
         }
+    },
+    {
+        "id":12,
+        "SeriesName":"Hajime no Ippo",
+        "category":["fight","action","boxing","self-improvement","Anime"],
+        "region":"Other",
+        "picture":"./animeseriesPhoto/Hajime no Ippo.jpg",
+        "content":{
+            "Season1":[{"ep":1,"path":"xyz"}]
+        }
     }
 ]

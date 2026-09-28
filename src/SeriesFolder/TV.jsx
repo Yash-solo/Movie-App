@@ -11,6 +11,7 @@ const TV = () => {
   const ref3 = useRef(null);
   const ref4 = useRef(null);
   const ref5 = useRef(null);
+  const ref6 = useRef(null);
 
   const [seriesData,setSeriesData] = useState([]);
 
@@ -60,6 +61,14 @@ const TV = () => {
       })
     }
   }
+  const scrollAnime = (num)=>{
+    if(ref6.current){
+      ref6.current.scrollBy({
+        left:num,
+        behavior:"smooth"
+      })
+    }
+  } 
 
   useEffect(()=>{
     async function gettopSeries(){
@@ -114,6 +123,17 @@ const TV = () => {
   const renderHorror = HorrorSeries.map((series)=>{
     return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
   })
+
+  //for rendering anime series 
+  const AnimeSeries = seriesData.filter((series)=>{
+    console.log(series.category);
+    return series.category.includes("Anime") || series.category.includes("Animation");
+  })
+  const renderAnime = AnimeSeries.map((series)=>{
+    return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
+  })
+
+
   return (
     <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
       <HeroSection path="https://www.youtube.com/watch?v=x6Xemdjqrlw" aboutMovie = 'The plot follows a brilliant, reclusive mastermind known as "The Professor" who recruits a team of eight skilled criminals to execute two incredibly complex, multi-day robberies' heroMovie="./SeriesPhoto/SeriesHero.png" MovieName = "Money Heist"/>
@@ -169,6 +189,17 @@ const TV = () => {
             {renderHorror}
           </div>
           <ScrollBtn scroll ={scrollHorror}/>
+        </div>
+      </div>
+
+      {/* Animation Series */}
+      <div className='relative w-full p-3 md:px-25 flex items-center justify-center'>
+        <div className=" w-full p-2  flex flex-col items-start justify-start gap-3 ">
+          <h1 className='font-bold text-lg text-[#ddd]'>Animation</h1>
+          <div ref={ref6} className='w-full py-3  [&::-webkit-scrollbar]:hidden flex gap-8 overflow-x-auto'>
+            {renderAnime}
+          </div>
+          <ScrollBtn scroll ={scrollAnime}/>
         </div>
       </div>
     </motion.div>
