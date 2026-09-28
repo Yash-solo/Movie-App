@@ -13,6 +13,7 @@ const TV = () => {
   const ref4 = useRef(null);
   const ref5 = useRef(null);
   const ref6 = useRef(null);
+  const ref7 = useRef(null);
 
   const [seriesData,setSeriesData] = useState([]);
 
@@ -70,7 +71,15 @@ const TV = () => {
       })
     }
   } 
-
+  const scrollFC = (num)=>{
+    if(ref7.current){
+      ref7.current.scrollBy({
+        left:num,
+        behavior:"smooth"
+      })
+    }
+  }
+  //get full data
   useEffect(()=>{
     async function gettopSeries(){
       const response = await fetch(`${import.meta.env.BASE_URL}/data/SeriesData.json`)
@@ -134,7 +143,14 @@ const TV = () => {
     return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
   })
 
-
+  //for rendering Family comedies
+  const familySeries = seriesData.filter((series)=>{
+    console.log(series.category);
+    return series.category.includes("family-comedies") || series.category.includes("FC");
+  })
+  const renderFC = familySeries.map((series)=>{
+    return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
+  })
   return (
     <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
       <HeroSection path="https://www.youtube.com/watch?v=x6Xemdjqrlw" aboutMovie = 'The plot follows a brilliant, reclusive mastermind known as "The Professor" who recruits a team of eight skilled criminals to execute two incredibly complex, multi-day robberies' heroMovie="./SeriesPhoto/SeriesHero.png" MovieName = "Money Heist"/>
@@ -201,6 +217,17 @@ const TV = () => {
             {renderAnime}
           </div>
           <ScrollBtn scroll ={scrollAnime}/>
+        </div>
+      </div>
+
+      {/* family comedies Series */}
+      <div className='relative w-full p-3 md:px-25 flex items-center justify-center'>
+        <div className=" w-full p-2  flex flex-col items-start justify-start gap-3 ">
+          <h1 className='font-bold text-lg text-[#ddd]'>Family Comedies</h1>
+          <div ref={ref7} className='w-full py-3  [&::-webkit-scrollbar]:hidden flex gap-8 overflow-x-auto'>
+            {renderFC}
+          </div>
+          <ScrollBtn scroll ={scrollFC}/>
         </div>
       </div>
 
