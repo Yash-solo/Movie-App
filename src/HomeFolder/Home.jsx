@@ -30,7 +30,6 @@ const Home = () => {
   const [watchingList,setWathingList] = useState([]);
   //take categories from the localstorage
   let iscate = useRef(true);
-  let iswatch = useRef(true);
 
   let category= JSON.parse(localStorage.getItem("categories"));
   //handle category undefined error
@@ -255,7 +254,7 @@ const Home = () => {
       <div className='relative w-full p-3 md:px-25 flex flex-col items-center justify-around gap-2'>
         <div className=' w-full flex flex-col gap-2'>    
             {/* Here your movies will render */}
-            {iscate?<h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Recommand Movies</h1>:""}
+            {iscate?<h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Recommand Content for you</h1>:""}
             <div ref={ref3} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-start justify-start'>
               {renderRdMovie}
             </div>

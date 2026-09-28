@@ -7,7 +7,7 @@ const Series_pic = (props) => {
         <>
             <div onClick={()=>{
               setopen(!isopen);
-            }} className='shrink-0 '>
+            }} className='shrink-0 cursor-pointer'>
               <img className='h-50  rounded-2xl' src={props.picture} alt="" />
             </div>
         </>
