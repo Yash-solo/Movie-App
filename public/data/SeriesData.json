@@ -133,5 +133,88 @@
         "content":{
             "Season1":[{"ep":1,"path":"xyz"}]
         }
+    },
+    {
+        "id":14,
+        "SeriesName":"The Terror",
+        "category":["horror","Supernatural Horror","Historical Period Drama","Anthology Series","Psychological Thriller & Survival"],
+        "region":"USA",
+        "picture":"./SeriesPhoto/the terror.jpg",
+        "content":{
+            "Season1":[{"ep":1,"path":"xyz"}],
+            "Season2":[{"ep":1,"path":"xyz"}],
+            "Season3":[{"ep":1,"path":"xyz"}]
+        }
+    },
+    {
+        "id":15,
+        "SeriesName":"Dark",
+        "category":["horror","Existential & Psychological Drama","Family Tragedy & Drama","Mystery & Supernatural Thriller","Science Fiction & Time Travel"],
+        "region":"USA",
+        "picture":"./SeriesPhoto/Dark.jpg",
+        "content":{
+            "Season1":[{"ep":1,"path":"xyz"}],
+            "Season2":[{"ep":1,"path":"xyz"}]
+        }
+    },
+    {
+        "id":16,
+        "SeriesName":"Chainsaw man",
+        "category":["fight","Adventure","action","horror","Anime","Death","Blood"],
+        "region":"Japan",
+        "picture":"./SeriesPhoto/chainsaw man.jpg",
+        "content":{
+            "Season1":[{"ep":1,"path":"xyz"}]
+        }
+    },
+    {
+        "id":17,
+        "SeriesName":"Stranger Things",
+        "category":["science","fiction","horror","supernatural","drama"],
+        "region":"USA",
+        "picture":"./SeriesPhoto/strangerThings.jpg",
+        "content":{
+            "Season1":[{"ep":1,"path":"xyz"}]
+        }
+    },
+    {
+        "id":18,
+        "SeriesName":"Wednesday",
+        "category":["Psychics","Comedy Horror","comedy","horror"],
+        "region":"USA",
+        "picture":"./SeriesPhoto/wednessday.jpg",
+        "content":{
+            "Season1":[{"ep":1,"path":"xyz"}]
+        }
+    },
+    {
+        "id":19,
+        "SeriesName":"Squid Game",
+        "category":["Adventure","dystopian","survival","thriller","psychological thriller","Korean drama"],
+        "region":"korean",
+        "picture":"./SeriesPhoto/squidgame.jpg",
+        "content":{
+            "Season1":[{"ep":1,"path":"xyz"}]
+        }
+    },
+    {
+        "id":20,
+        "SeriesName":"Farzi",
+        "category":["crime thriller","black comedy","drama"],
+        "region":"India",
+        "picture":"./SeriesPhoto/farzi.webp",
+        "content":{
+            "Season1":[{"ep":1,"path":"xyz"}]
+        }
+    },
+    {
+        "id":21,
+        "SeriesName":"Gullak",
+        "category":["FC","Drama","comedy"],
+        "region":"India",
+        "picture":"./SeriesPhoto/gullak.jpg",
+        "content":{
+            "Season1":[{"ep":1,"path":"xyz"}]
+        }
     }
 ]
