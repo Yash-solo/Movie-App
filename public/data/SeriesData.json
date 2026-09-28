@@ -49,7 +49,7 @@
     {
         "id":6,
         "SeriesName":"Game of Throne",
-        "category":["epic fantasy","drama","action-adventure"],
+        "category":["epic fantasy","Adventure","drama","action-adventure"],
         "picture":"./SeriesPhoto/thone.webp",
         "content":{
             "Season1":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"},{"ep":4,"path":"xyz"},{"ep":5,"path":"xyz"},{"ep":6,"path":"xyz"},{"ep":7,"path":"xyz"},{"ep":8,"path":"xyz"}]
