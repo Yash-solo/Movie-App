@@ -9,8 +9,10 @@ import { motion } from 'framer-motion'
 import { nanoid } from 'nanoid'
 import Top10 from '../MovieFolder/Top10.jsx'
 import ScrollBtn from '../componants/ScrollBtn.jsx'
+import SeriesPh from '../SeriesFolder/SeriesPh.jsx'
 import Series_pic from '../SeriesFolder/Series_pic.jsx'
 const Home = () => {
+  const [topSeries,setTopSeries] = useState([]);
   //load the page or not?
   const [isLoder,setLoder] = useState(true);
 
@@ -19,6 +21,7 @@ const Home = () => {
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
+  const ref5 = useRef(null);
   //movies filter
   const [topMovies,setTopMovies] = useState([]);
   const [RdMovie,setRdMovie] = useState([]);
@@ -66,6 +69,27 @@ const Home = () => {
       })
     }
   } 
+  const scrollseries = (scrollByNum)=>{
+    if(ref5.current){
+      ref5.current.scrollBy({
+        left:scrollByNum,
+        behavior:"smooth"
+      })
+    }
+  }
+
+  useEffect(()=>{
+    async function addTopSeries(){
+      const response3 = await fetch(`${import.meta.env.BASE_URL}/data/TopSeries.json`);
+      const data3 = await response3.json();
+      setTopSeries(data3);
+    }
+    addTopSeries();
+  },[])
+  const renderSeries = topSeries.map((series)=>{
+    return <SeriesPh content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
+  })
+
   //continue Watching
   useEffect(()=>{
             const getKey = JSON.parse(localStorage.getItem("watching"));
@@ -263,7 +287,17 @@ const Home = () => {
           </div>
           <ScrollBtn scroll={scroll}/>
       </div>
-      
+     
+      {/* Top 10 series On Netflix Section */}
+      <div key={nanoid()} className='py-3 relative w-full flex-col  md:px-25 px-3 flex gap-3 '>
+          <h1 className='text-lg md:text-2xl lg:text-2xl text-white'>Top 10 Series on Netflix</h1>
+          <div ref={ref5} className='flex py-5 [&::-webkit-scrollbar]:hidden gap-10 px-5  overflow-x-auto'>
+            {/* list of movies */}
+            {renderSeries}
+          </div>
+          <ScrollBtn scroll={scrollseries}/>
+      </div>
+
       <About/>
     </motion.div>
   )
