@@ -3,16 +3,29 @@ import { motion } from "framer-motion"
 const HeroSection = (props) => {
   function handleAdd(){
     //user friendly message
-    alert(`${props.addwatch} successfully Added to MyList`)
-    const previousItem = JSON.parse(localStorage.getItem("WatchLater"));
-    if(previousItem!==null){
+    if(props.isMovie===true){
+      alert(`${props.addwatch} is successfully added to MyList's series section`)
+      const previousItem = JSON.parse(localStorage.getItem("WatchSeriesLater"));
+      if(previousItem!==null){
         if(previousItem.includes(props.addwatch)){
-            return 
+          return 
         }
-            localStorage.setItem("WatchLater",JSON.stringify([...previousItem,props.addwatch]))
-        }else{
-            localStorage.setItem("WatchLater",JSON.stringify([props.addwatch]))
-        }
+        localStorage.setItem("WatchSeriesLater",JSON.stringify([...previousItem,props.addwatch]))
+      }else{
+        localStorage.setItem("WatchSeriesLater",JSON.stringify([props.addwatch]))
+      }
+    }else{
+      alert(`${props.addwatch} successfully Added to MyList`)
+      const previousItem = JSON.parse(localStorage.getItem("WatchLater"));
+      if(previousItem!==null){
+          if(previousItem.includes(props.addwatch)){
+              return 
+          }
+          localStorage.setItem("WatchLater",JSON.stringify([...previousItem,props.addwatch]))
+      }else{
+          localStorage.setItem("WatchLater",JSON.stringify([props.addwatch]))
+      }
+    }
   }
   return (
     <>

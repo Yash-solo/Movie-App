@@ -153,7 +153,7 @@ const TV = () => {
   })
   return (
     <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
-      <HeroSection path="https://www.youtube.com/watch?v=x6Xemdjqrlw" aboutMovie = 'The plot follows a brilliant, reclusive mastermind known as "The Professor" who recruits a team of eight skilled criminals to execute two incredibly complex, multi-day robberies' heroMovie="./SeriesPhoto/SeriesHero.png" MovieName = "Money Heist"/>
+      <HeroSection isMovie={true} addwatch={"Money Heist"} path="https://www.youtube.com/watch?v=x6Xemdjqrlw" aboutMovie = 'The plot follows a brilliant, reclusive mastermind known as "The Professor" who recruits a team of eight skilled criminals to execute two incredibly complex, multi-day robberies' heroMovie="./SeriesPhoto/SeriesHero.png" MovieName = "Money Heist"/>
       
       <div className='relative w-full p-3 md:px-25 flex items-center justify-center'>
         <div className=" w-full p-2  flex flex-col items-start justify-start gap-3 ">

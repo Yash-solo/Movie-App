@@ -130,5 +130,16 @@
         "region":"Hollywood",
         "category":["natural Horror","drama","adventure","horror"],
         "path":"https://youtube.com"
+    },
+    {
+        "id":12,
+        "MovieName":"Kantara",
+        "picture":"./photos/kantara.jpg",
+        "status":"Blockbuster",
+        "familyComedies":false,
+        "iswatching":false,
+        "region":"South Movie",
+        "category":["spiritual","Drama","Adventure","Folklore","Mythology","Action","Thriller"],
+        "path":"https://www.youtube.com/watch?v=x6Xemdjqrlw"
     }
 ]

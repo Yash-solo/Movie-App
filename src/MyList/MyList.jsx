@@ -16,7 +16,6 @@ const MyList = () => {
       //get movies data
       const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
       const data = await response.json();
-      console.log("console",data);
       
       //get series data 
       const response2 = await fetch(`${import.meta.env.BASE_URL}/data/SeriesData.json`);
