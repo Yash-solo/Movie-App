@@ -4,6 +4,7 @@
         "SeriesName":"kuruchetra",
         "category":["Historical Fiction","Animation","Drama","Indian Animated Mythology"],
         "picture":"./netPhoto/kuruchetra.jpg",
+        "region":"IND",
         "content":{
             "Season1":[{"ep":1,"path":"https://www.youtube.com/watch?v=G-3JSyi_Ss0"},{"ep":2,"path":"https://www.youtube.com/watch?v=G-3JSyi_Ss0"},{"ep":3,"path":"https://www.youtube.com/watch?v=5LjjFVXfi1M&list=PLGMiZ6sIS30s"},{"ep":4,"path":"https://www.youtube.com/watch?v=aKtoH3ZlJao&list=PL65XjcW09qWPTJD8iY3yCIZuHi_pESE7c"},{"ep":5,"path":"https://www.youtube.com/watch?v=qsZpVQT4Yzc&list=PL65XjcW09qWMW-f-GR3J-4N0rPuwfkauy"},{"ep":6,"path":"https://www.youtube.com/watch?v=qSC5wY6xMao&list=PL65XjcW09qWPbo4Q53sYl8H0zd3vM9X4t&index=1"},{"ep":7,"path":"https://www.youtube.com/watch?v=U_GDxwcjK80"},{"ep":8,"path":"xyz"},{"ep":9,"path":"xyz"},{"ep":10,"path":"xyz"},{"ep":11,"path":"xyz"},{"ep":12,"path":"https://www.youtube.com/watch?v=K_zbRj5BZkw&list=PL65XjcW09qWNw-Vlkpu2vt6kTd7TQ-Cpv"},{"ep":13,"path":"xyz"},{"ep":14,"path":"xyz"},{"ep":15,"path":"xyz"},{"ep":16,"path":"xyz"},{"ep":17,"path":"xyz"},{"ep":18,"path":"xyz"}]
         }
@@ -13,6 +14,7 @@
         "SeriesName":"ASUR",
         "category":["Crime","Psychological Thriller","Mystery","Mythology"],
         "picture":"./SeriesPhoto/Asur-Feature.jpg.jpeg",
+        "region":"IND",
         "content":{
             "Season1":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"},{"ep":4,"path":"xyz"},{"ep":5,"path":"xyz"},{"ep":6,"path":"xyz"},{"ep":7,"path":"xyz"},{"ep":8,"path":"xyz"}],
             "Season2":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"}]
@@ -22,6 +24,7 @@
         "id":3,
         "SeriesName":"Money Heist",
         "category":["crime drama", "heist"," thriller"],
+        "region":"USA",
         "picture":"./SeriesPhoto/moneyheist.jpg",
         "content":{
             "Season1":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"},{"ep":4,"path":"xyz"},{"ep":5,"path":"xyz"}]
@@ -31,6 +34,7 @@
         "id":4,
         "SeriesName":"Silo",
         "category":["Science Fiction","Dystopian","Psychological Drama","Mystery","Post-Apocalyptic Thriller"],
+        "region":"USA",
         "picture":"./SeriesPhoto/silo.png",
         "content":{
             "Season1":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"},{"ep":4,"path":"xyz"},{"ep":5,"path":"xyz"}]
@@ -40,6 +44,7 @@
     {
         "id":5,
         "SeriesName":"Breaking Bad",
+        "region":"USA",
         "category":["neo-Western","crime drama","crime","drama","Psychological Thriller","prestige television series"],
         "picture":"./SeriesPhoto/breaking.jpg",
         "content":{
@@ -49,6 +54,7 @@
     {
         "id":6,
         "SeriesName":"Game of Throne",
+        "region":"USA",
         "category":["epic fantasy","Adventure","drama","action-adventure"],
         "picture":"./SeriesPhoto/thone.webp",
         "content":{
@@ -59,6 +65,7 @@
     {
         "id":7,
         "SeriesName":"The Mad Man",
+        "region":"USA",
         "category":[" Period Drama","Psychology","Psychological Drama"],
         "picture":"./SeriesPhoto/madMan.webp",
         "content":{
@@ -69,6 +76,7 @@
     {
         "id":8,
         "SeriesName":"The Wire",
+        "region":"USA",
         "category":["Crime Drama","Tragedy","Realism"],
         "picture":"./SeriesPhoto/thewire.webp",
         "content":{
@@ -79,6 +87,7 @@
     {
         "id":9,
         "SeriesName":"Mirzapur",
+        "region":"IND",
         "category":["Action Thriller","Gangster Drama"],
         "picture":"./SeriesPhoto/mirzapur.webp",
         "content":{
@@ -88,10 +97,21 @@
     {
         "id":10,
         "SeriesName":"The Family Man",
+        "region":"IND",
         "category":["Espionage","Action","Comedy"],
         "picture":"./SeriesPhoto/familyman.webp",
         "content":{
             "Season1":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"},{"ep":4,"path":"xyz"},{"ep":5,"path":"xyz"}]
+        }
+    },
+    {
+        "id":11,
+        "SeriesName":"",
+        "category":[],
+        "region":"IND",
+        "picture":"",
+        "content":{
+            "Season1":[]
         }
     }
 ]
