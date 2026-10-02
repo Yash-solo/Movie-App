@@ -1,8 +1,6 @@
 import { nanoid } from "nanoid";
-import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const MovieCard = (props) => {
-    const [inlist,setinlist] = useState(false);
     //remove the movie
     const nevigate = useNavigate();
     const removeBtn = (
@@ -54,7 +52,7 @@ const MovieCard = (props) => {
                     <img className="h-50 md:h-70 rounded-2xl" src={props.picture} alt="" />
                     <div className='flex flex-col gap-2'>
                         <h1 className='text-[#ddd] font-semibold text-[20px] md:text-4xl'>{props.MovieName}</h1>
-                        <h2 className='text-[#ddd] md:text-[25px]'>⭐8.2 rating</h2>
+                        <h2 className='text-[#ddd] md:text-[25px]'>⭐4.6 rating</h2>
                         <h2 className='text-[#ddd] text-[17px] md:text-[20px]'>Category</h2>
                         <ul className='px-5 text-gray-300  md:text-[20px] list-decimal'>
                             {props.category.slice(0, 5).map((cate) => <li key={nanoid()}>{cate}</li>)}
