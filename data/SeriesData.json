@@ -16,8 +16,8 @@
         "picture":"./SeriesPhoto/Asur-Feature.jpg.jpeg",
         "region":"IND",
         "content":{
-            "Season1":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"},{"ep":4,"path":"xyz"},{"ep":5,"path":"xyz"},{"ep":6,"path":"xyz"},{"ep":7,"path":"xyz"},{"ep":8,"path":"xyz"}],
-            "Season2":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"}]
+            "Season1":[{"ep":1,"path":"https://www.youtube.com/watch?v=NvLiiQQgdZk&list=PL8_eSxJGoxlhJ4R3BT-PcEsCezW4BqOYQ&index=8"},{"ep":2,"path":"https://www.youtube.com/watch?v=VhzvChOuww0&list=PL8_eSxJGoxlhJ4R3BT-PcEsCezW4BqOYQ&index=7"},{"ep":3,"path":"https://www.youtube.com/watch?v=SaUPpJ1sXEk&list=PL8_eSxJGoxlhJ4R3BT-PcEsCezW4BqOYQ&index=6"},{"ep":4,"path":"https://www.youtube.com/watch?v=Msl3kFrRqPE&list=PL8_eSxJGoxlhJ4R3BT-PcEsCezW4BqOYQ&index=5"},{"ep":5,"path":"https://www.youtube.com/watch?v=Yuqgvn8Nf-o&list=PL8_eSxJGoxlhJ4R3BT-PcEsCezW4BqOYQ&index=4"},{"ep":6,"path":"https://www.youtube.com/watch?v=dUIBqSofSMw&list=PL8_eSxJGoxlhJ4R3BT-PcEsCezW4BqOYQ&index=3"},{"ep":7,"path":"https://www.youtube.com/watch?v=ZhbJxhSI684&list=PL8_eSxJGoxlhJ4R3BT-PcEsCezW4BqOYQ&index=2"},{"ep":8,"path":"https://www.youtube.com/watch?v=ZxLt0eeLGLY&list=PL8_eSxJGoxlhJ4R3BT-PcEsCezW4BqOYQ&index=1"}],
+            "Season2":[{"ep":1,"path":"https://www.hotstar.com/in/shows/asur/1971002845/the-dance-of-death/1971018609/watch"},{"ep":2,"path":"https://www.hotstar.com/in/shows/asur/1971002845/the-past-the-present-and-the-future/1971018610/watch?ulp_id=1971002845"},{"ep":3,"path":"https://www.hotstar.com/in/shows/asur/1971002845/burning-the-forest/1971018607/watch?ulp_id=1971002845"},{"ep":4,"path":"https://www.hotstar.com/in/shows/asur/1971002845/designing-the-future/1971018608/watch?ulp_id=1971002845"},{"ep":5,"path":"https://www.hotstar.com/in/shows/asur/1971002845/the-countdown-begins/1971018606/watch?ulp_id=1971002845"},{"ep":6,"path":"https://www.hotstar.com/in/shows/asur/1971002845/the-domino-effect/1971018605/watch?ulp_id=1971002845"},{"ep":7,"path":"https://www.hotstar.com/in/shows/asur/1971002845/birth-of-the-new-god/1971018604/watch?ulp_id=1971002845"},{"ep":8,"path":"https://www.hotstar.com/in/shows/asur/1971002845/the-gods-dilemma/1971018603/watch?ulp_id=1971002845"}]
         }
     },
     {
@@ -27,7 +27,12 @@
         "region":"USA",
         "picture":"./SeriesPhoto/moneyheist.jpg",
         "content":{
-            "Season1":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"},{"ep":4,"path":"xyz"},{"ep":5,"path":"xyz"}]
+            "Season1":[{"ep":1,"path":"https://www.youtube.com/watch?v=2ZgtaBWhVT0&list=PLG3hCLqLLB39hI2Y6rLsmpcHkSeDY4DZZ&index=1"},{"ep":"other 12","path":"https://net77.cc/home"}]
+            ,"Season2":[{"ep":"All","path":"https://net77.cc/home"}],
+            "Season3":[{"ep":"All","path":"https://net77.cc/home"}],
+            "Season4":[{"ep":"All","path":"https://net77.cc/home"}],
+            "Season5":[{"ep":"All","path":"https://net77.cc/home"}]
+
         }
     },
     {
@@ -48,7 +53,7 @@
         "category":["neo-Western","crime drama","crime","drama","Psychological Thriller","prestige television series"],
         "picture":"./SeriesPhoto/breaking.jpg",
         "content":{
-            "Season1":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"},{"ep":4,"path":"xyz"},{"ep":5,"path":"xyz"}]
+            "Season":[{"ep":"All","path":"https://net77.cc/home"}]
         }
     },
     {
@@ -121,7 +126,9 @@
         "region":"Other",
         "picture":"./animeseriesPhoto/Hajime no Ippo.jpg",
         "content":{
-            "Season1":[{"ep":1,"path":"xyz"}]
+            "Season1":[{"ep":"All 76","path":"https://net77.cc/home"}],
+            "Season2":[{"ep":"All 26","path":"https://net77.cc/home"}],
+            "Season3":[{"ep":"All 25","path":"https://net77.cc/home"}]
         }
     },
     {
@@ -141,7 +148,7 @@
         "region":"USA",
         "picture":"./SeriesPhoto/the terror.jpg",
         "content":{
-            "Season1":[{"ep":1,"path":"xyz"}],
+            "Season1":[{"ep":1,"path":"https://www.youtube.com/watch?v=00WqCsGMUxs&list=PLV4E-GGp5mkYBZWVQsNM01N15S0dPZn3T&index=1"},{"ep":2,"path":"https://www.youtube.com/watch?v=aaVp3ceh-hw&list=PLV4E-GGp5mkYBZWVQsNM01N15S0dPZn3T&index=2"},{"ep":3,"path":"https://www.youtube.com/watch?v=ssjKpQ1lkC8&list=PLV4E-GGp5mkYBZWVQsNM01N15S0dPZn3T&index=3"},{"ep":4,"path":"https://www.youtube.com/watch?v=SJZDrBF2cfQ&list=PLV4E-GGp5mkYBZWVQsNM01N15S0dPZn3T&index=4"},{"ep":5,"path":"https://www.youtube.com/watch?v=znfXVSHpZFA&list=PLV4E-GGp5mkYBZWVQsNM01N15S0dPZn3T&index=5"},{"ep":6,"path":"https://www.youtube.com/watch?v=lIq6PVZG_vI&list=PLV4E-GGp5mkYBZWVQsNM01N15S0dPZn3T&index=6"},{"ep":7,"path":"https://www.youtube.com/watch?v=H0yDBj6yitM&list=PLV4E-GGp5mkYBZWVQsNM01N15S0dPZn3T&index=7"},{"ep":8,"path":"https://www.youtube.com/watch?v=x39N75Q5gQk&list=PLV4E-GGp5mkYBZWVQsNM01N15S0dPZn3T&index=8"},{"ep":9,"path":"https://www.youtube.com/watch?v=57edJp7XEGk&list=PLV4E-GGp5mkYBZWVQsNM01N15S0dPZn3T&index=9"},{"ep":10,"path":"xyz"}],
             "Season2":[{"ep":1,"path":"xyz"}],
             "Season3":[{"ep":1,"path":"xyz"}]
         }
@@ -164,7 +171,7 @@
         "region":"Japan",
         "picture":"./SeriesPhoto/chainsaw man.jpg",
         "content":{
-            "Season1":[{"ep":1,"path":"xyz"}]
+            "Season1":[{"ep":1,"path":"https://animesalt.cx/episode/chainsaw-man-1x1/"},{"ep":2,"path":"https://animesalt.cx/episode/chainsaw-man-1x2/"},{"ep":3,"path":"https://animesalt.cx/episode/chainsaw-man-1x3/"},{"ep":4,"path":"https://animesalt.cx/episode/chainsaw-man-1x4/"},{"ep":5,"path":"https://animesalt.cx/episode/chainsaw-man-1x5/"},{"ep":6,"path":"https://animesalt.cx/episode/chainsaw-man-1x6/"},{"ep":7,"path":"https://animesalt.cx/episode/chainsaw-man-1x7/"},{"ep":8,"path":"https://animesalt.cx/episode/chainsaw-man-1x8/"},{"ep":9,"path":"https://animesalt.cx/episode/chainsaw-man-1x9/"},{"ep":10,"path":"https://animesalt.cx/episode/chainsaw-man-1x10/xyz"},{"ep":11,"path":"https://animesalt.cx/episode/chainsaw-man-1x11/"},{"ep":12,"path":"https://animesalt.cx/episode/chainsaw-man-1x12/"}]
         }
     },
     {
@@ -174,7 +181,7 @@
         "region":"USA",
         "picture":"./SeriesPhoto/strangerThings.jpg",
         "content":{
-            "Season1":[{"ep":1,"path":"xyz"}]
+            "Season1":[{"ep":"All","path":"https://net77.cc/home"}]
         }
     },
     {
@@ -184,7 +191,7 @@
         "region":"USA",
         "picture":"./SeriesPhoto/wednessday.jpg",
         "content":{
-            "Season1":[{"ep":1,"path":"xyz"}]
+            "Season1":[{"ep":"All","path":"https://net77.cc/home"}]
         }
     },
     {
@@ -194,7 +201,9 @@
         "region":"korean",
         "picture":"./SeriesPhoto/squidgame.jpg",
         "content":{
-            "Season1":[{"ep":1,"path":"xyz"}]
+            "Season1":[{"ep":"All","path":"https://net77.cc/home"}],
+            "Season2":[{"ep":"All","path":"https://net77.cc/home"}],
+            "Season3":[{"ep":"All","path":"https://net77.cc/home"}]
         }
     },
     {
