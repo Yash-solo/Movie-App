@@ -27,7 +27,12 @@
         "region":"USA",
         "picture":"./SeriesPhoto/moneyheist.jpg",
         "content":{
-            "Season1":[{"ep":1,"path":"https://www.youtube.com/watch?v=2ZgtaBWhVT0&list=PLG3hCLqLLB39hI2Y6rLsmpcHkSeDY4DZZ&index=1"}]
+            "Season1":[{"ep":1,"path":"https://www.youtube.com/watch?v=2ZgtaBWhVT0&list=PLG3hCLqLLB39hI2Y6rLsmpcHkSeDY4DZZ&index=1"},{"ep":"other 12","path":"https://net77.cc/home"}]
+            ,"Season2":[{"ep":"All","path":"https://net77.cc/home"}],
+            "Season3":[{"ep":"All","path":"https://net77.cc/home"}],
+            "Season4":[{"ep":"All","path":"https://net77.cc/home"}],
+            "Season5":[{"ep":"All","path":"https://net77.cc/home"}]
+
         }
     },
     {
@@ -46,7 +51,7 @@
         "category":["neo-Western","crime drama","crime","drama","Psychological Thriller","prestige television series"],
         "picture":"./SeriesPhoto/breaking.jpg",
         "content":{
-            "Season1":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"},{"ep":4,"path":"xyz"},{"ep":5,"path":"xyz"}]
+            "Season":[{"ep":"All","path":"https://net77.cc/home"}]
         }
     },
     {
@@ -55,7 +60,7 @@
         "category":["epic fantasy","drama","action-adventure"],
         "picture":"./SeriesPhoto/thone.webp",
         "content":{
-            "Season1":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"},{"ep":4,"path":"xyz"},{"ep":5,"path":"xyz"},{"ep":6,"path":"xyz"},{"ep":7,"path":"xyz"},{"ep":8,"path":"xyz"}]
+            "Season1":[{"ep":1,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":2,"path":"xyz"},{"ep":3,"path":"xyz"},{"ep":4,"path":"xyz"},{"ep":5,"path":"xyz"},{"ep":6,"path":"xyz"},{"ep":7,"path":"xyz"},{"ep":9,"path":"xyz"},{"ep":10,"path":"xyz"}]
             
         }
     },

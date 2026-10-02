@@ -55,14 +55,14 @@
     },
     {
         "id":5,
-        "MovieName":"policeman",
+        "MovieName":"Kalki",
         "picture":"./photos/sdf.jpg",
         "status":"NoBlockbuster",
         "familyComedies":false,
         "iswatching":false,
         "region":"South Movie",
         "category":["action","crime","drama"],
-        "path":"https://net77.cc/home"
+        "path":"https://www.hotstar.com/in/movies/kalki/1971000424/watch?search_query=kalki"
     },
     {
         "id":6,
@@ -77,14 +77,14 @@
     },
     {
         "id":7,
-        "MovieName":"DF",
+        "MovieName":"JohnDay",
         "picture":"./photos/df.jpg",
         "status":"NOBlockbuster",
         "familyComedies":false,
         "iswatching":false,
         "region":"South Movie",
         "category":["action","crime","drama"],
-        "path":"https://net77.cc/home"
+        "path":"https://www.hotstar.com/in/movies/john-day/1971006955/watch?search_query=john+day"
     },
     {
         "id":8,
@@ -129,7 +129,7 @@
         "iswatching":false,
         "region":"Hollywood",
         "category":["natural Horror","drama","adventure","horror"],
-        "path":"https://youtube.com"
+        "path":"https://net77.cc/home"
     },
     {
         "id":12,
