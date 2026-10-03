@@ -1,10 +1,13 @@
 import { nanoid } from "nanoid";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 const MovieCard = (props) => {
+    const [isSuccess,setSuccess] = useState(false);
     //remove the movie
     const nevigate = useNavigate();
     const removeBtn = (
         <button onClick={()=>{
+            
             //give a user friendly message
             alert(`deleted ${props.MovieName}`)
             //take data
@@ -25,7 +28,7 @@ const MovieCard = (props) => {
         <>
         <button onClick={()=>{
             //user friendly message
-            alert(`${props.MovieName} successfully Added to MyList`)
+            setSuccess(true);
             const previousItem = JSON.parse(localStorage.getItem("WatchLater"));
             if(previousItem!==null){
                 if(previousItem.includes(props.MovieName)){
@@ -39,10 +42,20 @@ const MovieCard = (props) => {
             + Add To Watch Later</button>
         </>
     )
+    useEffect(()=>{
+        if(isSuccess===true){
+            setTimeout(()=>{
+                setSuccess(false);
+            },3000)
+        }
+    },[isSuccess])
     //card html
   return (
     <>
-        <div key={props.id + 1} className='h-full w-full top-0 left-0 z-1000 p-2 backdrop-blur-[10px] bg-[rgba(17,17,17,0.3)] fixed  flex items-center justify-center'>
+        <div key={props.id + 1} className='h-full w-full top-0 left-0 z-1000 p-2  backdrop-blur-[10px] bg-[rgba(17,17,17,0.3)] fixed  flex items-center justify-center'>
+            <div className={`fixed ${isSuccess?"top-3":"-top-15"} md:w-1/2 transform transition-all ease-in duration-300 lg:w-1/4 after:p-1 after:w-full after:absolute after:-bottom-1 after:rounded-2xl after:left-0 bg-[rgb(17,17,17)]  after:bg-[rgba(2,255,53,0.2)] text-[#ddd] rounded-lg border border-[#5d5d5d] shadow-[0px_10px_10px_rgba(255,255,255,0.1)] w-3/4 p-3`}>
+                <span>✅ Sucessfully added to MyList</span>
+            </div>
             <div className='changeColor p-3 transform transition-colors duration-150 ease-in-out px-6 shadow-[0px_0px_20px_rgba(255,255,255,0.2)] rounded-2xl border border-[#535252] flex-col w-9/10 md:w-9/10 lg:w-1/2 bg-[rgba(17,17,17)] fixed  flex items-start justify-start'>
                 <button onClick={() => props.setopen(false)} className='cursor-pointer flex py-3 flex-col gap-2 items-end justify-end w-full text-end text-2xl font-mono text-white font-bold '>
                     <span className='h-0.5 -rotate-45 translate-y-2 w-6 bg-[rgba(255,255,255,0.5)]'></span>
