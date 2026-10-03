@@ -102,23 +102,27 @@ const Home = () => {
     if(getKey===null){
       console.log("don't know")
     }else{
-      //reduce the usablitily
-      const watchingId = [];
-      
-      getKey.map((movieName)=>{
-        if(!watchingId.includes(movieName)){
-          watchingId.push(movieName);
-        }
-      })
-                  
-      //filter data from both data
-      const filtered_list = totaldata.filter((item)=>{
-        return watchingId.includes(item.MovieName||item.SeriesName);
-      })
-      //set to render continue wathing list
-      setWathingList(filtered_list)
+      async function getData(){
+
+        //reduce the usablitily
+        const watchingId = [];
+        
+        getKey.map((movieName)=>{
+          if(!watchingId.includes(movieName)){
+            watchingId.push(movieName);
+          }
+        })
+                    
+        //filter data from both data
+        const filtered_list = totaldata.filter((item)=>{
+          return watchingId.includes(item.MovieName||item.SeriesName);
+        })
+        //set to render continue wathing list
+        setWathingList(filtered_list)
+      }
+      getData();
     }
-  },[totaldata])
+  },[totaldata, category])
   
   const renderWatch = watchingList.map((item)=>{
     if(item.MovieName===undefined){
@@ -131,23 +135,27 @@ const Home = () => {
   //Recommand Movies
   useEffect(()=>{
     try{
-      const newList = totaldata.filter((movie)=>{
-          let cateAgree = 0;
-          for(let cate of category){
-              if(movie.category.includes(cate)){
-                  cateAgree+=1;
-              }
-              if(cateAgree===2){
-                  return true
-              }
-          }
-      })
-      setRdMovie(newList);
+      async function getdata(){
+
+        const newList = totaldata.filter((movie)=>{
+            let cateAgree = 0;
+            for(let cate of category){
+                if(movie.category.includes(cate)){
+                    cateAgree+=1;
+                }
+                if(cateAgree===2){
+                    return true
+                }
+            }
+        })
+        setRdMovie(newList);
+      }
+      getdata();
 
     }catch(error){
-      console.log("errorCame");
+      console.log(error.message);
     }
-  },[totaldata])
+  },[totaldata ,category])
   
   const renderRdMovie = RdMovie.map((item)=>{
     if(item.MovieName===undefined){
