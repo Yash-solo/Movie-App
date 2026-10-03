@@ -93,7 +93,7 @@
         "status":"noBlockbuster",
         "familyComedies":false,
         "iswatching":false,
-        "region":"Hollywood",
+        "region":"Bollywood",
         "category":["action","thriller"],
         "path":"https://net77.cc/home"
     },
@@ -116,7 +116,7 @@
         "status":"Blockbuster",
         "familyComedies":false,
         "iswatching":false,
-        "region":"Hollywood",
+        "region":"Bollywood",
         "category":["devotional drama","history","biography","devotional","drama","spiritual biopic","biographical film"],
         "path":"https://www.facebook.com/sanjeev.kumar.81089/videos/hanuman-ansh-full-movi/2013226039341542/"
     },
@@ -127,7 +127,7 @@
         "status":"Blockbuster",
         "familyComedies":true,
         "iswatching":false,
-        "region":"Hollywood",
+        "region":"Bollywood",
         "category":["natural Horror","drama","adventure","horror"],
         "path":"https://net77.cc/home"
     },
@@ -141,5 +141,82 @@
         "region":"South Movie",
         "category":["spiritual","Drama","Adventure","Folklore","Mythology","Action","Thriller"],
         "path":"https://www.youtube.com/watch?v=x6Xemdjqrlw"
+    },
+    {
+        "id":13,
+        "MovieName":"Lucky Bhaskar",
+        "picture":"./photos/luckyBhas.jpg",
+        "status":"Blockbuster",
+        "familyComedies":false,
+        "iswatching":false,
+        "region":"South Movie",
+        "category":["Period Crime Thriller","crime drama","crime","thriller","Psychological Suspense","Investigative"],
+        "path":"https://net77.cc/home"
+    },
+    {
+        "id":14,
+        "MovieName":"Bhooth Bangla",
+        "picture":"./photos/bhutBangala.jpg",
+        "status":"noBlockbuster",
+        "familyComedies":false,
+        "iswatching":false,
+        "region":"Bollywood",
+        "category":["horror","mystery","Drama","Horror-Comedy","natural Horror"],
+        "path":"https://net77.cc/home"
+    },
+    {
+        "id":15,
+        "MovieName":"Mahavatar Narsimha",
+        "picture":"./photos/narsimha.jpg",
+        "status":"noBlockbuster",
+        "familyComedies":false,
+        "iswatching":false,
+        "region":"Bollywood",
+        "category":["Animation","history","historical fiction","Mythological Action","Epic","Drama"],
+        "path":"https://net77.cc/home"
+    },
+    {
+        "id":16,
+        "MovieName":"Dhurandar",
+        "picture":"./photos/dhurandar.jpg",
+        "status":"Blockbuster",
+        "familyComedies":false,
+        "iswatching":false,
+        "region":"Bollywood",
+        "category":["spy","action","adventure","thriller"],
+        "path":"https://net77.cc/home"
+    },
+    {
+        "id":17,
+        "MovieName":"Peddi",
+        "picture":"./photos/PeddiFilm.jpg",
+        "status":"noBlockbuster",
+        "familyComedies":false,
+        "iswatching":false,
+        "region":"South Movie",
+        "category":["drama","Action","Sports","Period Drama"],
+        "path":"https://net77.cc/home"
+    },
+    {
+        "id":18,
+        "MovieName":"Raja Shivaji",
+        "picture":"./photos/rajaShivaji.jpg",
+        "status":"Blockbuster",
+        "familyComedies":false,
+        "iswatching":false,
+        "region":"Marathi",
+        "category":["Action","Historical Drama","history","Biographical"],
+        "path":"https://net77.cc/movies"
+    },
+    {
+        "id":19,
+        "MovieName":"Ikka",
+        "picture":"./photos/ikka.jpg",
+        "status":"noBlockbuster",
+        "familyComedies":false,
+        "iswatching":false,
+        "region":"Bollywood",
+        "category":["debate","loyer","LLB","Legal","Courtroom Thriller","crime drama","Crime","Drama","Psychological Suspense"],
+        "path":"https://net77.cc/movies"
     }
 ]

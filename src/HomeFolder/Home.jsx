@@ -169,7 +169,7 @@ const Home = () => {
           //contains latest movies
           let lMovieList = [];
                
-          const movieAdded = 13;
+          const movieAdded = 22;
           //show only last 10 movies
           for(let i= data.length-1  ;i > data.length-movieAdded+1;i--){
               lMovieList.push(data[i]);

@@ -225,5 +225,16 @@
         "content":{
             "Season1":[{"ep":1,"path":"xyz"}]
         }
+    },
+    {
+        "id":22,
+        "SeriesName":"Solo Leveling",
+        "category":["Shonen","Dark Fantasy","Sci-Fi","Anime","Manga","Action","Adventure"],
+        "region":"korean",
+        "picture":"./animeseriesPhoto/soloLeveling.jpg",
+        "content":{
+            "Season1":[{"ep":1,"path":"https://animesalt.cx/episode/solo-leveling-1x1/"},{"ep":2,"path":"https://animesalt.cx/episode/solo-leveling-1x2/"},{"ep":3,"path":"https://animesalt.cx/episode/solo-leveling-1x3/"},{"ep":4,"path":"https://animesalt.cx/episode/solo-leveling-1x4/"},{"ep":5,"path":"https://animesalt.cx/episode/solo-leveling-1x5/"},{"ep":6,"path":"https://animesalt.cx/episode/solo-leveling-1x6/"},{"ep":7,"path":"https://animesalt.cx/episode/solo-leveling-1x7/"},{"ep":8,"path":"https://animesalt.cx/episode/solo-leveling-1x8/"},{"ep":9,"path":"https://animesalt.cx/episode/solo-leveling-1x9/"},{"ep":10,"path":"https://animesalt.cx/episode/solo-leveling-1x10/"},{"ep":11,"path":"https://animesalt.cx/episode/solo-leveling-1x11/"},{"ep":12,"path":"https://animesalt.cx/episode/solo-leveling-1x12/"}],
+            "Season2":[{"ep":1,"path":"https://animesalt.cx/episode/solo-leveling-2x1/"},{"ep":2,"path":"https://animesalt.cx/episode/solo-leveling-2x2/"},{"ep":3,"path":"https://animesalt.cx/episode/solo-leveling-2x3/"},{"ep":4,"path":"https://animesalt.cx/episode/solo-leveling-2x4/"},{"ep":5,"path":"https://animesalt.cx/episode/solo-leveling-2x5/"},{"ep":6,"path":"https://animesalt.cx/episode/solo-leveling-2x6/"},{"ep":7,"path":"https://animesalt.cx/episode/solo-leveling-2x7/"},{"ep":8,"path":"https://animesalt.cx/episode/solo-leveling-2x8/"},{"ep":9,"path":"https://animesalt.cx/episode/solo-leveling-2x9/"},{"ep":10,"path":"https://animesalt.cx/episode/solo-leveling-2x10/"},{"ep":11,"path":"https://animesalt.cx/episode/solo-leveling-2x11/"},{"ep":12,"path":"https://animesalt.cx/episode/solo-leveling-2x12/"},{"ep":13,"path":"https://animesalt.cx/episode/solo-leveling-2x13/"}]
+        }
     }
 ]

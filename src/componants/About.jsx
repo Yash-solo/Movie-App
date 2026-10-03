@@ -1,5 +1,4 @@
 import "./style.css";
-import React from 'react'
 import videoCam from "/photos/video-camera (1).png"
 const About = () => {
   return (
