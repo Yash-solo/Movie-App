@@ -122,7 +122,7 @@ const Home = () => {
       }
       getData();
     }
-  },[totaldata, category])
+  },[totaldata])
   
   const renderWatch = watchingList.map((item)=>{
     if(item.MovieName===undefined){
@@ -155,7 +155,7 @@ const Home = () => {
     }catch(error){
       console.log(error.message);
     }
-  },[totaldata ,category])
+  },[totaldata])
   
   const renderRdMovie = RdMovie.map((item)=>{
     if(item.MovieName===undefined){
