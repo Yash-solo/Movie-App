@@ -1,4 +1,3 @@
-import { useScroll } from "framer-motion"
 import { useState } from "react"
 import MovieCard from "../componants/MovieCard";
 

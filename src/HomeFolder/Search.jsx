@@ -1,6 +1,6 @@
 import "./style.css"
-import React, { useEffect } from 'react'
-import { useState , useRef } from "react"
+import { useEffect } from 'react'
+import { useState } from "react"
 import { nanoid } from "nanoid"
 import Series_pic from "../SeriesFolder/Series_pic"
 import ActionxAdv from "../MovieFolder/ActionxAdv"

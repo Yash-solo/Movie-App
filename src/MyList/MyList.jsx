@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./stylelist.css"
 import WatchMe from './WatchMe';
 import { motion } from 'framer-motion';

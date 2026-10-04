@@ -1,5 +1,5 @@
-import React, { useEffect, useState ,useRef } from 'react'
-import { animate, motion } from 'framer-motion'
+import  { useEffect, useState ,useRef } from 'react'
+import { motion } from 'framer-motion'
 import HeroSection from '../componants/HeroSection'
 import SeriesPh from './SeriesPh'
 import About from "../componants/About.jsx"
@@ -156,7 +156,7 @@ const TV = () => {
     return <Series_pic content={series.content} category={series.category}SeriesName={series.SeriesName} key={series.id} picture = {series.picture} id={series.id} />
   })
   return (
-    <motion.div initial={{opacity:0}}animate={{opacity:1}}exit={{opacity:0}}>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
       <HeroSection isMovie={true} addwatch={"Money Heist"} path="https://www.youtube.com/watch?v=2ZgtaBWhVT0&list=PLG3hCLqLLB39hI2Y6rLsmpcHkSeDY4DZZ&index=1" aboutMovie = 'The plot follows a brilliant, reclusive mastermind known as "The Professor" who recruits a team of eight skilled criminals to execute two incredibly complex, multi-day robberies' heroMovie="./SeriesPhoto/SeriesHero.png" MovieName = "Money Heist"/>
       
       <div className='relative w-full p-3 md:px-25 flex items-center justify-center'>

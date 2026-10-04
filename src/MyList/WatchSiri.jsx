@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from "react"
 import SeriesCard from '../SeriesFolder/SeriesCard';
 const WatchSiri = (props) => {
