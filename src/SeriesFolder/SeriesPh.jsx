@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import SeriesCard from './SeriesCard';
 const SeriesPh = (props) => {
   const [isopen , setopen ] = useState(false);

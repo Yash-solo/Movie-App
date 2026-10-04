@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
 import { useState } from 'react';
+import "./TV.css"
 function Episode(props) {
   //watching
   const watchingList = JSON.parse(localStorage.getItem("watching"))
@@ -42,7 +42,7 @@ function Episode(props) {
       </>
   )
   const temp1 = (
-    <div className='flex items-center cursor-pointer justify-start p-1 gap-2'>
+    <div className='FadeInClass flex items-center cursor-pointer justify-start p-1 gap-2'>
         <div onClick={()=>{
           setopen(true);
         }} className='h-15 px-5 md:px-4  md:h-15 rounded-lg border border-[#212121] p-2 flex items-center justify-around  bg-[rgba(255,255,255,0.2)]'>

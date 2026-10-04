@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { nanoid } from 'nanoid'
 import { useNavigate } from 'react-router-dom';
 import Episode from './Episode';
+import "./TV.css"
 const SeriesCard = (props) => {
     const [isSuccess,setSuccess] = useState(false);
     //use navigator to reload MyList
@@ -68,7 +69,7 @@ const SeriesCard = (props) => {
             <div className={`fixed ${isSuccess?"top-2":"-top-15"} md:w-1/2 transform transition-all ease-in duration-300 lg:w-1/4 after:p-1 after:w-full after:absolute after:-bottom-1 after:rounded-2xl after:left-0 bg-[rgb(17,17,17)]  after:bg-[rgba(2,255,53,0.2)] text-[#ddd] rounded-lg border border-[#5d5d5d] shadow-[0px_10px_10px_rgba(255,255,255,0.1)] w-3/4 p-3`}>
                 <span>✅ Sucessfully added to MyList</span>
             </div>
-            <div className=' w-9/10 md:w-1/2 rounded-2xl border border-[#646464]  bg-[rgba(17,17,17)] p-3 text-white'>
+            <div className='SeriesCard w-9/10 md:w-1/2 rounded-2xl border border-[#646464]  bg-[rgba(17,17,17)] p-3 text-white'>
                 {/* cut btn */}
                 <button onClick={() => props.setopen(false)} className='cursor-pointer flex py-3 flex-col gap-2 items-end justify-end w-full text-end text-2xl font-mono text-white font-bold '>
                     <span className='h-0.5 -rotate-45 translate-y-2 w-6 bg-[rgba(255,255,255,0.5)]'></span>

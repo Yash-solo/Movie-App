@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./style.css"
 const MovieCard = (props) => {
     const [isSuccess,setSuccess] = useState(false);
     //remove the movie
