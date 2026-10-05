@@ -211,7 +211,7 @@ const Movie = () => {
       </div>
       <div className='relative w-full flex-col py-5   md:px-25 px-3 flex gap-3 '>
           <h1 className='text-[20px] font-semibold md:text-2xl  lg:text-2xl text-white'>Top 10 Movies on Netflix</h1>
-          <div ref={ref} className='flex gap-10 py-4 px-5 [&::-webkit-scrollbar]:hidden  overflow-x-auto'>
+          <div ref={ref} className='flex gap-10 py-7 px-5 [&::-webkit-scrollbar]:hidden  overflow-x-auto'>
             {topMovies}
           </div>
           <ScrollBtn scroll={scroll}/>

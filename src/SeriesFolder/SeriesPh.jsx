@@ -6,7 +6,7 @@ const SeriesPh = (props) => {
     <>
         <div onClick={()=>{
           setopen(!isopen);
-        }} className='cursor-pointer relative shrink-0  '>
+        }} className='cursor-pointer hover:shadow-[0px_0px_10px_rgba(0,0,0)] hover:scale-110 transition-all duration-150 ease-in-out relative shrink-0  '>
           <h1 className='absolute top-1/2 -left-4 text-8xl [-webkit-text-stroke:1px_#ddd] text-[rgb(17,17,17)] font-bold'>{props.id}</h1>
           <img className='h-50  rounded-2xl' src={props.picture} alt="" />
         </div>

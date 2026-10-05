@@ -7,7 +7,7 @@ const Series_pic = (props) => {
             <div onClick={()=>{
               setopen(!isopen);
             }} className='shrink-0 cursor-pointer'>
-              <img className='h-50  rounded-2xl' src={props.picture} alt="" />
+              <img className='h-50 hover:shadow-[0px_0px_10px_rgba(0,0,0)] hover:scale-110 transform transition-all duration-150 ease-in-out  rounded-2xl' src={props.picture} alt="" />
             </div>
         </>
       )

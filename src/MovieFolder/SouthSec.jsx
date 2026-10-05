@@ -1,26 +1,15 @@
-import { useRef , useState , useEffect} from 'react'
+import {useState} from 'react'
 import MovieCard from '../componants/MovieCard';
 const SouthSec = (props) => {
     
-    const ref = useRef(null);
     const[isopen,setopen] = useState(false);
-    //scroll template
-    const scroll =(scrollByNum)=>{
-        if(ref.current){
-            ref.current.scrollBy({
-                left:scrollByNum,
-                behavior:"smooth"
-            })
-        }
-    }
     
     const realTemplate=[(
        <img key={props.id} onClick = {()=>{
             setopen(true);
-            const getKey = JSON.parse(localStorage.getItem("watching"));
             localStorage.setItem("categories",JSON.stringify(props.category));
 
-        }} className="cursor-pointer h-50 rounded-2xl shrink-0" src={props.picture} alt="Movie" />
+        }} className="cursor-pointer hover:shadow-[0px_0px_10px_rgba(0,0,0)] hover:scale-110 transition-all duration-150 ease-in-out h-50 rounded-2xl shrink-0" src={props.picture} alt="Movie" />
     )]
   return (
     <>

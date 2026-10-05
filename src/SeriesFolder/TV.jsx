@@ -162,7 +162,7 @@ const TV = () => {
       <div className='relative w-full p-3 md:px-25 flex items-center justify-center'>
         <div className=" w-full p-2  flex flex-col items-start justify-start gap-3 ">
           <h1 className='font-bold text-lg text-[#ddd]'>Top 10 Series on Netflix</h1>
-          <div ref={ref} className='w-full py-3  [&::-webkit-scrollbar]:hidden flex gap-8 overflow-x-auto'>
+          <div ref={ref} className='w-full py-7  [&::-webkit-scrollbar]:hidden flex gap-8 overflow-x-auto'>
             {renderData}
           </div>
           <ScrollBtn scroll ={scroll}/>

@@ -252,7 +252,7 @@ const Home = () => {
         <div className=' w-full flex flex-col gap-2'>    
             {/* Here your movies will render */}
             <h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Latest Movies</h1>
-            <div ref={ref2} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-around'>
+            <div ref={ref2} className='overflow-x-auto py-3 p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-center justify-around'>
               {RenderLatest}
             </div>
             <ScrollBtn scroll={scrollLatest}/>
@@ -263,7 +263,7 @@ const Home = () => {
         <div className=' w-full flex flex-col gap-2'>    
             {/* Here your movies will render */}
             {iscate?<h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Recommand Content for you</h1>:""}
-            <div ref={ref3} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-start justify-start'>
+            <div ref={ref3} className='overflow-x-auto py-3 p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-start justify-start'>
               {renderRdMovie}
             </div>
             {iscate?<ScrollBtn scroll={scrollRd}/>:""}
@@ -274,7 +274,7 @@ const Home = () => {
         <div className=' w-full flex flex-col gap-2'>    
             {/* Here your movies will render */}
             <h1 className='text-lg md:text-2xl lg:text-4xl text-white'>Continue watching</h1>
-            <div ref={ref4} className='overflow-x-auto p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-start justify-start'>
+            <div ref={ref4} className='overflow-x-auto py-3 p-2 w-full [&::-webkit-scrollbar]:hidden  flex flex-row gap-7 items-start justify-start'>
               {renderWatch}
             </div>
             <ScrollBtn scroll={scrollContinue}/>
@@ -285,7 +285,7 @@ const Home = () => {
       {/* Top 10 Movies On Netflix Section */}
       <div key={nanoid()} className='py-3 relative w-full flex-col  md:px-25 px-3 flex gap-3 '>
           <h1 className='text-lg md:text-2xl lg:text-2xl text-white'>Top 10 Movies on Netflix</h1>
-          <div ref={ref} className='flex py-5 [&::-webkit-scrollbar]:hidden gap-10 px-5  overflow-x-auto'>
+          <div ref={ref} className='flex py-7 [&::-webkit-scrollbar]:hidden gap-10 px-5  overflow-x-auto'>
             {/* list of movies */}
             {TopMoviesNet}
           </div>
@@ -295,7 +295,7 @@ const Home = () => {
       {/* Top 10 series On Netflix Section */}
       <div key={nanoid()} className='py-3 relative w-full flex-col  md:px-25 px-3 flex gap-3 '>
           <h1 className='text-lg md:text-2xl lg:text-2xl text-white'>Top 10 Series on Netflix</h1>
-          <div ref={ref5} className='flex py-5 [&::-webkit-scrollbar]:hidden gap-10 px-5  overflow-x-auto'>
+          <div ref={ref5} className='flex py-7 [&::-webkit-scrollbar]:hidden gap-10 px-5  overflow-x-auto'>
             {/* list of movies */}
             {renderSeries}
           </div>

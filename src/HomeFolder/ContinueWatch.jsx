@@ -9,7 +9,7 @@ const ContinueWatch = (props) => {
             setopen(true);
             localStorage.setItem("categories",JSON.stringify(props.category));
 
-        }} className="cursor-pointer h-50 rounded-2xl shrink-0" src={props.picture} alt="Movie" />
+        }} className="cursor-pointer hover:scale-110 hover:shadow-[0px_0px_10px_rgba(0,0,0)] transform transition-all duration-150 ease-in-out h-50 rounded-2xl shrink-0" src={props.picture} alt="Movie" />
     )]
 
   return (
