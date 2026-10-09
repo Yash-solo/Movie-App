@@ -29,11 +29,11 @@ const HeroSection = (props) => {
   }
   return (
     <>
-      <motion.div className="relative w-full md:mask-[linear-gradient(to_right,transparent_0%,black_5%_95%,transparent_100%)]  md:relative md:-top-25 md:p-0 md:py-0 p-3  py-5 flex items-center justify-around">
+      <motion.div className="relative w-full md:relative md:-top-25 md:p-0 md:py-0 p-3  py-5 flex items-center justify-around">
         <div className="h-full w-full bg-[rgba(0,0,0,0.2)] md:bg-[rgba(0,0,0,0.3)] absolute"></div>
         
         {/* For dekstop Devices */}
-        <div className="text-white hidden  absolute lg:gap-3 lg:bottom-20 bottom-5 gap-1 md:flex flex-col px-25">  
+        <div className="text-white hidden  absolute lg:gap-3 lg:bottom-20 md:bottom-20 bottom-5 gap-1 md:flex flex-col px-25">  
           <h1 className="text-5xl font-semibold lg:text-7xl lg:tracking-[20px] tracking-[15px]">{props.MovieName}</h1>
           <p className="tracking-[10px]">{props.ShortNote}</p>
           <ul className="text-sm flex gap-5">
@@ -48,7 +48,7 @@ const HeroSection = (props) => {
             <button onClick={()=>window.open(props.path,"_blank")} className="p-2 px-7 cursor-pointer flex bg-red-500">&#9655; Watch Now</button>
             <button onClick={()=>{
               handleAdd()
-            }} className="p-2 px-7 border cursor-pointer border-[#ddd]">+ Add Watch Later</button>
+            }} className="p-2 backdrop-blur-[5px] px-7 border cursor-pointer border-[#ddd]">+ Add Watch Later</button>
           </div>
         </div>
 
@@ -76,8 +76,33 @@ const HeroSection = (props) => {
             </div>
 
           </div>
+        
+        </div>
+      <div className="absolute md:-bottom-20 lg:-bottom-25">
+          <div className="md:flex  items-center hidden justify-center [&::-webkit-scrollbar]:hidden gap-5  w-full overflow-x-auto">
+            <div className="lg:w-50 w-40 h-30 cursor-pointer overflow-hidden lg:h-40 shrink-0 rounded-2xl bg-[rgba(0,0,0,0.1)] backdrop-blur-2xl">
+              <img className="w-full transform transition-all duration-150 hover:scale-110 h-full object-cover" src="./HeroPhoto/bhoot.jpg" alt="" />
+            </div>
+            <div className="lg:w-50 w-40 h-30 cursor-pointer lg:h-40 overflow-hidden shrink-0 rounded-2xl bg-[rgba(0,0,0,0.1)] backdrop-blur-2xl">
+              <img className="w-full transform transition-all duration-150 hover:scale-110 h-full object-cover" src="./HeroPhoto/rrrr.jpg" alt="" />
+            </div>
+            <div className="lg:w-50 w-40 h-30 cursor-pointer lg:h-40 overflow-hidden shrink-0 rounded-2xl bg-[rgba(0,0,0,0.1)] backdrop-blur-2xl">
+              <img className="w-full transform transition-all duration-150 hover:scale-110 h-full object-cover" src="./HeroPhoto/vvv.avif" alt="" />
+
+            </div>
+            <div className="lg:w-50 w-40 h-30 cursor-pointer lg:h-40 overflow-hidden shrink-0 rounded-2xl bg-[rgba(0,0,0,0.1)] backdrop-blur-2xl">
+              <img className="w-full transform transition-all duration-150  hover:scale-110 h-full object-cover" src="./HeroPhoto/raja.jpg" alt="" />
+
+            </div>
+            <div className="lg:w-50 w-40 h-30 cursor-pointer hidden overflow-hidden lg:flex rounded-2xl lg:h-40 shrink-0 bg-[rgba(0,0,0,0.1)] backdrop-blur-2xl">
+              <img className="w-full transform transition-all duration-150 hover:scale-110 h-full object-cover" src="./HeroPhoto/ikka.jpg" alt="" />
+            </div>
+          </div> 
         </div>
       </motion.div>
+      <div className="rounded-[50%] w-full px-3 md:px-25 mask-[linear-gradient(to_right,transparent_0%,black_20%_80%,transparent_100%)]">
+        <div className="w-full  h-5 mt-5 border-t-8 rounded-[50%] border-t-yellow-200 md:border-t-[#e41e1e]"></div>
+      </div>
     </>
   )
 }
