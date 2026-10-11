@@ -9,7 +9,6 @@ const MyList = () => {
   const [seriesdata,setSeriesData] = useState([]);
   const WatchList = JSON.parse(localStorage.getItem("WatchLater"))||[]
   const WatchseriesList = JSON.parse(localStorage.getItem("WatchSeriesLater"))||[];
-  console.log(WatchseriesList);
   //get data of movies
   useEffect(()=>{
     async function getMovies(){
@@ -69,7 +68,7 @@ const MyList = () => {
         </div>
       </div>
       <h1 className='w-full text-[#ddd] text-center text-2xl font-bold'>Series</h1>
-      <div className='w-full p-3  md:px-25 flex items-center justify-around'>
+      <div className='w-full p-3`  md:px-25 flex items-center justify-around'>
         <div className='w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 py-3 rounded-3xl border bg-[rgba(255,255,255,0.1)] border-[#505050] shadow-[0px_0px_10px_rgba(255,255,255,0.4)] gap-4 p-2'>
           {watchLaterseriesList}
         </div>

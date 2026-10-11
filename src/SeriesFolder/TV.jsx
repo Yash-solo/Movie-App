@@ -100,7 +100,7 @@ const TV = () => {
 
   //for rendering adventure series
   let AdventureSeries = seriesData.filter((series)=>{
-    console.log(series.category);
+    
     return series.category.includes("Adventure") || series.category.includes("adventure");
   })
   AdventureSeries = AdventureSeries.reverse().slice(0,20);
@@ -128,7 +128,6 @@ const TV = () => {
 
   //for horror series
   let HorrorSeries = seriesData.filter((series)=>{
-    console.log(series.category);
     return series.category.includes("Horror") || series.category.includes("horror");
   })
   HorrorSeries = HorrorSeries.reverse().slice(0,20)
@@ -138,7 +137,7 @@ const TV = () => {
 
   //for rendering anime series 
   let AnimeSeries = seriesData.filter((series)=>{
-    console.log(series.category);
+    
     return series.category.includes("Anime") || series.category.includes("Animation");
   })
   AnimeSeries = AnimeSeries.reverse().slice(0,20)
@@ -148,7 +147,7 @@ const TV = () => {
 
   //for rendering Family comedies
   let familySeries = seriesData.filter((series)=>{
-    console.log(series.category);
+    
     return series.category.includes("family-comedies") || series.category.includes("FC");
   })
   familySeries = familySeries.reverse().slice(0,20)

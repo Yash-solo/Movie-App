@@ -13,9 +13,7 @@ const SearchBar = () => {
   
   
   useEffect(()=>{
-    if(searchMovie === ""){
-      console.log("No Search");
-    }else{
+    if(searchMovie!== ""){
       async function getSearch(){
         const response = await fetch(`${import.meta.env.BASE_URL}/data/movies.json`);
         const response2 = await fetch(`${import.meta.env.BASE_URL}/data/SeriesData.json`)
