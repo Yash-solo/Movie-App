@@ -5,6 +5,7 @@ import TV from "../SeriesFolder/TV.jsx"
 import Movies from '../MovieFolder/Movies.jsx'
 import Home from '../HomeFolder/Home.jsx'
 import MyList from '../MyList/MyList.jsx';
+import Login from '../LogSign/Login.jsx';
 const AnimateComp = () => {
     const location = useLocation();
   return (
@@ -15,6 +16,7 @@ const AnimateComp = () => {
           <Route path='/TV' element={<TV/>}/>
           <Route path='/Saved' element={<Movies/>}/>
           <Route path='/MyList' element={<MyList/>}/>
+          <Route path='/Login' element = {<Login/>}/>
         </Routes>
     </AnimatePresence>
     </>

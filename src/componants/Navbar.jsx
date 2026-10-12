@@ -27,6 +27,7 @@ const Navbar = () => {
                         <li><Link to="/TV">TV Series</Link></li>
                         <li><Link to="/Saved">Movies</Link></li>
                         <li><Link to="/MyList">My List</Link></li>
+                        <li className="p-1 px-3 rounded-[5px] border font-semibold border-l-red-700 border-b-red-700 border-r-red-700 border-t-red-500 bg-[linear-gradient(to_bottom,#f20010,#b30713)]"><Link to="/Login">Login</Link></li>
                     </ul>
                 </div>
                 <div className={`sidebar rounded-4xl  md:hidden transform transition-all duration-300 w-full p-3 h-1/2 flex items-center flex-col justify-around backdrop-blur-[5px] fixed bg-[rgba(0,0,0,0.4)] ${isOpen?"left-0":"-left-full"} top-18   `}>
@@ -36,6 +37,7 @@ const Navbar = () => {
                         <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/TV">TV Series</Link></li>
                         <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/Saved">Movies</Link></li>
                         <li className="w-full rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/MyList">My List</Link></li>
+                        <li className="w-full cursor-pointer rounded-2xl hover:bg-[rgba(255,255,255,0.1)] text-center p-2"><Link to="/Login"/>Login</li>
                     </ul>
                 </div>
             </div>
