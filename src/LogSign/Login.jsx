@@ -30,10 +30,18 @@ const Login = () => {
                     <span className="text-[#6e6e6e]">OR</span>
                     <hr className="h-0.5  border border-[#6e6e6e] w-1/3"/>
                 </div>
-                <button className="w-full mb-3 p-5 hover:text-white bg-[linear-gradient(to_bottom,#878787,#3b3b3b)] hover:-translate-y-0.5 transform transition-all duration-200 hover:bg-[linear-gradient(to_bottom,#b3b1b1,#3b3b3b)] cursor-pointer rounded-[10px] font-bold text-[#dbd9d9] text-lg">Log in with apple</button>
-                <button className="w-full mb-3 p-5 hover:text-white bg-[linear-gradient(to_bottom,#878787,#3b3b3b)] hover:-translate-y-0.5 transform transition-all duration-200 hover:bg-[linear-gradient(to_bottom,#b3b1b1,#3b3b3b)] cursor-pointer rounded-[10px] font-bold text-[#dbd9d9] text-lg">Log in with Google</button>
-                <button className="w-full mb-3 p-5 hover:text-white bg-[linear-gradient(to_bottom,#878787,#3b3b3b)] hover:-translate-y-0.5 transform transition-all duration-200 hover:bg-[linear-gradient(to_bottom,#b3b1b1,#3b3b3b)] cursor-pointer rounded-[10px] font-bold text-[#dbd9d9] text-lg">Log in with Facebook</button>
-            
+                <button className="w-full flex items-center justify-center gap-2  mb-3 p-5 hover:text-white bg-[linear-gradient(to_bottom,#878787,#3b3b3b)] hover:-translate-y-0.5 transform transition-all duration-200 hover:bg-[linear-gradient(to_bottom,#b3b1b1,#3b3b3b)] cursor-pointer rounded-[10px] font-bold text-[#dbd9d9] text-lg">
+                    <img className="h-6" src="./photos/apple_logo_32.png" alt="" />
+                    <span>Login with apple</span>
+                </button>
+                <button className="w-full flex items-center justify-center gap-2 mb-3 p-5 hover:text-white bg-[linear-gradient(to_bottom,#878787,#3b3b3b)] hover:-translate-y-0.5 transform transition-all duration-200 hover:bg-[linear-gradient(to_bottom,#b3b1b1,#3b3b3b)] cursor-pointer rounded-[10px] font-bold text-[#dbd9d9] text-lg">
+                    <img className="h-6" src="./photos/logo-google.svg" alt="" />
+                    <span>Login with Google</span>
+                </button>
+                <button className="w-full flex items-center justify-center gap-2 mb-3 p-5 hover:text-white bg-[linear-gradient(to_bottom,#878787,#3b3b3b)] hover:-translate-y-0.5 transform transition-all duration-200 hover:bg-[linear-gradient(to_bottom,#b3b1b1,#3b3b3b)] cursor-pointer rounded-[10px] font-bold text-[#dbd9d9] text-lg">
+                    <img className="h-6" src="./photos/logo-facebook.svg" alt="" />
+                    <span>Login with Facebook</span>
+                </button>
             </div>
         </div>
     </>
