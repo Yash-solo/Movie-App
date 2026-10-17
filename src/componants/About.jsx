@@ -34,7 +34,7 @@ const About = () => {
                     <a className="md:text-sm text-[12px] text-bold text-gray-400" href="#">Privacy Terms Cookies</a>
                 </div>
             </div>
-            <Spline scene="https://prod.spline.design/6wz-E2ICc6I7qcTA/scene.splinecode" />
+            <Spline scene="https://prod.spline.design/6wz-E2ICc6I7qcTA/scene.splinecode"/>
             <p className="w-full text-center text-sm text-[#DDD] font-serif">@2026 All rights reserved.</p>
         </>
     )
