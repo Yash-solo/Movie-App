@@ -34,7 +34,16 @@ const About = () => {
                     <a className="md:text-sm text-[12px] text-bold text-gray-400" href="#">Privacy Terms Cookies</a>
                 </div>
             </div>
-            <Spline scene="https://prod.spline.design/6wz-E2ICc6I7qcTA/scene.splinecode"/>
+            <div className="relative w-full px-25 hidden lg:flex items-center justify-start gap-10 h-150">
+                <div className="h-150 w-full">
+                     <Spline scene="https://prod.spline.design/IM0ZsZJtBrtuhHft/scene.splinecode" />
+                </div>
+                <div className="flex text-[#ddd] flex-col items-start gap-3">
+                    <h1 className="text-3xl font-mono" >Play your Favorite Movies and Series</h1>
+                    <button className="p-2 bg-purple-700 cursor-pointer rounded-[5px] font-semibold">Start Watching</button>
+                    <p>using Daily.Movies for seeing Movies will help you to increase you ability to find out which one is best for you</p>
+                </div>
+            </div>
             <p className="w-full text-center text-sm text-[#DDD] font-serif">@2026 All rights reserved.</p>
         </>
     )
