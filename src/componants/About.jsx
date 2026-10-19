@@ -44,6 +44,16 @@ const About = () => {
                     <p>using Daily.Movies for seeing Movies will help you to increase you ability to find out which one is best for you</p>
                 </div>
             </div>
+            <div className="relative w-full px-25 hidden lg:flex items-center justify-start gap-10 h-150">
+                <div className="h-150 w-full">
+                     <Spline scene="https://prod.spline.design/iPSuuy4Gr1Ds1XsN/scene.splinecode" />
+                </div>
+                <div className="flex text-[#ddd] flex-col items-start gap-3">
+                    <h1 className="text-3xl font-mono" >See Space and earth related Movies</h1>
+                    <button className="p-2 bg-blue-600 cursor-pointer rounded-[5px] font-semibold">Start Watching</button>
+                    <p>using Daily.Movies for seeing space Movies will help you to increase your ability to see space scenes</p>
+                </div>
+            </div>
             <p className="w-full text-center text-sm text-[#DDD] font-serif">@2026 All rights reserved.</p>
         </>
     )
