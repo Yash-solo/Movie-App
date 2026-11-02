@@ -154,7 +154,7 @@ const Home = () => {
 
     }catch(error){
       console.log(error.message);
-    }
+    };
   },[totaldata])
   
   const renderRdMovie = RdMovie.map((item)=>{
