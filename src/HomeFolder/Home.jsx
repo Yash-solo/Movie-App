@@ -229,7 +229,7 @@ const Home = () => {
   useEffect(()=>{
     setTimeout(()=>{
       setLoder(false);
-    },500);
+    },2000);
   },[])
   //Loder template
   const ReloderTemplate = (
