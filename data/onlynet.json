@@ -4,34 +4,34 @@
         "MovieName":"Kuruchetra",
         "path":"xyz",
         "type":"series",
-        "picture":"./netPhoto/kuruchetra.jpg"
+        "picture":"./netPhoto/kuruchetra.png"
     },
     {
         "id":1,
         "MovieName":"Dhamal 4",
         "path":"xyz",
         "type":"Movie",
-        "picture":"./netPhoto/dhamal4.jpg"
+        "picture":"./netPhoto/dhamal4.png"
     },
     {
         "id":2,
         "MovieName":"Extrection 2",
         "path":"xyz",
         "type":"Movie",
-        "picture":"./netPhoto/extrection.jpg"
+        "picture":"./netPhoto/extrection.png"
     },
     {
         "id":3,
         "MovieName":"The Great Flood",
         "path":"xyz",
         "type":"Movie",
-        "picture":"./netPhoto/greatflood.jpg"
+        "picture":"./netPhoto/greatflood.png"
     },
     {
         "id":4,
         "MovieName":"Thrash",
         "path":"xyz",
         "type":"Movie",
-        "picture":"./netPhoto/Thrash_(film)_poster.jpg"
+        "picture":"./netPhoto/Thrash_(film)_poster.png"
     }
 ]
