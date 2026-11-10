@@ -3,7 +3,7 @@
         "id":1,
         "SeriesName":"kuruchetra",
         "category":["Historical Fiction","Animation","Drama","Indian Animated Mythology"],
-        "picture":"./netPhoto/kuruchetra.jpg",
+        "picture":"./netPhoto/kuruchetra.png",
         "region":"IND",
         "content":{
             "Season1":[{"ep":1,"path":"https://www.youtube.com/watch?v=G-3JSyi_Ss0"},{"ep":2,"path":"https://www.youtube.com/watch?v=G-3JSyi_Ss0"},{"ep":3,"path":"https://www.youtube.com/watch?v=5LjjFVXfi1M&list=PLGMiZ6sIS30s"},{"ep":4,"path":"https://www.youtube.com/watch?v=aKtoH3ZlJao&list=PL65XjcW09qWPTJD8iY3yCIZuHi_pESE7c"},{"ep":5,"path":"https://www.youtube.com/watch?v=qsZpVQT4Yzc&list=PL65XjcW09qWMW-f-GR3J-4N0rPuwfkauy"},{"ep":6,"path":"https://www.youtube.com/watch?v=qSC5wY6xMao&list=PL65XjcW09qWPbo4Q53sYl8H0zd3vM9X4t&index=1"},{"ep":7,"path":"https://www.youtube.com/watch?v=U_GDxwcjK80"},{"ep":8,"path":"xyz"},{"ep":9,"path":"xyz"},{"ep":10,"path":"xyz"},{"ep":11,"path":"xyz"},{"ep":12,"path":"https://www.youtube.com/watch?v=K_zbRj5BZkw&list=PL65XjcW09qWNw-Vlkpu2vt6kTd7TQ-Cpv"},{"ep":13,"path":"xyz"},{"ep":14,"path":"xyz"},{"ep":15,"path":"xyz"},{"ep":16,"path":"xyz"},{"ep":17,"path":"xyz"},{"ep":18,"path":"xyz"}]
