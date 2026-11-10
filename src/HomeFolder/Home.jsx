@@ -243,7 +243,7 @@ const Home = () => {
   //real Template
   const RealTemplate = (
     <motion.div initial={{opacity:0}} animate={{opacity:1}}exit={{opacity:0}}>
-      <HeroSection addwatch="Kalki 2898 AD" MovieName="KALKI"aboutMovie="The story follows a modern avatar of Vishnu, inspired by Hindu mythology, who arrives on Earth to protect the world from evil forces" path="https://www.youtube.com/watch?v=ed7DxXQgTKk&t=10216s" ShortNote="== 2898AD ==" heroMovie="./photos/herosection.png"/>
+      <HeroSection addwatch="Ramayana" MovieName="Ramayana"aboutMovie="An ancient epic follows a young prince and princess whose marriage and subsequent exile mark the beginning of a legendary journey. Their story of love, duty and destiny sets the stage for greater challenges ahead." path="https://net77.cc/home" ShortNote="This is the beginning of the era of Ram" heroMovie="./photos/heroSection.png"/>
       <h1 className='text-2xl text-white font-bold md:text-4xl font-mono w-full text-center'>Home</h1>
       <SearchBar/>
 

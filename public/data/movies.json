@@ -218,5 +218,16 @@
         "region":"Bollywood",
         "category":["debate","loyer","LLB","Legal","Courtroom Thriller","crime drama","Crime","Drama","Psychological Suspense"],
         "path":"https://net77.cc/movies"
+    },
+    {
+        "id":20,
+        "MovieName":"Ramayana",
+        "picture":"./photos/rama.jpg",
+        "status":"Blockbuster",
+        "familyComedies":false,
+        "iswatching":false,
+        "region":"Bollywood",
+        "category":["spiritual","historical fiction","Historical Drama","mythological drama","action","adventure","fantasy"],
+        "path":"https://net77.cc/home"
     }
 ]
